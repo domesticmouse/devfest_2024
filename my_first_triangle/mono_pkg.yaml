@@ -1,0 +1,23 @@
+# Every entry must be associated with at least one SDK version – corresponding
+# to the Dart SDK version or the Flutter framework version, depending on the
+# type of package. It can be specified at the top-lever as a single value or
+# an array. Alternatively, you can specify the SDK version(s) within each job.
+sdk:
+ - master
+
+stages:
+  # Register two jobs to run under the `analyze` stage.
+  - analyze:
+    - analyze
+    - format
+  - unit_test:
+    - test
+  # Example cron stage which will only run for scheduled jobs (here we run
+  # multiple OS configs for extra validation as an example).
+  #
+  # See the `mono_repo.yaml` example above for where this stage is specially
+  # configured.
+  - cron:
+    - test:
+      os:
+        - macos

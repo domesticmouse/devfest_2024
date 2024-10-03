@@ -1,0 +1,101 @@
+# Created with package:mono_repo v6.6.2
+name: Dart Lint CI
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+  schedule:
+    - cron: "0 0 * * 0"
+defaults:
+  run:
+    shell: bash
+env:
+  PUB_ENVIRONMENT: bot.github
+permissions: read-all
+
+jobs:
+  job_001:
+    name: mono_repo self validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cache Pub hosted dependencies
+        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+        with:
+          path: "~/.pub-cache/hosted"
+          key: "os:ubuntu-latest;pub-cache-hosted;sdk:stable"
+          restore-keys: |
+            os:ubuntu-latest;pub-cache-hosted
+            os:ubuntu-latest
+      - name: Setup Dart SDK
+        uses: dart-lang/setup-dart@0a8a0fc875eb934c15d08629302413c671d3f672
+        with:
+          sdk: stable
+      - id: checkout
+        name: Checkout repository
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+      - name: mono_repo self validate
+        run: dart pub global activate mono_repo 6.6.2
+      - name: mono_repo self validate
+        run: dart pub global run mono_repo generate --validate
+  job_002:
+    name: "analyze; `dart format --output=none --set-exit-if-changed .`"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cache Pub hosted dependencies
+        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+        with:
+          path: "~/.pub-cache/hosted"
+          key: "os:ubuntu-latest;pub-cache-hosted;sdk:master;packages:my_first_triangle;commands:format"
+          restore-keys: |
+            os:ubuntu-latest;pub-cache-hosted;sdk:master;packages:my_first_triangle
+            os:ubuntu-latest;pub-cache-hosted;sdk:master
+            os:ubuntu-latest;pub-cache-hosted
+            os:ubuntu-latest
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@44ac965b96f18d999802d4b807e3256d5a3f9fa1
+        with:
+          channel: master
+      - id: checkout
+        name: Checkout repository
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+      - id: my_first_triangle_pub_upgrade
+        name: my_first_triangle; flutter pub upgrade
+        run: flutter pub upgrade
+        if: "always() && steps.checkout.conclusion == 'success'"
+        working-directory: my_first_triangle
+      - name: "my_first_triangle; dart format --output=none --set-exit-if-changed ."
+        run: "dart format --output=none --set-exit-if-changed ."
+        if: "always() && steps.my_first_triangle_pub_upgrade.conclusion == 'success'"
+        working-directory: my_first_triangle
+  job_003:
+    name: "analyze; `flutter analyze`"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cache Pub hosted dependencies
+        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+        with:
+          path: "~/.pub-cache/hosted"
+          key: "os:ubuntu-latest;pub-cache-hosted;sdk:master;packages:my_first_triangle;commands:analyze"
+          restore-keys: |
+            os:ubuntu-latest;pub-cache-hosted;sdk:master;packages:my_first_triangle
+            os:ubuntu-latest;pub-cache-hosted;sdk:master
+            os:ubuntu-latest;pub-cache-hosted
+            os:ubuntu-latest
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@44ac965b96f18d999802d4b807e3256d5a3f9fa1
+        with:
+          channel: master
+      - id: checkout
+        name: Checkout repository
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+      - id: my_first_triangle_pub_upgrade
+        name: my_first_triangle; flutter pub upgrade
+        run: flutter pub upgrade
+        if: "always() && steps.checkout.conclusion == 'success'"
+        working-directory: my_first_triangle
+      - name: my_first_triangle; flutter analyze
+        run: flutter analyze
+        if: "always() && steps.my_first_triangle_pub_upgrade.conclusion == 'success'"
+        working-directory: my_first_triangle

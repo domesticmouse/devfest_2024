@@ -1,0 +1,20 @@
+# Created with package:mono_repo v6.6.2
+{
+  "version": 2,
+  "updates": [
+    {
+      "package-ecosystem": "github-actions",
+      "directory": "/",
+      "schedule": {
+        "interval": "daily"
+      }
+    },
+    {
+      "package-ecosystem": "pub",
+      "directory": "my_first_triangle",
+      "schedule": {
+        "interval": "weekly"
+      }
+    }
+  ]
+}
