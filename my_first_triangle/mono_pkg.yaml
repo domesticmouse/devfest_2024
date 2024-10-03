@@ -5,6 +5,9 @@
 sdk:
  - master
 
+os:
+   - macos
+
 stages:
   # Register two jobs to run under the `analyze` stage.
   - analyze:
@@ -19,5 +22,3 @@ stages:
   # configured.
   - cron:
     - test:
-      os:
-        - macos

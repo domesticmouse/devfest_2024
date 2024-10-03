@@ -17,19 +17,19 @@ permissions: read-all
 
 jobs:
   job_001:
-    name: "unit_test; linux; `flutter test`"
-    runs-on: ubuntu-latest
+    name: "unit_test; `flutter test`"
+    runs-on: macos-latest
     steps:
       - name: Cache Pub hosted dependencies
         uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
         with:
           path: "~/.pub-cache/hosted"
-          key: "os:ubuntu-latest;pub-cache-hosted;sdk:master;packages:my_first_triangle;commands:test"
+          key: "os:macos-latest;pub-cache-hosted;sdk:master;packages:my_first_triangle;commands:test"
           restore-keys: |
-            os:ubuntu-latest;pub-cache-hosted;sdk:master;packages:my_first_triangle
-            os:ubuntu-latest;pub-cache-hosted;sdk:master
-            os:ubuntu-latest;pub-cache-hosted
-            os:ubuntu-latest
+            os:macos-latest;pub-cache-hosted;sdk:master;packages:my_first_triangle
+            os:macos-latest;pub-cache-hosted;sdk:master
+            os:macos-latest;pub-cache-hosted
+            os:macos-latest
       - name: Setup Flutter SDK
         uses: subosito/flutter-action@44ac965b96f18d999802d4b807e3256d5a3f9fa1
         with:
@@ -47,7 +47,7 @@ jobs:
         if: "always() && steps.my_first_triangle_pub_upgrade.conclusion == 'success'"
         working-directory: my_first_triangle
   job_002:
-    name: "cron; macos; `flutter test`"
+    name: "cron; `flutter test`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
     steps:
