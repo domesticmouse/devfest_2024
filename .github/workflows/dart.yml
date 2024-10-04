@@ -137,6 +137,36 @@ jobs:
         if: "always() && steps.step_03_pub_upgrade.conclusion == 'success'"
         working-directory: step_03
   job_005:
+    name: "unit_test; PKG: step_04; `flutter test`"
+    runs-on: macos-latest
+    steps:
+      - name: Cache Pub hosted dependencies
+        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+        with:
+          path: "~/.pub-cache/hosted"
+          key: "os:macos-latest;pub-cache-hosted;sdk:master;packages:step_04;commands:test"
+          restore-keys: |
+            os:macos-latest;pub-cache-hosted;sdk:master;packages:step_04
+            os:macos-latest;pub-cache-hosted;sdk:master
+            os:macos-latest;pub-cache-hosted
+            os:macos-latest
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@44ac965b96f18d999802d4b807e3256d5a3f9fa1
+        with:
+          channel: master
+      - id: checkout
+        name: Checkout repository
+        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
+      - id: step_04_pub_upgrade
+        name: step_04; flutter pub upgrade
+        run: flutter pub upgrade
+        if: "always() && steps.checkout.conclusion == 'success'"
+        working-directory: step_04
+      - name: step_04; flutter test
+        run: flutter test
+        if: "always() && steps.step_04_pub_upgrade.conclusion == 'success'"
+        working-directory: step_04
+  job_006:
     name: "cron; PKG: my_first_triangle; `flutter test`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -172,7 +202,8 @@ jobs:
       - job_002
       - job_003
       - job_004
-  job_006:
+      - job_005
+  job_007:
     name: "cron; PKG: step_01; `flutter test`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -208,7 +239,8 @@ jobs:
       - job_002
       - job_003
       - job_004
-  job_007:
+      - job_005
+  job_008:
     name: "cron; PKG: step_02; `flutter test`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -244,7 +276,8 @@ jobs:
       - job_002
       - job_003
       - job_004
-  job_008:
+      - job_005
+  job_009:
     name: "cron; PKG: step_03; `flutter test`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -280,3 +313,41 @@ jobs:
       - job_002
       - job_003
       - job_004
+      - job_005
+  job_010:
+    name: "cron; PKG: step_04; `flutter test`"
+    runs-on: macos-latest
+    if: "github.event_name == 'schedule'"
+    steps:
+      - name: Cache Pub hosted dependencies
+        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+        with:
+          path: "~/.pub-cache/hosted"
+          key: "os:macos-latest;pub-cache-hosted;sdk:master;packages:step_04;commands:test"
+          restore-keys: |
+            os:macos-latest;pub-cache-hosted;sdk:master;packages:step_04
+            os:macos-latest;pub-cache-hosted;sdk:master
+            os:macos-latest;pub-cache-hosted
+            os:macos-latest
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@44ac965b96f18d999802d4b807e3256d5a3f9fa1
+        with:
+          channel: master
+      - id: checkout
+        name: Checkout repository
+        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
+      - id: step_04_pub_upgrade
+        name: step_04; flutter pub upgrade
+        run: flutter pub upgrade
+        if: "always() && steps.checkout.conclusion == 'success'"
+        working-directory: step_04
+      - name: step_04; flutter test
+        run: flutter test
+        if: "always() && steps.step_04_pub_upgrade.conclusion == 'success'"
+        working-directory: step_04
+    needs:
+      - job_001
+      - job_002
+      - job_003
+      - job_004
+      - job_005
