@@ -197,6 +197,36 @@ jobs:
         if: "always() && steps.step_05_pub_upgrade.conclusion == 'success'"
         working-directory: step_05
   job_007:
+    name: "unit_test; PKG: step_06; `flutter test`"
+    runs-on: macos-latest
+    steps:
+      - name: Cache Pub hosted dependencies
+        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+        with:
+          path: "~/.pub-cache/hosted"
+          key: "os:macos-latest;pub-cache-hosted;sdk:master;packages:step_06;commands:test"
+          restore-keys: |
+            os:macos-latest;pub-cache-hosted;sdk:master;packages:step_06
+            os:macos-latest;pub-cache-hosted;sdk:master
+            os:macos-latest;pub-cache-hosted
+            os:macos-latest
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@44ac965b96f18d999802d4b807e3256d5a3f9fa1
+        with:
+          channel: master
+      - id: checkout
+        name: Checkout repository
+        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
+      - id: step_06_pub_upgrade
+        name: step_06; flutter pub upgrade
+        run: flutter pub upgrade
+        if: "always() && steps.checkout.conclusion == 'success'"
+        working-directory: step_06
+      - name: step_06; flutter test
+        run: flutter test
+        if: "always() && steps.step_06_pub_upgrade.conclusion == 'success'"
+        working-directory: step_06
+  job_008:
     name: "cron; PKG: my_first_triangle; `flutter test`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -234,7 +264,8 @@ jobs:
       - job_004
       - job_005
       - job_006
-  job_008:
+      - job_007
+  job_009:
     name: "cron; PKG: step_01; `flutter test`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -272,7 +303,8 @@ jobs:
       - job_004
       - job_005
       - job_006
-  job_009:
+      - job_007
+  job_010:
     name: "cron; PKG: step_02; `flutter test`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -310,7 +342,8 @@ jobs:
       - job_004
       - job_005
       - job_006
-  job_010:
+      - job_007
+  job_011:
     name: "cron; PKG: step_03; `flutter test`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -348,7 +381,8 @@ jobs:
       - job_004
       - job_005
       - job_006
-  job_011:
+      - job_007
+  job_012:
     name: "cron; PKG: step_04; `flutter test`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -386,7 +420,8 @@ jobs:
       - job_004
       - job_005
       - job_006
-  job_012:
+      - job_007
+  job_013:
     name: "cron; PKG: step_05; `flutter test`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -424,3 +459,43 @@ jobs:
       - job_004
       - job_005
       - job_006
+      - job_007
+  job_014:
+    name: "cron; PKG: step_06; `flutter test`"
+    runs-on: macos-latest
+    if: "github.event_name == 'schedule'"
+    steps:
+      - name: Cache Pub hosted dependencies
+        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+        with:
+          path: "~/.pub-cache/hosted"
+          key: "os:macos-latest;pub-cache-hosted;sdk:master;packages:step_06;commands:test"
+          restore-keys: |
+            os:macos-latest;pub-cache-hosted;sdk:master;packages:step_06
+            os:macos-latest;pub-cache-hosted;sdk:master
+            os:macos-latest;pub-cache-hosted
+            os:macos-latest
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@44ac965b96f18d999802d4b807e3256d5a3f9fa1
+        with:
+          channel: master
+      - id: checkout
+        name: Checkout repository
+        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
+      - id: step_06_pub_upgrade
+        name: step_06; flutter pub upgrade
+        run: flutter pub upgrade
+        if: "always() && steps.checkout.conclusion == 'success'"
+        working-directory: step_06
+      - name: step_06; flutter test
+        run: flutter test
+        if: "always() && steps.step_06_pub_upgrade.conclusion == 'success'"
+        working-directory: step_06
+    needs:
+      - job_001
+      - job_002
+      - job_003
+      - job_004
+      - job_005
+      - job_006
+      - job_007
