@@ -73,7 +73,7 @@ for PKG in ${PKGS}; do
         ;;
       test)
         echo 'flutter test'
-        flutter test || EXIT_CODE=$?
+        flutter test --enable-impeller || EXIT_CODE=$?
         ;;
       *)
         echo -e "\033[31mUnknown TASK '${TASK}' - TERMINATING JOB\033[0m"
