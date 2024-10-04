@@ -71,7 +71,6 @@ class MainApp extends ConsumerWidget {
             child: Scaffold(
               appBar: AppBar(
                 title: Text(
-                  'docs.flutter.dev/go/forge2d-workshop - '
                   'Step ${currentSection.displayStepNumber}: ${currentSection.name}',
                   style: GoogleFonts.roboto(
                     textStyle: TextStyle(

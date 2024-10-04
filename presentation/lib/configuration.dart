@@ -208,8 +208,6 @@ class SubStep {
 class Node {
   final String? directory;
   final String? file;
-  @JsonKey(name: 'file-type')
-  final String? fileType;
   final List<Node>? children;
   final String? contents;
 
@@ -218,7 +216,6 @@ class Node {
   Node({
     this.directory,
     this.file,
-    this.fileType,
     this.children,
     this.contents,
   }) {
@@ -226,13 +223,6 @@ class Node {
         (file == null || file!.isEmpty)) {
       throw ArgumentError.value(
           directory, 'directory', 'Cannot be empty if file is empty.');
-    }
-
-    if (file != null &&
-        file!.isNotEmpty &&
-        (fileType == null || fileType!.isEmpty)) {
-      throw ArgumentError.value(
-          fileType, 'fileType', 'Cannot be empty if file is not empty.');
     }
 
     if ((directory == null || directory!.isEmpty) &&

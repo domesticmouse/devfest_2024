@@ -1,7 +1,3 @@
-// Copyright 2024 The Flutter Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'configuration.dart';
@@ -170,18 +166,11 @@ Node _$NodeFromJson(Map json) => $checkedCreate(
       ($checkedConvert) {
         $checkKeys(
           json,
-          allowedKeys: const [
-            'directory',
-            'file',
-            'file-type',
-            'children',
-            'contents'
-          ],
+          allowedKeys: const ['directory', 'file', 'children', 'contents'],
         );
         final val = Node(
           directory: $checkedConvert('directory', (v) => v as String?),
           file: $checkedConvert('file', (v) => v as String?),
-          fileType: $checkedConvert('file-type', (v) => v as String?),
           children: $checkedConvert(
               'children',
               (v) => (v as List<dynamic>?)
@@ -191,13 +180,11 @@ Node _$NodeFromJson(Map json) => $checkedCreate(
         );
         return val;
       },
-      fieldKeyMap: const {'fileType': 'file-type'},
     );
 
 Map<String, dynamic> _$NodeToJson(Node instance) => <String, dynamic>{
       'directory': instance.directory,
       'file': instance.file,
-      'file-type': instance.fileType,
       'children': instance.children,
       'contents': instance.contents,
     };
