@@ -15,6 +15,20 @@
       "schedule": {
         "interval": "weekly"
       }
+    },
+    {
+      "package-ecosystem": "pub",
+      "directory": "step_01",
+      "schedule": {
+        "interval": "weekly"
+      }
+    },
+    {
+      "package-ecosystem": "pub",
+      "directory": "step_02",
+      "schedule": {
+        "interval": "weekly"
+      }
     }
   ]
 }
