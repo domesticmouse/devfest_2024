@@ -964,3 +964,100 @@ sections:
       - name: Show step 7     
         show-step: step_07
 
+  - name: Rotating in perspective
+    step-number: 8
+    steps:
+      - name: lib/main.dart
+        display-code: assets/step_08/lib/main.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: view matrix
+            base-offset: 2992 
+            extent-offset: 3049 
+            scroll-percentage: 73.0
+          - name: perspective matrix
+            base-offset: 3061 
+            extent-offset: 3106 
+            scroll-percentage: 74.0
+          - name: Field of view
+            base-offset: 3107 
+            extent-offset: 3121 
+            scroll-percentage: 74.0
+          - name: Correct for aspect ratio
+            base-offset: 3123 
+            extent-offset: 3139 
+            scroll-percentage: 74.0
+          - name: near and far planes
+            base-offset: 3141 
+            extent-offset: 3149 
+            scroll-percentage: 74.0
+          - name: All the matrices
+            base-offset: 3163 
+            extent-offset: 3203 
+            scroll-percentage: 76.0
+          - name: bottom
+            extent-offset: 3203
+            scroll-percentage: 76.0
+
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+            children:
+              - file: main.dart
+                contents: assets/step_08/lib/main.dart
+              - file: shaders.dart
+                contents: assets/step_08/lib/shaders.dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_08/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_08/pubspec.yaml
+      - name: shaders/simple.vert
+        file-type: glsl
+        display-code: assets/step_08/shaders/simple.vert
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: view and projection matrices
+            base-offset: 106 
+            extent-offset: 135 
+            scroll-percentage: 0.0
+          - name: Apply all the matrices
+            base-offset: 170 
+            extent-offset: 211 
+            scroll-percentage: 88.0
+          - name: bottom
+            extent-offset: 211
+            scroll-percentage: 88.0
+
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+          - directory: macos
+          - directory: shaders
+            children:
+              - file: simple.frag
+                contents: assets/step_08/shaders/simple.frag
+              - file: simple.vert
+                contents: assets/step_08/shaders/simple.vert
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_08/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_08/pubspec.yaml
+      - name: Show step 8
+        show-step: step_08
