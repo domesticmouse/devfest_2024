@@ -580,3 +580,151 @@ sections:
             contents: assets/step_04/pubspec.yaml
       - name: Show step 4
         show-step: step_04
+
+  - name: Quad with UV mapping
+    step-number: 5
+    steps:
+      - name: lib/main.dart
+        display-code: assets/step_05/lib/main.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: floats per index
+            base-offset: 1537 
+            extent-offset: 1556 
+            scroll-percentage: 60.0
+          - name: vertex data format
+            base-offset: 1611 
+            extent-offset: 1630 
+            scroll-percentage: 62.0
+          - name: bottom left UV
+            base-offset: 1671 
+            extent-offset: 1695 
+            scroll-percentage: 65.0
+          - name: bottom right UV
+            base-offset: 1713 
+            extent-offset: 1738 
+            scroll-percentage: 66.0
+          - name: top left UV
+            base-offset: 1756 
+            extent-offset: 1777 
+            scroll-percentage: 67.0
+          - name: top right UV
+            base-offset: 1859 
+            extent-offset: 1881 
+            scroll-percentage: 71.0
+          - name: bottom
+            extent-offset: 1881
+            scroll-percentage: 71.0
+
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+            children:
+              - file: main.dart
+                contents: assets/step_05/lib/main.dart
+              - file: shaders.dart
+                contents: assets/step_05/lib/shaders.dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_05/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_05/pubspec.yaml
+      - name: shaders/simple.vert
+        file-type: glsl
+        display-code: assets/step_05/shaders/simple.vert
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: color -> uv
+            base-offset: 37 
+            extent-offset: 69 
+            scroll-percentage: 50.0
+          - name: uv assignment
+            base-offset: 129 
+            extent-offset: 144 
+            scroll-percentage: 90.0
+          - name: bottom
+            extent-offset: 144
+            scroll-percentage: 90.0
+
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+          - directory: macos
+          - directory: shaders
+            children:
+              - file: simple.frag
+                contents: assets/step_05/shaders/simple.frag
+              - file: simple.vert
+                contents: assets/step_05/shaders/simple.vert
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_05/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_05/pubspec.yaml
+      - name: shaders/simple.frag
+        file-type: glsl
+        display-code: assets/step_05/shaders/simple.frag
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: uv varying
+            base-offset: 19 
+            extent-offset: 37 
+            scroll-percentage: 14.0
+          - name: UV colour map
+            base-offset: 60 
+            extent-offset: 251 
+            scroll-percentage: 57.0
+          - name: mix bottom left and right colours
+            base-offset: 292 
+            extent-offset: 347 
+            scroll-percentage: 86.0
+          - name: mix top left and right colours
+            base-offset: 359 
+            extent-offset: 408 
+            scroll-percentage: 93.0
+          - name: mix top and bottom colours
+            base-offset: 288 
+            extent-offset: 422 
+            scroll-percentage: 93.0
+          - name: bottom
+            extent-offset: 422
+            scroll-percentage: 93.0
+
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+          - directory: macos
+          - directory: shaders
+            children:
+              - file: simple.frag
+                contents: assets/step_05/shaders/simple.frag
+              - file: simple.vert
+                contents: assets/step_05/shaders/simple.vert
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_05/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_05/pubspec.yaml
+
+      - name: Show step 5
+        show-step: step_05
