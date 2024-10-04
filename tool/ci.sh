@@ -73,6 +73,7 @@ for PKG in ${PKGS}; do
         ;;
       test)
         echo 'flutter test'
+        flutter config --enable-native-assets
         flutter test --enable-impeller || EXIT_CODE=$?
         ;;
       *)
