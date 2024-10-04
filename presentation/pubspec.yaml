@@ -18,7 +18,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   google_fonts: ^6.2.1
   json_annotation: ^4.9.0
-  native_assets_cli: ^0.7.3
+  native_assets_cli: ^0.8.0
   path: ^1.9.0
   riverpod: ^2.5.1
   riverpod_annotation: ^2.3.5
