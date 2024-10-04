@@ -40,16 +40,16 @@ jobs:
       - name: mono_repo self validate
         run: dart pub global run mono_repo generate --validate
   job_002:
-    name: "analyze; PKGS: my_first_triangle, step_01, step_02, step_03, step_04, step_05, step_06; `dart format --output=none --set-exit-if-changed .`"
+    name: "analyze; PKGS: my_first_triangle, step_01, step_02, step_03, step_04, step_05, step_06, step_07; `dart format --output=none --set-exit-if-changed .`"
     runs-on: macos-latest
     steps:
       - name: Cache Pub hosted dependencies
         uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
         with:
           path: "~/.pub-cache/hosted"
-          key: "os:macos-latest;pub-cache-hosted;sdk:master;packages:my_first_triangle-step_01-step_02-step_03-step_04-step_05-step_06;commands:format"
+          key: "os:macos-latest;pub-cache-hosted;sdk:master;packages:my_first_triangle-step_01-step_02-step_03-step_04-step_05-step_06-step_07;commands:format"
           restore-keys: |
-            os:macos-latest;pub-cache-hosted;sdk:master;packages:my_first_triangle-step_01-step_02-step_03-step_04-step_05-step_06
+            os:macos-latest;pub-cache-hosted;sdk:master;packages:my_first_triangle-step_01-step_02-step_03-step_04-step_05-step_06-step_07
             os:macos-latest;pub-cache-hosted;sdk:master
             os:macos-latest;pub-cache-hosted
             os:macos-latest
@@ -123,17 +123,26 @@ jobs:
         run: "dart format --output=none --set-exit-if-changed ."
         if: "always() && steps.step_06_pub_upgrade.conclusion == 'success'"
         working-directory: step_06
+      - id: step_07_pub_upgrade
+        name: step_07; flutter pub upgrade
+        run: flutter pub upgrade
+        if: "always() && steps.checkout.conclusion == 'success'"
+        working-directory: step_07
+      - name: "step_07; dart format --output=none --set-exit-if-changed ."
+        run: "dart format --output=none --set-exit-if-changed ."
+        if: "always() && steps.step_07_pub_upgrade.conclusion == 'success'"
+        working-directory: step_07
   job_003:
-    name: "analyze; PKGS: my_first_triangle, step_01, step_02, step_03, step_04, step_05, step_06; `flutter analyze`"
+    name: "analyze; PKGS: my_first_triangle, step_01, step_02, step_03, step_04, step_05, step_06, step_07; `flutter analyze`"
     runs-on: macos-latest
     steps:
       - name: Cache Pub hosted dependencies
         uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
         with:
           path: "~/.pub-cache/hosted"
-          key: "os:macos-latest;pub-cache-hosted;sdk:master;packages:my_first_triangle-step_01-step_02-step_03-step_04-step_05-step_06;commands:analyze"
+          key: "os:macos-latest;pub-cache-hosted;sdk:master;packages:my_first_triangle-step_01-step_02-step_03-step_04-step_05-step_06-step_07;commands:analyze"
           restore-keys: |
-            os:macos-latest;pub-cache-hosted;sdk:master;packages:my_first_triangle-step_01-step_02-step_03-step_04-step_05-step_06
+            os:macos-latest;pub-cache-hosted;sdk:master;packages:my_first_triangle-step_01-step_02-step_03-step_04-step_05-step_06-step_07
             os:macos-latest;pub-cache-hosted;sdk:master
             os:macos-latest;pub-cache-hosted
             os:macos-latest
@@ -207,3 +216,12 @@ jobs:
         run: flutter analyze
         if: "always() && steps.step_06_pub_upgrade.conclusion == 'success'"
         working-directory: step_06
+      - id: step_07_pub_upgrade
+        name: step_07; flutter pub upgrade
+        run: flutter pub upgrade
+        if: "always() && steps.checkout.conclusion == 'success'"
+        working-directory: step_07
+      - name: step_07; flutter analyze
+        run: flutter analyze
+        if: "always() && steps.step_07_pub_upgrade.conclusion == 'success'"
+        working-directory: step_07

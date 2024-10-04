@@ -57,6 +57,13 @@
       "schedule": {
         "interval": "weekly"
       }
+    },
+    {
+      "package-ecosystem": "pub",
+      "directory": "step_07",
+      "schedule": {
+        "interval": "weekly"
+      }
     }
   ]
 }
