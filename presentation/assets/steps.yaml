@@ -725,7 +725,6 @@ sections:
             contents: assets/step_05/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
             contents: assets/step_05/pubspec.yaml
-
       - name: Show step 5
         show-step: step_05
 
@@ -832,6 +831,136 @@ sections:
             contents: assets/step_06/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
             contents: assets/step_06/pubspec.yaml
-
-      - name: Show step 6
+      - name: Show step 6      
         show-step: step_06
+
+  - name: Rotating Mandelbrot set
+    step-number: 7
+    steps:
+      - name: lib/main.dart
+        display-code: assets/step_07/lib/main.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: import math
+            base-offset: 26 
+            extent-offset: 52 
+            scroll-percentage: 0.0
+          - name: import vector math
+            base-offset: 141 
+            extent-offset: 192 
+            scroll-percentage: 0.0
+          - name: Stateless to StatefulWidget
+            base-offset: 409 
+            extent-offset: 423 
+            scroll-percentage: 13.0
+          - name: Declare animation and animation controller
+            base-offset: 606 
+            extent-offset: 672 
+            scroll-percentage: 19.0
+          - name: declare animation controller
+            base-offset: 734 
+            extent-offset: 848 
+            scroll-percentage: 24.0
+          - name: Full circle in radians
+            base-offset: 868 
+            extent-offset: 909 
+            scroll-percentage: 26.0
+          - name: AnimatedBuilder
+            base-offset: 1053 
+            extent-offset: 1107 
+            scroll-percentage: 31.0
+          - name: Pass angle into TrianglePainter
+            base-offset: 1163 
+            extent-offset: 1203 
+            scroll-percentage: 32.0
+          - name: TrianglePainter's angle
+            base-offset: 1348 
+            extent-offset: 1415 
+            scroll-percentage: 40.0
+          - name: Model matrix
+            base-offset: 2945 
+            extent-offset: 2980 
+            scroll-percentage: 74.0
+          - name: Vertex uniforms
+            base-offset: 2993 
+            extent-offset: 3015 
+            scroll-percentage: 75.0
+          - name: Vertex uniforms buffer
+            base-offset: 3028 
+            extent-offset: 3210 
+            scroll-percentage: 78.0
+          - name: Vertex uniforms buffer view
+            base-offset: 3633 
+            extent-offset: 3788 
+            scroll-percentage: 91.0
+          - name: Bind uniforms buffer
+            base-offset: 3795 
+            extent-offset: 3868 
+            scroll-percentage: 93.0
+          - name: bottom
+            extent-offset: 3868
+            scroll-percentage: 93.0
+
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+            children:
+              - file: main.dart
+                contents: assets/step_07/lib/main.dart
+              - file: shaders.dart
+                contents: assets/step_07/lib/shaders.dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_07/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_07/pubspec.yaml
+      - name: shaders/simple.vert
+        file-type: glsl
+        display-code: assets/step_07/shaders/simple.vert
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: vertex uniforms
+            base-offset: 71 
+            extent-offset: 106 
+            scroll-percentage: 0.0
+          - name: Apply model matrix
+            base-offset: 138 
+            extent-offset: 159 
+            scroll-percentage: 86.0
+          - name: bottom
+            extent-offset: 159
+            scroll-percentage: 86.0
+
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+          - directory: macos
+          - directory: shaders
+            children:
+              - file: simple.frag
+                contents: assets/step_07/shaders/simple.frag
+              - file: simple.vert
+                contents: assets/step_07/shaders/simple.vert
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_07/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_07/pubspec.yaml
+      - name: Show step 7     
+        show-step: step_07
+
