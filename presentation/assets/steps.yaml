@@ -728,3 +728,110 @@ sections:
 
       - name: Show step 5
         show-step: step_05
+
+  - name: Mandelbrot set
+    step-number: 6
+    steps:
+      - name: lib/main.dart
+        display-code: assets/step_06/lib/main.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: UV from -1 to 1
+            base-offset: 1671 
+            extent-offset: 1681 
+            scroll-percentage: 65.0
+          - name: bottom
+            extent-offset: 1681
+            scroll-percentage: 65.0
+
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+            children:
+              - file: main.dart
+                contents: assets/step_06/lib/main.dart
+              - file: shaders.dart
+                contents: assets/step_06/lib/shaders.dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_06/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_06/pubspec.yaml
+      - name: shaders/simple.frag
+        file-type: glsl
+        display-code: assets/step_06/shaders/simple.frag
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: mandelbrot set
+            base-offset: 119 
+            extent-offset: 432 
+            scroll-percentage: 68.0
+          - name: imaginary numbers as vec2
+            base-offset: 218 
+            extent-offset: 236 
+            scroll-percentage: 32.0
+          - name: Sampling UV as point on plane
+            base-offset: 179 
+            extent-offset: 214 
+            scroll-percentage: 29.0
+          - name: mandelbrot set equation
+            base-offset: 295 
+            extent-offset: 347 
+            scroll-percentage: 43.0
+          - name: escape to Infinity
+            base-offset: 353 
+            extent-offset: 373 
+            scroll-percentage: 46.0
+          - name: How long to escape?
+            base-offset: 382 
+            extent-offset: 404 
+            scroll-percentage: 50.0
+          - name: Otherwise assume collapse to zero
+            base-offset: 419 
+            extent-offset: 429 
+            scroll-percentage: 64.0
+          - name: Grayscale mandelbrot
+            base-offset: 453 
+            extent-offset: 509 
+            scroll-percentage: 86.0
+          - name: Introduce some colour
+            base-offset: 514 
+            extent-offset: 552 
+            scroll-percentage: 89.0
+          - name: bottom
+            extent-offset: 552
+            scroll-percentage: 89.0
+
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+          - directory: macos
+          - directory: shaders
+            children:
+              - file: simple.frag
+                contents: assets/step_06/shaders/simple.frag
+              - file: simple.vert
+                contents: assets/step_06/shaders/simple.vert
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_06/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_06/pubspec.yaml
+
+      - name: Show step 6
+        show-step: step_06
