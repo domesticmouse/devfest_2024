@@ -11,13 +11,6 @@
     },
     {
       "package-ecosystem": "pub",
-      "directory": "my_first_triangle",
-      "schedule": {
-        "interval": "weekly"
-      }
-    },
-    {
-      "package-ecosystem": "pub",
       "directory": "step_01",
       "schedule": {
         "interval": "weekly"
