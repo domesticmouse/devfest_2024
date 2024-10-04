@@ -11,6 +11,13 @@
     },
     {
       "package-ecosystem": "pub",
+      "directory": "presentation",
+      "schedule": {
+        "interval": "weekly"
+      }
+    },
+    {
+      "package-ecosystem": "pub",
       "directory": "step_01",
       "schedule": {
         "interval": "weekly"
