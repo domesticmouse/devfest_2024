@@ -1,5 +1,5 @@
 sections:
-  - name: Create project
+  - name: Create a triangle
     step-number: 1
     steps:
       - name: pubspec.yaml
@@ -73,7 +73,7 @@ sections:
             scroll-percentage: 78.0
           - name: bottom
             extent-offset: 184
-            scroll-percentage: 100.0
+            scroll-percentage: 78.0
         tree:
           - directory: .vscode
           - directory: android
@@ -112,7 +112,7 @@ sections:
             scroll-percentage: 83.0
           - name: bottom
             extent-offset: 93
-            scroll-percentage: 100.0
+            scroll-percentage: 83.0
         tree:
           - directory: .vscode
           - directory: android
@@ -152,7 +152,7 @@ sections:
             scroll-percentage: 83.0
           - name: bottom
             extent-offset: 87
-            scroll-percentage: 100.0
+            scroll-percentage: 83.0
         tree:
           - directory: .vscode
           - directory: android
@@ -184,7 +184,7 @@ sections:
             scroll-percentage: 80.0
           - name: bottom
             extent-offset: 345
-            scroll-percentage: 100.0
+            scroll-percentage: 80.0
         tree:
           - directory: .vscode
           - directory: android
@@ -213,7 +213,7 @@ sections:
             scroll-percentage: 20.0
           - name: bottom
             extent-offset: 137
-            scroll-percentage: 100.0
+            scroll-percentage: 20.0
         tree:
           - directory: .vscode
           - directory: android
@@ -347,7 +347,7 @@ sections:
             scroll-percentage: 99.0
           - name: bottom
             extent-offset: 2455
-            scroll-percentage: 100.0
+            scroll-percentage: 99.0
         tree:
           - directory: .vscode
           - directory: android
@@ -368,7 +368,127 @@ sections:
           - file: my_first_triangle.shaderbundle.json
             contents: assets/step_01/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_02/pubspec.yaml
+            contents: assets/step_01/pubspec.yaml
       - name: Show step 1
         show-step: step_01
 
+  - name: Add color to triangle
+    step-number: 2
+    steps:
+      - name: lib/main.dart
+        display-code: assets/step_02/lib/main.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: floatsPerVertex
+            base-offset: 1537 
+            extent-offset: 1556 
+            scroll-percentage: 64.0
+          - name: vertex data
+            base-offset: 1608 
+            extent-offset: 1729 
+            scroll-percentage: 69.0
+          - name: bottom
+            extent-offset: 1729
+            scroll-percentage: 69.0
+
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+            children:
+              - file: main.dart
+                contents: assets/step_02/lib/main.dart
+              - file: shaders.dart
+                contents: assets/step_02/lib/shaders.dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_02/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_02/pubspec.yaml
+      - name: shaders/simple.vert
+        file-type: glsl
+        display-code: assets/step_02/shaders/simple.vert
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: input params
+            base-offset: 19 
+            extent-offset: 51 
+            scroll-percentage: 30.0
+          - name: varying color
+            base-offset: 53 
+            extent-offset: 75 
+            scroll-percentage: 50.0
+          - name: assignment
+            base-offset: 135 
+            extent-offset: 155 
+            scroll-percentage: 90.0
+          - name: bottom
+            extent-offset: 155
+            scroll-percentage: 90.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+          - directory: macos
+          - directory: shaders
+            children:
+              - file: simple.frag
+                contents: assets/step_02/shaders/simple.frag
+              - file: simple.vert
+                contents: assets/step_02/shaders/simple.vert
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_02/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_02/pubspec.yaml
+      - name: shaders/simple.frag
+        file-type: glsl
+        display-code: assets/step_02/shaders/simple.frag
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: varying color
+            base-offset: 19 
+            extent-offset: 40 
+            scroll-percentage: 29.0
+          - name: frag color
+            base-offset: 79 
+            extent-offset: 113 
+            scroll-percentage: 86.0
+          - name: bottom
+            extent-offset: 113
+            scroll-percentage: 86.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+          - directory: macos
+          - directory: shaders
+            children:
+              - file: simple.frag
+                contents: assets/step_02/shaders/simple.frag
+              - file: simple.vert
+                contents: assets/step_02/shaders/simple.vert
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_02/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_02/pubspec.yaml
+      - name: Show step 2
+        show-step: step_02
