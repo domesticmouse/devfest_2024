@@ -1,0 +1,90 @@
+{
+    "Step01Vertex": {
+        "type": "vertex",
+        "file": "shaders/step_01.vert"
+    },
+    "Step01Fragment": {
+        "type": "fragment",
+        "file": "shaders/step_01.frag"
+    },
+    "Step02Vertex": {
+        "type": "vertex",
+        "file": "shaders/step_02.vert"
+    },
+    "Step02Fragment": {
+        "type": "fragment",
+        "file": "shaders/step_02.frag"
+    },
+    "Step03Vertex": {
+        "type": "vertex",
+        "file": "shaders/step_03.vert"
+    },
+    "Step03Fragment": {
+        "type": "fragment",
+        "file": "shaders/step_03.frag"
+    },
+    "Step04Vertex": {
+        "type": "vertex",
+        "file": "shaders/step_04.vert"
+    },
+    "Step04Fragment": {
+        "type": "fragment",
+        "file": "shaders/step_04.frag"
+    },
+    "Step05Vertex": {
+        "type": "vertex",
+        "file": "shaders/step_05.vert"
+    },
+    "Step05Fragment": {
+        "type": "fragment",
+        "file": "shaders/step_05.frag"
+    },
+    "Step06Vertex": {
+        "type": "vertex",
+        "file": "shaders/step_06.vert"
+    },
+    "Step06Fragment": {
+        "type": "fragment",
+        "file": "shaders/step_06.frag"
+    },
+    "Step07Vertex": {
+        "type": "vertex",
+        "file": "shaders/step_07.vert"
+    },
+    "Step07Fragment": {
+        "type": "fragment",
+        "file": "shaders/step_07.frag"
+    },
+    "Step08Vertex": {
+        "type": "vertex",
+        "file": "shaders/step_08.vert"
+    },
+    "Step08Fragment": {
+        "type": "fragment",
+        "file": "shaders/step_08.frag"
+    },
+    "Step09Vertex": {
+        "type": "vertex",
+        "file": "shaders/step_09.vert"
+    },
+    "Step09Fragment": {
+        "type": "fragment",
+        "file": "shaders/step_09.frag"
+    },
+    "Step10Vertex": {
+        "type": "vertex",
+        "file": "shaders/step_10.vert"
+    },
+    "Step10Fragment": {
+        "type": "fragment",
+        "file": "shaders/step_10.frag"
+    },
+    "Step11Vertex": {
+        "type": "vertex",
+        "file": "shaders/step_11.vert"
+    },
+    "Step11Fragment": {
+        "type": "fragment",
+        "file": "shaders/step_11.frag"
+    }
+}

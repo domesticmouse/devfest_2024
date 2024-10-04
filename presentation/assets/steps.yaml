@@ -1,0 +1,2224 @@
+sections:
+  - name: Test shaders
+    step-number: 0
+    steps:
+      - name: Shader 01
+        show-step: step_01
+      - name: Shader 02
+        show-step: step_02
+      - name: Shader 03
+        show-step: step_03
+      - name: Shader 04
+        show-step: step_04
+      - name: Shader 05
+        show-step: step_05
+      - name: Shader 06
+        show-step: step_06
+      - name: Shader 07
+        show-step: step_07
+      - name: Shader 08
+        show-step: step_08
+      - name: Shader 09
+        show-step: step_09
+      - name: Shader 10
+        show-step: step_10
+      - name: Shader 11
+        show-step: step_11
+
+  - name: Create project
+    step-number: 2
+    steps:
+      - name: Create your Flutter project
+        display-markdown: assets/markdown/01_create_project.md
+      - name: pubspec.yaml
+        display-code: assets/step_02/pubspec.yaml
+        file-type: yaml
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: Characters for UTF8 correctness
+            base-offset: 146
+            extent-offset: 164
+          - name: Flame is a game engine built atop Flutter
+            base-offset: 167
+            extent-offset: 181
+          - name: Flame Forge2D is an adaptor
+            base-offset: 184
+            extent-offset: 206
+          - name: XML is a library for easily parsing and modifying XML
+            base-offset: 237
+            extent-offset: 248
+          - name: done
+            extent-offset: 248
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: ios
+          - directory: lib
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_02/pubspec.yaml
+            file-type: yaml
+      - name: lib/main.dart
+        display-code: assets/step_02/lib/main.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: GameWidget.controlled is Flutter widget that manages a Flame game instance
+            base-offset: 103
+            extent-offset: 124
+          - name: FlameGame.new is a tear off constructor for the world's most boring game
+            base-offset: 145
+            extent-offset: 158
+          - name: done
+            extent-offset: 158
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: ios
+          - directory: lib
+            children:
+              - file: main.dart
+                contents: assets/step_02/lib/main.dart
+                file-type: dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_02/pubspec.yaml
+            file-type: yaml
+      - name: Show game step 2
+        show-step: step_02
+
+  - name: Add image assets
+    step-number: 3
+    steps:
+      - name: Download Physics Assets from Kenney.nl
+        display-markdown: assets/markdown/03_kenney_nl_download_physics_assets.md
+      - name: colored_desert.png
+        display-code: assets/step_03/assets/images/colored_desert.png
+        file-type: png
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+            children:
+              - directory: images
+                children:
+                  - file: colored_desert.png
+                    contents: assets/step_03/assets/images/colored_desert.png
+                    file-type: png
+                  - file: colored_grass.png
+                    contents: assets/step_03/assets/images/colored_grass.png
+                    file-type: png
+                  - file: colored_land.png
+                    contents: assets/step_03/assets/images/colored_land.png
+                    file-type: png
+                  - file: colored_shroom.png
+                    contents: assets/step_03/assets/images/colored_shroom.png
+                    file-type: png
+                  - file: spritesheet_aliens.png
+                    contents: assets/step_03/assets/images/spritesheet_aliens.png
+                    file-type: png
+                  - file: spritesheet_elements.png
+                    contents: assets/step_03/assets/images/spritesheet_elements.png
+                    file-type: png
+                  - file: spritesheet_tiles.png
+                    contents: assets/step_03/assets/images/spritesheet_tiles.png
+                    file-type: png
+              - file: spritesheet_aliens.xml
+                contents: assets/step_03/assets/spritesheet_aliens.xml
+                file-type: xml
+              - file: spritesheet_elements.xml
+                contents: assets/step_03/assets/spritesheet_elements.xml
+                file-type: xml
+              - file: spritesheet_tiles.xml
+                contents: assets/step_03/assets/spritesheet_tiles.xml
+                file-type: xml
+          - directory: bin
+          - directory: ios
+          - directory: lib
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_03/pubspec.yaml
+            file-type: yaml
+      - name: colored_grass.png
+        display-code: assets/step_03/assets/images/colored_grass.png
+        file-type: png
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+            children:
+              - directory: images
+                children:
+                  - file: colored_desert.png
+                    contents: assets/step_03/assets/images/colored_desert.png
+                    file-type: png
+                  - file: colored_grass.png
+                    contents: assets/step_03/assets/images/colored_grass.png
+                    file-type: png
+                  - file: colored_land.png
+                    contents: assets/step_03/assets/images/colored_land.png
+                    file-type: png
+                  - file: colored_shroom.png
+                    contents: assets/step_03/assets/images/colored_shroom.png
+                    file-type: png
+                  - file: spritesheet_aliens.png
+                    contents: assets/step_03/assets/images/spritesheet_aliens.png
+                    file-type: png
+                  - file: spritesheet_elements.png
+                    contents: assets/step_03/assets/images/spritesheet_elements.png
+                    file-type: png
+                  - file: spritesheet_tiles.png
+                    contents: assets/step_03/assets/images/spritesheet_tiles.png
+                    file-type: png
+              - file: spritesheet_aliens.xml
+                contents: assets/step_03/assets/spritesheet_aliens.xml
+                file-type: xml
+              - file: spritesheet_elements.xml
+                contents: assets/step_03/assets/spritesheet_elements.xml
+                file-type: xml
+              - file: spritesheet_tiles.xml
+                contents: assets/step_03/assets/spritesheet_tiles.xml
+                file-type: xml
+          - directory: bin
+          - directory: ios
+          - directory: lib
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_03/pubspec.yaml
+            file-type: yaml
+      - name: colored_land.png
+        display-code: assets/step_03/assets/images/colored_land.png
+        file-type: png
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+            children:
+              - directory: images
+                children:
+                  - file: colored_desert.png
+                    contents: assets/step_03/assets/images/colored_desert.png
+                    file-type: png
+                  - file: colored_grass.png
+                    contents: assets/step_03/assets/images/colored_grass.png
+                    file-type: png
+                  - file: colored_land.png
+                    contents: assets/step_03/assets/images/colored_land.png
+                    file-type: png
+                  - file: colored_shroom.png
+                    contents: assets/step_03/assets/images/colored_shroom.png
+                    file-type: png
+                  - file: spritesheet_aliens.png
+                    contents: assets/step_03/assets/images/spritesheet_aliens.png
+                    file-type: png
+                  - file: spritesheet_elements.png
+                    contents: assets/step_03/assets/images/spritesheet_elements.png
+                    file-type: png
+                  - file: spritesheet_tiles.png
+                    contents: assets/step_03/assets/images/spritesheet_tiles.png
+                    file-type: png
+              - file: spritesheet_aliens.xml
+                contents: assets/step_03/assets/spritesheet_aliens.xml
+                file-type: xml
+              - file: spritesheet_elements.xml
+                contents: assets/step_03/assets/spritesheet_elements.xml
+                file-type: xml
+              - file: spritesheet_tiles.xml
+                contents: assets/step_03/assets/spritesheet_tiles.xml
+                file-type: xml
+          - directory: bin
+          - directory: ios
+          - directory: lib
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_03/pubspec.yaml
+            file-type: yaml
+      - name: colored_shroom.png
+        display-code: assets/step_03/assets/images/colored_shroom.png
+        file-type: png
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+            children:
+              - directory: images
+                children:
+                  - file: colored_desert.png
+                    contents: assets/step_03/assets/images/colored_desert.png
+                    file-type: png
+                  - file: colored_grass.png
+                    contents: assets/step_03/assets/images/colored_grass.png
+                    file-type: png
+                  - file: colored_land.png
+                    contents: assets/step_03/assets/images/colored_land.png
+                    file-type: png
+                  - file: colored_shroom.png
+                    contents: assets/step_03/assets/images/colored_shroom.png
+                    file-type: png
+                  - file: spritesheet_aliens.png
+                    contents: assets/step_03/assets/images/spritesheet_aliens.png
+                    file-type: png
+                  - file: spritesheet_elements.png
+                    contents: assets/step_03/assets/images/spritesheet_elements.png
+                    file-type: png
+                  - file: spritesheet_tiles.png
+                    contents: assets/step_03/assets/images/spritesheet_tiles.png
+                    file-type: png
+              - file: spritesheet_aliens.xml
+                contents: assets/step_03/assets/spritesheet_aliens.xml
+                file-type: xml
+              - file: spritesheet_elements.xml
+                contents: assets/step_03/assets/spritesheet_elements.xml
+                file-type: xml
+              - file: spritesheet_tiles.xml
+                contents: assets/step_03/assets/spritesheet_tiles.xml
+                file-type: xml
+          - directory: bin
+          - directory: ios
+          - directory: lib
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_03/pubspec.yaml
+            file-type: yaml
+      - name: spritesheet_aliens.png
+        display-code: assets/step_03/assets/images/spritesheet_aliens.png
+        file-type: png
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+            children:
+              - directory: images
+                children:
+                  - file: colored_desert.png
+                    contents: assets/step_03/assets/images/colored_desert.png
+                    file-type: png
+                  - file: colored_grass.png
+                    contents: assets/step_03/assets/images/colored_grass.png
+                    file-type: png
+                  - file: colored_land.png
+                    contents: assets/step_03/assets/images/colored_land.png
+                    file-type: png
+                  - file: colored_shroom.png
+                    contents: assets/step_03/assets/images/colored_shroom.png
+                    file-type: png
+                  - file: spritesheet_aliens.png
+                    contents: assets/step_03/assets/images/spritesheet_aliens.png
+                    file-type: png
+                  - file: spritesheet_elements.png
+                    contents: assets/step_03/assets/images/spritesheet_elements.png
+                    file-type: png
+                  - file: spritesheet_tiles.png
+                    contents: assets/step_03/assets/images/spritesheet_tiles.png
+                    file-type: png
+              - file: spritesheet_aliens.xml
+                contents: assets/step_03/assets/spritesheet_aliens.xml
+                file-type: xml
+              - file: spritesheet_elements.xml
+                contents: assets/step_03/assets/spritesheet_elements.xml
+                file-type: xml
+              - file: spritesheet_tiles.xml
+                contents: assets/step_03/assets/spritesheet_tiles.xml
+                file-type: xml
+          - directory: bin
+          - directory: ios
+          - directory: lib
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_03/pubspec.yaml
+            file-type: yaml
+      - name: spritesheet_elements.png
+        display-code: assets/step_03/assets/images/spritesheet_elements.png
+        file-type: png
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+            children:
+              - directory: images
+                children:
+                  - file: colored_desert.png
+                    contents: assets/step_03/assets/images/colored_desert.png
+                    file-type: png
+                  - file: colored_grass.png
+                    contents: assets/step_03/assets/images/colored_grass.png
+                    file-type: png
+                  - file: colored_land.png
+                    contents: assets/step_03/assets/images/colored_land.png
+                    file-type: png
+                  - file: colored_shroom.png
+                    contents: assets/step_03/assets/images/colored_shroom.png
+                    file-type: png
+                  - file: spritesheet_aliens.png
+                    contents: assets/step_03/assets/images/spritesheet_aliens.png
+                    file-type: png
+                  - file: spritesheet_elements.png
+                    contents: assets/step_03/assets/images/spritesheet_elements.png
+                    file-type: png
+                  - file: spritesheet_tiles.png
+                    contents: assets/step_03/assets/images/spritesheet_tiles.png
+                    file-type: png
+              - file: spritesheet_aliens.xml
+                contents: assets/step_03/assets/spritesheet_aliens.xml
+                file-type: xml
+              - file: spritesheet_elements.xml
+                contents: assets/step_03/assets/spritesheet_elements.xml
+                file-type: xml
+              - file: spritesheet_tiles.xml
+                contents: assets/step_03/assets/spritesheet_tiles.xml
+                file-type: xml
+          - directory: bin
+          - directory: ios
+          - directory: lib
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_03/pubspec.yaml
+            file-type: yaml
+      - name: spritesheet_tiles.png
+        display-code: assets/step_03/assets/images/spritesheet_tiles.png
+        file-type: png
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+            children:
+              - directory: images
+                children:
+                  - file: colored_desert.png
+                    contents: assets/step_03/assets/images/colored_desert.png
+                    file-type: png
+                  - file: colored_grass.png
+                    contents: assets/step_03/assets/images/colored_grass.png
+                    file-type: png
+                  - file: colored_land.png
+                    contents: assets/step_03/assets/images/colored_land.png
+                    file-type: png
+                  - file: colored_shroom.png
+                    contents: assets/step_03/assets/images/colored_shroom.png
+                    file-type: png
+                  - file: spritesheet_aliens.png
+                    contents: assets/step_03/assets/images/spritesheet_aliens.png
+                    file-type: png
+                  - file: spritesheet_elements.png
+                    contents: assets/step_03/assets/images/spritesheet_elements.png
+                    file-type: png
+                  - file: spritesheet_tiles.png
+                    contents: assets/step_03/assets/images/spritesheet_tiles.png
+                    file-type: png
+              - file: spritesheet_aliens.xml
+                contents: assets/step_03/assets/spritesheet_aliens.xml
+                file-type: xml
+              - file: spritesheet_elements.xml
+                contents: assets/step_03/assets/spritesheet_elements.xml
+                file-type: xml
+              - file: spritesheet_tiles.xml
+                contents: assets/step_03/assets/spritesheet_tiles.xml
+                file-type: xml
+          - directory: bin
+          - directory: ios
+          - directory: lib
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_03/pubspec.yaml
+            file-type: yaml
+      - name: spritesheet_aliens.xml
+        display-code: assets/step_03/assets/spritesheet_aliens.xml
+        file-type: xml
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: alienBlue_round.png
+            base-offset: 301
+            extent-offset: 320
+          - name: alientBlue X and Y
+            base-offset: 322
+            extent-offset: 336
+          - name: alienBlue width and height
+            base-offset: 337
+            extent-offset: 359
+          - name: done
+            extent-offset: 359
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+            children:
+              - directory: images
+              - file: spritesheet_aliens.xml
+                contents: assets/step_03/assets/spritesheet_aliens.xml
+                file-type: xml
+              - file: spritesheet_elements.xml
+                contents: assets/step_03/assets/spritesheet_elements.xml
+                file-type: xml
+              - file: spritesheet_tiles.xml
+                contents: assets/step_03/assets/spritesheet_tiles.xml
+                file-type: xml
+          - directory: bin
+          - directory: ios
+          - directory: lib
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_03/pubspec.yaml
+            file-type: yaml
+      - name: spritesheet_elements.xml
+        display-code: assets/step_03/assets/spritesheet_elements.xml
+        file-type: xml
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: bottom
+            extent-offset: 0
+            scroll-percentage: 100
+            scroll-seconds: 2
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+            children:
+              - directory: images
+              - file: spritesheet_aliens.xml
+                contents: assets/step_03/assets/spritesheet_aliens.xml
+                file-type: xml
+              - file: spritesheet_elements.xml
+                contents: assets/step_03/assets/spritesheet_elements.xml
+                file-type: xml
+              - file: spritesheet_tiles.xml
+                contents: assets/step_03/assets/spritesheet_tiles.xml
+                file-type: xml
+          - directory: bin
+          - directory: ios
+          - directory: lib
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_03/pubspec.yaml
+            file-type: yaml
+      - name: spritesheet_tiles.xml
+        display-code: assets/step_03/assets/spritesheet_tiles.xml
+        file-type: xml
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: ground
+            base-offset: 930
+            extent-offset: 1212
+            scroll-percentage: 76.0
+            scroll-seconds: 1
+          - name: done
+            extent-offset: 1212
+            scroll-percentage: 76.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+            children:
+              - directory: images
+              - file: spritesheet_aliens.xml
+                contents: assets/step_03/assets/spritesheet_aliens.xml
+                file-type: xml
+              - file: spritesheet_elements.xml
+                contents: assets/step_03/assets/spritesheet_elements.xml
+                file-type: xml
+              - file: spritesheet_tiles.xml
+                contents: assets/step_03/assets/spritesheet_tiles.xml
+                file-type: xml
+          - directory: bin
+          - directory: ios
+          - directory: lib
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_03/pubspec.yaml
+            file-type: yaml
+      - name: pubspec.yaml
+        display-code: assets/step_03/pubspec.yaml
+        file-type: yaml
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: "assets:"
+            base-offset: 366
+            extent-offset: 373
+          - name: flutter/assets
+            base-offset: 378
+            extent-offset: 387
+          - name: flutter/assets/images
+            base-offset: 392
+            extent-offset: 408
+          - name: done
+            extent-offset: 408
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+          - directory: bin
+          - directory: ios
+          - directory: lib
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_03/pubspec.yaml
+            file-type: yaml
+      - name: lib/components/background.dart
+        display-code: assets/step_03/lib/components/background.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: class Background
+            base-offset: 87
+            extent-offset: 97
+          - name: Background extends SpriteComponent
+            base-offset: 106
+            extent-offset: 121
+          - name: Component
+            base-offset: 112
+            extent-offset: 121
+          - name: "@override onMount"
+            base-offset: 308
+            extent-offset: 324
+          - name: Sprite
+            base-offset: 106
+            extent-offset: 112
+          - name: required super.sprite
+            base-offset: 175
+            extent-offset: 196
+          - name: super.anchor
+            base-offset: 224
+            extent-offset: 245
+          - name: super.position
+            base-offset: 257
+            extent-offset: 280
+          - name: Background HasGameReference
+            base-offset: 127
+            extent-offset: 158
+          - name: game
+            base-offset: 381
+            extent-offset: 385
+          - name: game.camera.visibleWorldRect.width
+            base-offset: 381
+            extent-offset: 415
+          - name: game.camera.visibleWorldRect.height
+            base-offset: 423
+            extent-offset: 458
+          - name: super.size
+            base-offset: 351
+            extent-offset: 374
+          - name: done
+            extent-offset: 374
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+          - directory: bin
+          - directory: ios
+          - directory: lib
+            children:
+              - directory: components
+                children:
+                  - file: background.dart
+                    contents: assets/step_03/lib/components/background.dart
+                    file-type: dart
+              - file: main.dart
+                contents: assets/step_03/lib/main.dart
+                file-type: dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_03/pubspec.yaml
+            file-type: yaml
+      - name: lib/components/game.dart
+        display-code: assets/step_03/lib/components/game.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: class MyPhysicsGame
+            base-offset: 315
+            extent-offset: 328
+          - name: extends Forge2DGame
+            base-offset: 337
+            extent-offset: 348
+          - name: "gravity is in MKS units"
+            base-offset: 394
+            extent-offset: 417
+          - name: "camera is in Fixed Resolution"
+            base-offset: 429
+            extent-offset: 497
+          - name: Scroll for onLoad
+            base-offset: 429
+            extent-offset: 497
+            scroll-percentage: 35.0
+            scroll-seconds: 1
+          - name: onLoad
+            base-offset: 650
+            extent-offset: 658
+            scroll-percentage: 35.0
+          - name: async
+            base-offset: 659
+            extent-offset: 664
+            scroll-percentage: 35.0
+          - name: await rootBundle.loadString('assets/spritesheet_aliens.xml')
+            base-offset: 982
+            extent-offset: 1042
+            scroll-percentage: 45.0
+            scroll-seconds: 1
+          - name: await rootBundle.loadString('assets/spritesheet_elements.xml')
+            base-offset: 1098
+            extent-offset: 1160
+            scroll-percentage: 48.0
+            scroll-seconds: 1
+          - name: await rootBundle.loadString('assets/spritesheet_tiles.xml')
+            base-offset: 1210
+            extent-offset: 1269
+            scroll-percentage: 51.0
+            scroll-seconds: 1
+          - name: Preposition for images.load
+            base-offset: 1210
+            extent-offset: 1269
+            scroll-percentage: 37.0
+            scroll-seconds: 1
+          - name: images.load('colored_grass.png')
+            base-offset: 751
+            extent-offset: 783
+            scroll-percentage: 37.0
+            scroll-seconds: 1
+          - name: images.load('spritesheet_aliens.png')
+            base-offset: 791
+            extent-offset: 828
+            scroll-percentage: 38.0
+            scroll-seconds: 1
+          - name: images.load('spritesheet_elements.png')
+            base-offset: 836
+            extent-offset: 875
+            scroll-percentage: 39.0
+            scroll-seconds: 1
+          - name: images.load('spritesheet_tiles.png')
+            base-offset: 883
+            extent-offset: 919
+            scroll-percentage: 41.0
+            scroll-seconds: 1
+          - name: .wait
+            base-offset: 926
+            extent-offset: 931
+            scroll-percentage: 42.0
+            scroll-seconds: 1
+          - name: await
+            base-offset: 737
+            extent-offset: 742
+            scroll-percentage: 35.0
+            scroll-seconds: 1
+          - name: desctructuring assignmet
+            base-offset: 671
+            extent-offset: 736
+            scroll-percentage: 35.0
+            scroll-seconds: 1
+          - name: "Background(sprite: Sprite(backgroundImage))"
+            base-offset: 1335
+            extent-offset: 1293
+            scroll-percentage: 54.0
+            scroll-seconds: 1
+          - name: await world.add(background)
+            base-offset: 1277
+            extent-offset: 1293
+            scroll-percentage: 54.0
+            scroll-seconds: 1
+          - name: XmlSpriteSheet(...)
+            base-offset: 946
+            extent-offset: 960
+            scroll-percentage: 44.0
+            scroll-seconds: 1
+          - name: class XmlSpriteSheet
+            base-offset: 1374
+            extent-offset: 1394
+            scroll-percentage: 62.0
+            scroll-seconds: 1
+          - name: final ui.Image image
+            base-offset: 1910
+            extent-offset: 1930
+            scroll-percentage: 80.0
+            scroll-seconds: 1
+          - name: final _rects
+            base-offset: 1934
+            extent-offset: 1965
+            scroll-percentage: 82.0
+            scroll-seconds: 1
+          - name: XmlDocument.parse
+            base-offset: 1444
+            extent-offset: 1484
+            scroll-percentage: 65.0
+            scroll-seconds: 1
+          - name: for (final node in document.xpath('//TextureAtlas/SubTexture'))
+            base-offset: 1489
+            extent-offset: 1554
+            scroll-percentage: 66.0
+            scroll-seconds: 1
+          - name: Grabbing XML attributes
+            base-offset: 1561
+            extent-offset: 1839
+            scroll-percentage: 73.0
+            scroll-seconds: 1
+          - name: _rects[name] = Rect.fromLTWH(x, y, width, height)
+            base-offset: 1846
+            extent-offset: 1895
+            scroll-percentage: 75.0
+            scroll-seconds: 1
+          - name: Sprite getSprite(String name)
+            base-offset: 1970
+            extent-offset: 1999
+            scroll-percentage: 85.0
+            scroll-seconds: 1
+          - name: Sprite(...)
+            base-offset: 2120
+            extent-offset: 2236
+            scroll-percentage: 97.0
+            scroll-seconds: 1
+          - name: done
+            extent-offset: 2236
+            scroll-percentage: 97.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+          - directory: bin
+          - directory: ios
+          - directory: lib
+            children:
+              - directory: components
+                children:
+                  - file: background.dart
+                    contents: assets/step_03/lib/components/background.dart
+                    file-type: dart
+                  - file: game.dart
+                    contents: assets/step_03/lib/components/game.dart
+                    file-type: dart
+              - file: main.dart
+                contents: assets/step_03/lib/main.dart
+                file-type: dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_03/pubspec.yaml
+            file-type: yaml
+      - name: lib/main.dart
+        display-code: assets/step_03/lib/main.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: import components/game.dart
+            base-offset: 75
+            extent-offset: 105
+          - name: MyPhysicsGame.new
+            base-offset: 177
+            extent-offset: 194
+          - name: done
+            extent-offset: 194
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+          - directory: bin
+          - directory: ios
+          - directory: lib
+            children:
+              - directory: components
+              - file: main.dart
+                contents: assets/step_03/lib/main.dart
+                file-type: dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_03/pubspec.yaml
+            file-type: yaml
+      - name: Show game step 3
+        show-step: step_03
+
+  - name: Add the ground
+    step-number: 4
+    steps:
+      - name: lib/components/ground.dart
+        display-code: assets/step_04/lib/components/ground.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: class Ground
+            base-offset: 123
+            extent-offset: 129
+            scroll-percentage: 19.0
+            scroll-seconds: 1
+          - name: groundSize configurable
+            base-offset: 92
+            extent-offset: 114
+            scroll-percentage: 11.0
+            scroll-seconds: 1
+          - name: BodyComponent
+            base-offset: 138
+            extent-offset: 151
+            scroll-percentage: 19.0
+            scroll-seconds: 1
+          - name: "package:flame_forge2d"
+            base-offset: 48
+            extent-offset: 69
+            scroll-percentage: 4.0
+            scroll-seconds: 1
+          - name: sprite arg
+            base-offset: 181
+            extent-offset: 194
+            scroll-percentage: 22.0
+            scroll-seconds: 1
+          - name: SpriteComponent
+            base-offset: 554
+            extent-offset: 735
+            scroll-percentage: 89.0
+            scroll-seconds: 1
+          - name: SpriteComponent child of BodyComponent
+            base-offset: 530
+            extent-offset: 541
+            scroll-percentage: 67.0
+            scroll-seconds: 1
+          - name: Render body false
+            base-offset: 221
+            extent-offset: 238
+            scroll-percentage: 30.0
+            scroll-seconds: 1
+          - name: Position arg
+            base-offset: 163
+            extent-offset: 179
+            scroll-percentage: 22.0
+            scroll-seconds: 1
+          - name: BodyDef
+            base-offset: 259
+            extent-offset: 339
+            scroll-percentage: 41.0
+            scroll-seconds: 1
+          - name: BodyType static
+            base-offset: 324
+            extent-offset: 339
+            scroll-percentage: 41.0
+            scroll-seconds: 1
+          - name: Shape definition
+            base-offset: 404
+            extent-offset: 418
+            scroll-percentage: 52.0
+            scroll-seconds: 1
+          - name: XY axis aligned box
+            base-offset: 420
+            extent-offset: 430
+            scroll-percentage: 52.0
+            scroll-seconds: 1
+          - name: halfWidth and halfHeight
+            base-offset: 431
+            extent-offset: 461
+            scroll-percentage: 52.0
+            scroll-seconds: 1
+          - name: FixtureDefs list
+            base-offset: 351
+            extent-offset: 365
+            scroll-percentage: 44.0
+            scroll-seconds: 1
+          - name: FixtureDef
+            base-offset: 378
+            extent-offset: 389
+            scroll-percentage: 48.0
+            scroll-seconds: 1
+          - name: Friction
+            base-offset: 478
+            extent-offset: 491
+            scroll-percentage: 56.0
+            scroll-seconds: 1
+          - name: done
+            extent-offset: 491
+            scroll-percentage: 56.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+          - directory: bin
+          - directory: ios
+          - directory: lib
+            children:
+              - directory: components
+                children:
+                  - file: background.dart
+                    contents: assets/step_04/lib/components/background.dart
+                    file-type: dart
+                  - file: game.dart
+                    contents: assets/step_04/lib/components/game.dart
+                    file-type: dart
+                  - file: ground.dart
+                    contents: assets/step_04/lib/components/ground.dart
+                    file-type: dart
+              - file: main.dart
+                contents: assets/step_04/lib/main.dart
+                file-type: dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_04/pubspec.yaml
+            file-type: yaml
+      - name: lib/components/game.dart
+        display-code: assets/step_04/lib/components/game.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: import ground.dart
+            base-offset: 308
+            extent-offset: 329
+            scroll-percentage: 0
+          - name: pre-position for await addGround()
+            base-offset: 308
+            extent-offset: 329
+            scroll-percentage: 47.0
+            scroll-seconds: 1
+          - name: await addGround()
+            base-offset: 1365
+            extent-offset: 1383
+            scroll-percentage: 47.0
+          - name: addGround() defn
+            base-offset: 1419
+            extent-offset: 1443
+            scroll-percentage: 53.0
+            scroll-seconds: 1
+          - name: world.addAll
+            base-offset: 1457
+            extent-offset: 1469
+            scroll-percentage: 54.0
+            scroll-seconds: 1
+          - name: Start of list
+            base-offset: 1470
+            extent-offset: 1471
+            scroll-percentage: 54.0
+            scroll-seconds: 1
+          - name: for loop
+            base-offset: 1478
+            extent-offset: 1481
+            scroll-percentage: 55.0
+            scroll-seconds: 1
+          - name: start at left of screen
+            base-offset: 1483
+            extent-offset: 1519
+            scroll-percentage: 55.0
+            scroll-seconds: 1
+          - name: while ever we have screen real estate
+            base-offset: 1531
+            extent-offset: 1577
+            scroll-percentage: 56.0
+            scroll-seconds: 1
+          - name: walk to the right
+            base-offset: 1589
+            extent-offset: 1604
+            scroll-percentage: 58.0
+            scroll-seconds: 1
+          - name: add a ground component
+            base-offset: 1614
+            extent-offset: 1744
+            scroll-percentage: 62.0
+            scroll-seconds: 1
+          - name: done
+            extent-offset: 1744
+            scroll-percentage: 62.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+          - directory: bin
+          - directory: ios
+          - directory: lib
+            children:
+              - directory: components
+                children:
+                  - file: background.dart
+                    contents: assets/step_04/lib/components/background.dart
+                    file-type: dart
+                  - file: game.dart
+                    contents: assets/step_04/lib/components/game.dart
+                    file-type: dart
+                  - file: ground.dart
+                    contents: assets/step_04/lib/components/ground.dart
+                    file-type: dart
+              - file: main.dart
+                contents: assets/step_04/lib/main.dart
+                file-type: dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_04/pubspec.yaml
+            file-type: yaml
+      - name: Show game step 4
+        show-step: step_04
+  - name: Add the bricks
+    step-number: 5
+    steps:
+      - name: lib/components/brick.dart
+        display-code: assets/step_05/lib/components/brick.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: brickScale
+            base-offset: 177
+            extent-offset: 199
+            scroll-percentage: 0
+          - name: enum BrickType
+            base-offset: 202
+            extent-offset: 216
+            scroll-percentage: 0
+          - name: BrickType values
+            base-offset: 221
+            extent-offset: 404
+            scroll-percentage: 0
+          - name: BrickType attributes
+            base-offset: 408
+            extent-offset: 454
+            scroll-percentage: 0
+          - name: BrickType constructor
+            base-offset: 458
+            extent-offset: 522
+            scroll-percentage: 0
+          - name: BrickType random generator
+            base-offset: 526
+            extent-offset: 600
+            scroll-percentage: 0
+          - name: enum BrickSize
+            base-offset: 605
+            extent-offset: 619
+            scroll-percentage: 8.0
+            scroll-seconds: 1
+          - name: enum BrickDamange
+            base-offset: 1017
+            extent-offset: 1033
+            scroll-percentage: 13.0
+            scroll-seconds: 1
+          - name: brickFileNames definition
+            base-offset: 1056
+            extent-offset: 1127
+            scroll-percentage: 14.0
+            scroll-seconds: 1
+          - name: end of brickFileNames definition
+            base-offset: 1056
+            extent-offset: 1127
+            scroll-percentage: 83.0
+            scroll-seconds: 3
+          - name: class Brick
+            base-offset: 9483
+            extent-offset: 9488
+            scroll-percentage: 83.0
+            scroll-seconds: 1
+          - name: extends BodyComponent
+            base-offset: 9497
+            extent-offset: 9510
+            scroll-percentage: 83.0
+            scroll-seconds: 1
+          - name: Prepositon for Brick attributes
+            base-offset: 9497
+            extent-offset: 9510
+            scroll-percentage: 100
+            scroll-seconds: 1
+          - name: Brick attributes
+            base-offset: 10341
+            extent-offset: 10429
+            scroll-percentage: 100
+            scroll-seconds: 1
+          - name: Brick damage
+            base-offset: 10433
+            extent-offset: 10596
+            scroll-percentage: 100
+            scroll-seconds: 1
+          - name: spriteComponent attribute
+            base-offset: 10293
+            extent-offset: 10336
+            scroll-percentage: 100
+            scroll-seconds: 1
+          - name: Adding spriteComponent to Brick
+            base-offset: 10640
+            extent-offset: 10884
+            scroll-percentage: 100
+            scroll-seconds: 1
+          - name: Pre-position for body defintion
+            base-offset: 10640
+            extent-offset: 10884
+            scroll-percentage: 92.0
+            scroll-seconds: 1
+          - name: body definition
+            base-offset: 9803
+            extent-offset: 9888
+            scroll-percentage: 92.0
+          - name: BodyType.dynamic
+            base-offset: 9872
+            extent-offset: 9888
+            scroll-percentage: 92.0
+            scroll-seconds: 1
+          - name: Varying density and friction
+            base-offset: 10206
+            extent-offset: 10273
+            scroll-percentage: 92.0
+            scroll-seconds: 1
+          - name: done
+            extent-offset: 10273
+            scroll-percentage: 92.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+          - directory: bin
+          - directory: ios
+          - directory: lib
+            children:
+              - directory: components
+                children:
+                  - file: background.dart
+                    contents: assets/step_05/lib/components/background.dart
+                    file-type: dart
+                  - file: brick.dart
+                    contents: assets/step_05/lib/components/brick.dart
+                    file-type: dart
+                  - file: game.dart
+                    contents: assets/step_05/lib/components/game.dart
+                    file-type: dart
+                  - file: ground.dart
+                    contents: assets/step_05/lib/components/ground.dart
+                    file-type: dart
+              - file: main.dart
+                contents: assets/step_05/lib/main.dart
+                file-type: dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_05/pubspec.yaml
+            file-type: yaml
+      - name: lib/components/game.dart
+        display-code: assets/step_05/lib/components/game.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: import brick.dart
+            base-offset: 328
+            extent-offset: 348
+          - name: pre-position for unawaited addBricks()
+            base-offset: 328
+            extent-offset: 348
+            scroll-percentage: 37.0
+            scroll-seconds: 1
+          - name: unawaited addBricks()
+            base-offset: 1429
+            extent-offset: 1451
+            scroll-percentage: 37.0
+          - name: preposition for addBricks() defn
+            base-offset: 1429
+            extent-offset: 1451
+            scroll-percentage: 54.0
+            scroll-seconds: 1
+          - name: addBricks() defn
+            base-offset: 1859
+            extent-offset: 1889
+            scroll-percentage: 54.0
+            scroll-seconds: 1
+          - name: for loop
+            base-offset: 1896
+            extent-offset: 1923
+            scroll-percentage: 55.0
+            scroll-seconds: 1
+          - name: random factories
+            base-offset: 1932
+            extent-offset: 2007
+            scroll-percentage: 57.0
+            scroll-seconds: 1
+          - name: Preposition for Brick to add
+            base-offset: 1932
+            extent-offset: 2007
+            scroll-percentage: 72.0
+            scroll-seconds: 1
+          - name: Brick to add
+            base-offset: 2039
+            extent-offset: 2467
+            scroll-percentage: 72.0
+            scroll-seconds: 1
+          - name: random position
+            base-offset: 2136
+            extent-offset: 2273
+            scroll-percentage: 72.0
+            scroll-seconds: 1
+          - name: add brick to world
+            base-offset: 2014
+            extent-offset: 2029
+            scroll-percentage: 72.0
+            scroll-seconds: 1
+          - name: then sleep for 500ms
+            base-offset: 2484
+            extent-offset: 2545
+            scroll-percentage: 72.0
+            scroll-seconds: 1
+          - name: done
+            extent-offset: 2545
+            scroll-percentage: 72.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+          - directory: bin
+          - directory: ios
+          - directory: lib
+            children:
+              - directory: components
+                children:
+                  - file: background.dart
+                    contents: assets/step_05/lib/components/background.dart
+                    file-type: dart
+                  - file: brick.dart
+                    contents: assets/step_05/lib/components/brick.dart
+                    file-type: dart
+                  - file: game.dart
+                    contents: assets/step_05/lib/components/game.dart
+                    file-type: dart
+                  - file: ground.dart
+                    contents: assets/step_05/lib/components/ground.dart
+                    file-type: dart
+              - file: main.dart
+                contents: assets/step_05/lib/main.dart
+                file-type: dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_05/pubspec.yaml
+            file-type: yaml
+      - name: Show game step 5
+        show-step: step_05
+
+  - name: Add the player
+    step-number: 6
+    steps:
+      - name: lib/components/player.dart
+        display-code: assets/step_06/lib/components/player.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: Player configurable
+            base-offset: 226
+            extent-offset: 248
+            scroll-percentage: 0
+          - name: enum PlayerColor
+            base-offset: 251
+            extent-offset: 267
+            scroll-percentage: 0
+          - name: PlayerColor values
+            base-offset: 272
+            extent-offset: 304
+            scroll-percentage: 0
+          - name: Preposition for Player class
+            base-offset: 272
+            extent-offset: 304
+            scroll-percentage: 17.0
+            scroll-seconds: 1
+          - name: class Player
+            base-offset: 517
+            extent-offset: 523
+            scroll-percentage: 17.0
+            scroll-seconds: 1
+          - name: extends BodyComponent
+            base-offset: 532
+            extent-offset: 545
+            scroll-percentage: 17.0
+          - name: with DragCallbacks
+            base-offset: 551
+            extent-offset: 564
+            scroll-percentage: 17.0
+          - name: super constructor
+            base-offset: 643
+            extent-offset: 1055
+            scroll-percentage: 17.0
+            scroll-seconds: 1
+          - name: BodyType.static
+            base-offset: 763
+            extent-offset: 778
+            scroll-percentage: 17.0
+            scroll-seconds: 1
+          - name: Preposition for _sprite
+            base-offset: 763
+            extent-offset: 778
+            scroll-percentage: 30.0
+            scroll-seconds: 1
+          - name: _sprite
+            base-offset: 1060
+            extent-offset: 1081
+            scroll-percentage: 30.0
+            scroll-seconds: 1
+          - name: SpriteComponent
+            base-offset: 1327
+            extent-offset: 1487
+            scroll-percentage: 30.0
+            scroll-seconds: 1
+          - name: CustomPainterComponent
+            base-offset: 1140
+            extent-offset: 1319
+            scroll-percentage: 30.0
+            scroll-seconds: 1
+          - name: Preposition for update(dt)
+            base-offset: 1140
+            extent-offset: 1319
+            scroll-percentage: 46.0
+            scroll-seconds: 1
+          - name: update(dt)
+            base-offset: 1542
+            extent-offset: 1559
+            scroll-percentage: 46.0
+            scroll-seconds: 1
+          - name: if not awake
+            base-offset: 1589
+            extent-offset: 1641
+            scroll-percentage: 49.0
+            scroll-seconds: 1
+          - name: if out of frame
+            base-offset: 1647
+            extent-offset: 1791
+            scroll-percentage: 53.0
+            scroll-seconds: 1
+          - name: drag attributes
+            base-offset: 1799
+            extent-offset: 1913
+            scroll-percentage: 57.0
+            scroll-seconds: 1
+          - name: drag start callback
+            base-offset: 1934
+            extent-offset: 1967
+            scroll-percentage: 59.0
+            scroll-seconds: 1
+          - name: if static
+            base-offset: 2004
+            extent-offset: 2041
+            scroll-percentage: 60.0
+            scroll-seconds: 1
+          - name: record drag start
+            base-offset: 2050
+            extent-offset: 2082
+            scroll-percentage: 61.0
+            scroll-seconds: 1
+          - name: drag update callback
+            base-offset: 2114
+            extent-offset: 2149
+            scroll-percentage: 64.0
+            scroll-seconds: 1
+          - name: if static
+            base-offset: 2156
+            extent-offset: 2193
+            scroll-percentage: 65.0
+            scroll-seconds: 1
+          - name: record drag update
+            base-offset: 2202
+            extent-offset: 2250
+            scroll-percentage: 66.0
+            scroll-seconds: 1
+          - name: drag end callback
+            base-offset: 2282
+            extent-offset: 2311
+            scroll-percentage: 70.0
+            scroll-seconds: 1
+          - name: if static
+            base-offset: 2346
+            extent-offset: 2383
+            scroll-percentage: 71.0
+            scroll-seconds: 1
+          - name: rip out custom painter component
+            base-offset: 2392
+            extent-offset: 2501
+            scroll-percentage: 74.0
+            scroll-seconds: 1
+          - name: set dynamic
+            base-offset: 2509
+            extent-offset: 2539
+            scroll-percentage: 75.0
+            scroll-seconds: 1
+          - name: Get the player moving
+            base-offset: 2547
+            extent-offset: 2588
+            scroll-percentage: 75.0
+            scroll-seconds: 1
+          - name: give the player component a limited time alive
+            base-offset: 2596
+            extent-offset: 2642
+            scroll-percentage: 78.0
+            scroll-seconds: 1
+          - name: Preposition for class _DragPainter
+            base-offset: 2596
+            extent-offset: 2642
+            scroll-percentage: 100
+            scroll-seconds: 1
+          - name: class _DragPainter
+            base-offset: 2795
+            extent-offset: 2807
+            scroll-percentage: 100
+            scroll-seconds: 1
+          - name: extends CustomPainter
+            base-offset: 2816
+            extent-offset: 2829
+            scroll-percentage: 100
+            scroll-seconds: 1
+          - name: canvas.drawLine
+            base-offset: 3036
+            extent-offset: 3271
+            scroll-percentage: 100
+            scroll-seconds: 1
+          - name: should repaint?
+            base-offset: 3303
+            extent-offset: 3361
+            scroll-percentage: 100
+            scroll-seconds: 1
+          - name: done
+            extent-offset: 3361
+            scroll-percentage: 100
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+          - directory: bin
+          - directory: ios
+          - directory: lib
+            children:
+              - directory: components
+                children:
+                  - file: background.dart
+                    contents: assets/step_06/lib/components/background.dart
+                    file-type: dart
+                  - file: brick.dart
+                    contents: assets/step_06/lib/components/brick.dart
+                    file-type: dart
+                  - file: game.dart
+                    contents: assets/step_06/lib/components/game.dart
+                    file-type: dart
+                  - file: ground.dart
+                    contents: assets/step_06/lib/components/ground.dart
+                    file-type: dart
+                  - file: player.dart
+                    contents: assets/step_06/lib/components/player.dart
+                    file-type: dart
+              - file: main.dart
+                contents: assets/step_06/lib/main.dart
+                file-type: dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_06/pubspec.yaml
+            file-type: yaml
+      - name: lib/components/game.dart
+        display-code: assets/step_06/lib/components/game.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: import player.dart
+            base-offset: 371
+            extent-offset: 391
+            scroll-percentage: 0
+          - name: pre-position for addPlayer()
+            base-offset: 371
+            extent-offset: 391
+            scroll-percentage: 34.0
+            scroll-seconds: 1
+          - name: addPlayer()
+            base-offset: 1479
+            extent-offset: 1496
+            scroll-percentage: 34.0
+            scroll-seconds: 1
+          - name: Preposition for addPlayer() defn
+            base-offset: 1479
+            extent-offset: 1496
+            scroll-percentage: 67.0
+            scroll-seconds: 1
+          - name: addPlayer() defn
+            base-offset: 2618
+            extent-offset: 2629
+            scroll-percentage: 67.0
+            scroll-seconds: 1
+          - name: addPlayer() body
+            base-offset: 2639
+            extent-offset: 2806
+            scroll-percentage: 71.0
+            scroll-seconds: 1
+          - name: update(dt) for adding player
+            base-offset: 2823
+            extent-offset: 2833
+            scroll-percentage: 73.0
+            scroll-seconds: 1
+          - name: if there isn;t a player
+            base-offset: 2862
+            extent-offset: 2922
+            scroll-percentage: 75.0
+            scroll-seconds: 1
+          - name: Add a player
+            base-offset: 2931
+            extent-offset: 2942
+            scroll-percentage: 76.0
+            scroll-seconds: 1
+          - name: done
+            extent-offset: 2942
+            scroll-percentage: 76.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+          - directory: bin
+          - directory: ios
+          - directory: lib
+            children:
+              - directory: components
+                children:
+                  - file: background.dart
+                    contents: assets/step_06/lib/components/background.dart
+                    file-type: dart
+                  - file: brick.dart
+                    contents: assets/step_06/lib/components/brick.dart
+                    file-type: dart
+                  - file: game.dart
+                    contents: assets/step_06/lib/components/game.dart
+                    file-type: dart
+                  - file: ground.dart
+                    contents: assets/step_06/lib/components/ground.dart
+                    file-type: dart
+                  - file: player.dart
+                    contents: assets/step_06/lib/components/player.dart
+                    file-type: dart
+              - file: main.dart
+                contents: assets/step_06/lib/main.dart
+                file-type: dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_06/pubspec.yaml
+            file-type: yaml
+      - name: Show game step 6
+        show-step: step_06
+
+  - name: React to impact
+    step-number: 7
+    steps:
+      - name: lib/components/enemy.dart
+        display-code: assets/step_07/lib/components/enemy.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: import body_component_with_user_data.dart
+            base-offset: 153
+            extent-offset: 197
+            scroll-percentage: 0
+          - name: enum EnemyColor
+            base-offset: 223
+            extent-offset: 238
+            scroll-percentage: 0
+          - name: boss enemy enum
+            base-offset: 556
+            extent-offset: 572
+            scroll-percentage: 10
+            scroll-seconds: 1
+          - name: boss enemy file name
+            base-offset: 828
+            extent-offset: 852
+            scroll-percentage: 20
+            scroll-seconds: 1
+          - name: class Enemy
+            base-offset: 869
+            extent-offset: 874
+            scroll-percentage: 39.0
+            scroll-seconds: 1
+          - name: extends BodyComponentWithUserData
+            base-offset: 883
+            extent-offset: 908
+            scroll-percentage: 39.0
+            scroll-seconds: 1
+          - name: with ContactCallbacks
+            base-offset: 914
+            extent-offset: 930
+            scroll-percentage: 39.0
+            scroll-seconds: 1
+          - name: super constructor
+            base-offset: 982
+            extent-offset: 1535
+            scroll-percentage: 50.0
+            scroll-seconds: 1
+          - name: contact callback
+            base-offset: 1557
+            extent-offset: 1600
+            scroll-percentage: 68.0
+            scroll-seconds: 1
+          - name: velocity delta
+            base-offset: 1639
+            extent-offset: 1700
+            scroll-percentage: 71.0
+            scroll-seconds: 1
+          - name: collapse Vector2 to scalar
+            base-offset: 1713
+            extent-offset: 1720
+            scroll-percentage: 72.0
+            scroll-seconds: 1
+          - name: absolute value
+            base-offset: 1733
+            extent-offset: 1739
+            scroll-percentage: 73.0
+            scroll-seconds: 1
+          - name: Remove if hard enough hit
+            base-offset: 1745
+            extent-offset: 1806
+            scroll-percentage: 77.0
+            scroll-seconds: 1
+          - name: update(dt)
+            base-offset: 1867
+            extent-offset: 1884
+            scroll-percentage: 86.0
+            scroll-seconds: 1
+          - name: remove from parent if outside of screen
+            base-offset: 1914
+            extent-offset: 2058
+            scroll-percentage: 95.0
+            scroll-seconds: 1
+          - name: done
+            extent-offset: 2058
+            scroll-percentage: 95.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+          - directory: bin
+          - directory: ios
+          - directory: lib
+            children:
+              - directory: components
+                children:
+                  - file: background.dart
+                    contents: assets/step_07/lib/components/background.dart
+                    file-type: dart
+                  - file: brick.dart
+                    contents: assets/step_07/lib/components/brick.dart
+                    file-type: dart
+                  - file: enemy.dart
+                    contents: assets/step_07/lib/components/enemy.dart
+                    file-type: dart
+                  - file: game.dart
+                    contents: assets/step_07/lib/components/game.dart
+                    file-type: dart
+                  - file: ground.dart
+                    contents: assets/step_07/lib/components/ground.dart
+                    file-type: dart
+                  - file: player.dart
+                    contents: assets/step_07/lib/components/player.dart
+                    file-type: dart
+              - file: main.dart
+                contents: assets/step_07/lib/main.dart
+                file-type: dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_07/pubspec.yaml
+            file-type: yaml
+      - name: lib/components/body_component_with_user_data.dart
+        display-code: assets/step_07/lib/components/body_component_with_user_data.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: class BodyComponentWithUserData
+            base-offset: 58
+            extent-offset: 83
+            scroll-percentage: 0
+          - name: extends BodyComponent
+            base-offset: 92
+            extent-offset: 105
+            scroll-percentage: 0
+          - name: pass through constructor args
+            base-offset: 142
+            extent-offset: 273
+            scroll-percentage: 0
+          - name: override createBody
+            base-offset: 283
+            extent-offset: 312
+            scroll-percentage: 0
+          - name: add user data
+            base-offset: 364
+            extent-offset: 381
+            scroll-percentage: 0
+          - name: done
+            extent-offset: 381
+            scroll-percentage: 0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+          - directory: bin
+          - directory: ios
+          - directory: lib
+            children:
+              - directory: components
+                children:
+                  - file: background.dart
+                    contents: assets/step_07/lib/components/background.dart
+                    file-type: dart
+                  - file: body_component_with_user_data.dart
+                    contents: assets/step_07/lib/components/body_component_with_user_data.dart
+                    file-type: dart
+                  - file: brick.dart
+                    contents: assets/step_07/lib/components/brick.dart
+                    file-type: dart
+                  - file: enemy.dart
+                    contents: assets/step_07/lib/components/enemy.dart
+                    file-type: dart
+                  - file: game.dart
+                    contents: assets/step_07/lib/components/game.dart
+                    file-type: dart
+                  - file: ground.dart
+                    contents: assets/step_07/lib/components/ground.dart
+                    file-type: dart
+                  - file: player.dart
+                    contents: assets/step_07/lib/components/player.dart
+                    file-type: dart
+              - file: main.dart
+                contents: assets/step_07/lib/main.dart
+                file-type: dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_07/pubspec.yaml
+            file-type: yaml
+      - name: lib/components/ground.dart
+        display-code: assets/step_07/lib/components/ground.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: import body_component_with_user_data.dart
+            base-offset: 92
+            extent-offset: 136
+            scroll-percentage: 0
+          - name: Update base class
+            base-offset: 184
+            extent-offset: 209
+            scroll-percentage: 0
+          - name: done
+            extent-offset: 209
+            scroll-percentage: 0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+          - directory: bin
+          - directory: ios
+          - directory: lib
+            children:
+              - directory: components
+                children:
+                  - file: background.dart
+                    contents: assets/step_07/lib/components/background.dart
+                    file-type: dart
+                  - file: body_component_with_user_data.dart
+                    contents: assets/step_07/lib/components/body_component_with_user_data.dart
+                    file-type: dart
+                  - file: brick.dart
+                    contents: assets/step_07/lib/components/brick.dart
+                    file-type: dart
+                  - file: enemy.dart
+                    contents: assets/step_07/lib/components/enemy.dart
+                    file-type: dart
+                  - file: game.dart
+                    contents: assets/step_07/lib/components/game.dart
+                    file-type: dart
+                  - file: ground.dart
+                    contents: assets/step_07/lib/components/ground.dart
+                    file-type: dart
+                  - file: player.dart
+                    contents: assets/step_07/lib/components/player.dart
+                    file-type: dart
+              - file: main.dart
+                contents: assets/step_07/lib/main.dart
+                file-type: dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_07/pubspec.yaml
+            file-type: yaml
+      - name: lib/components/player.dart
+        display-code: assets/step_07/lib/components/player.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: import body_component_with_user_data.dart
+            base-offset: 226
+            extent-offset: 270
+          - name: update base class
+            base-offset: 578
+            extent-offset: 603
+            scroll-percentage: 8.0
+            scroll-seconds: 1
+          - name: done
+            extent-offset: 603
+            scroll-percentage: 8.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+          - directory: bin
+          - directory: ios
+          - directory: lib
+            children:
+              - directory: components
+                children:
+                  - file: background.dart
+                    contents: assets/step_07/lib/components/background.dart
+                    file-type: dart
+                  - file: body_component_with_user_data.dart
+                    contents: assets/step_07/lib/components/body_component_with_user_data.dart
+                    file-type: dart
+                  - file: brick.dart
+                    contents: assets/step_07/lib/components/brick.dart
+                    file-type: dart
+                  - file: enemy.dart
+                    contents: assets/step_07/lib/components/enemy.dart
+                    file-type: dart
+                  - file: game.dart
+                    contents: assets/step_07/lib/components/game.dart
+                    file-type: dart
+                  - file: ground.dart
+                    contents: assets/step_07/lib/components/ground.dart
+                    file-type: dart
+                  - file: player.dart
+                    contents: assets/step_07/lib/components/player.dart
+                    file-type: dart
+              - file: main.dart
+                contents: assets/step_07/lib/main.dart
+                file-type: dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_07/pubspec.yaml
+            file-type: yaml
+      - name: lib/components/brick.dart
+        display-code: assets/step_07/lib/components/brick.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: import body_component_with_user_data.dart
+            base-offset: 177
+            extent-offset: 221
+          - name: Preposition for update base class
+            base-offset: 177
+            extent-offset: 221
+            scroll-percentage: 83.0
+            scroll-seconds: 3
+          - name: update base class
+            base-offset: 9543
+            extent-offset: 9568
+            scroll-percentage: 83.0
+            scroll-seconds: 1
+          - name: done
+            extent-offset: 9568
+            scroll-percentage: 83.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+          - directory: bin
+          - directory: ios
+          - directory: lib
+            children:
+              - directory: components
+                children:
+                  - file: background.dart
+                    contents: assets/step_07/lib/components/background.dart
+                    file-type: dart
+                  - file: body_component_with_user_data.dart
+                    contents: assets/step_07/lib/components/body_component_with_user_data.dart
+                    file-type: dart
+                  - file: brick.dart
+                    contents: assets/step_07/lib/components/brick.dart
+                    file-type: dart
+                  - file: enemy.dart
+                    contents: assets/step_07/lib/components/enemy.dart
+                    file-type: dart
+                  - file: game.dart
+                    contents: assets/step_07/lib/components/game.dart
+                    file-type: dart
+                  - file: ground.dart
+                    contents: assets/step_07/lib/components/ground.dart
+                    file-type: dart
+                  - file: player.dart
+                    contents: assets/step_07/lib/components/player.dart
+                    file-type: dart
+              - file: main.dart
+                contents: assets/step_07/lib/main.dart
+                file-type: dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_07/pubspec.yaml
+            file-type: yaml
+      - name: lib/components/game.dart
+        display-code: assets/step_07/lib/components/game.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: import flutter/material.dart
+            base-offset: 197
+            extent-offset: 235
+            scroll-percentage: 0
+          - name: import enemy.dart
+            base-offset: 389
+            extent-offset: 409
+            scroll-percentage: 0
+          - name: preposition
+            base-offset: 389
+            extent-offset: 409
+            scroll-percentage: 20
+            scroll-seconds: 1
+          - name: Add enemies
+            base-offset: 1533
+            extent-offset: 1559
+            scroll-percentage: 20.0
+            scroll-seconds: 1
+          - name: Preposition for update(dt)
+            base-offset: 1533
+            extent-offset: 1559
+            scroll-percentage: 60.0
+            scroll-seconds: 1
+          - name: update(dt) update adding player
+            base-offset: 2949
+            extent-offset: 3100
+            scroll-percentage: 60.0
+            scroll-seconds: 1
+          - name: show win
+            base-offset: 3105
+            extent-offset: 3715
+            scroll-percentage: 71.0
+            scroll-seconds: 1
+          - name: add enemies
+            base-offset: 3729
+            extent-offset: 4275
+            scroll-percentage: 83.0
+            scroll-seconds: 1
+          - name: done
+            extent-offset: 4275
+            scroll-percentage: 83.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: assets
+          - directory: bin
+          - directory: ios
+          - directory: lib
+            children:
+              - directory: components
+                children:
+                  - file: background.dart
+                    contents: assets/step_07/lib/components/background.dart
+                    file-type: dart
+                  - file: body_component_with_user_data.dart
+                    contents: assets/step_07/lib/components/body_component_with_user_data.dart
+                    file-type: dart
+                  - file: brick.dart
+                    contents: assets/step_07/lib/components/brick.dart
+                    file-type: dart
+                  - file: enemy.dart
+                    contents: assets/step_07/lib/components/enemy.dart
+                    file-type: dart
+                  - file: game.dart
+                    contents: assets/step_07/lib/components/game.dart
+                    file-type: dart
+                  - file: ground.dart
+                    contents: assets/step_07/lib/components/ground.dart
+                    file-type: dart
+                  - file: player.dart
+                    contents: assets/step_07/lib/components/player.dart
+                    file-type: dart
+              - file: main.dart
+                contents: assets/step_07/lib/main.dart
+                file-type: dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+            file-type: gitignore
+          - file: analysis_options.yaml
+            file-type: yaml
+          - file: pubspec.yaml
+            contents: assets/step_07/pubspec.yaml
+            file-type: yaml
+      - name: Show game step 7
+        show-step: step_07
