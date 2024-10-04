@@ -277,7 +277,9 @@ class _DisplayCodeTextHelperState extends State<_DisplayCodeTextHelper> {
             ),
             children: [
               switch (widget.fileType) {
+                'glsl' => widget.highlighters.glsl.highlight(widget.content),
                 'dart' => widget.highlighters.dart.highlight(widget.content),
+                'json' => widget.highlighters.json.highlight(widget.content),
                 'yaml' => widget.highlighters.yaml.highlight(widget.content),
                 'xml' => widget.highlighters.xml.highlight(widget.content),
                 _ => TextSpan(
@@ -307,7 +309,7 @@ class _DisplayCodeTextHelperState extends State<_DisplayCodeTextHelper> {
                 TextLayoutSelectionHighlight(
                   textLayout: textLayout,
                   style: SelectionHighlightStyle(
-                    color: Color.fromARGB(255, 60, 91, 183),
+                    color: Color.fromARGB(255, 21, 40, 99),
                     borderRadius: BorderRadius.circular(4),
                   ),
                   selection: textSelection,

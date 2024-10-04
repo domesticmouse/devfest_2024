@@ -8,6 +8,33 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
+          - name: Flutter beta channel
+            base-offset: 97 
+            extent-offset: 125 
+            scroll-percentage: 22.0
+          - name: flutter_gpu
+            base-offset: 171 
+            extent-offset: 200 
+            scroll-percentage: 44.0
+          - name: flutter_gpu_shaders
+            base-offset: 203 
+            extent-offset: 230 
+            scroll-percentage: 48.0
+          - name: native_assets_cli
+            base-offset: 233 
+            extent-offset: 258 
+            scroll-percentage: 52.0
+          - name: vector_math
+            base-offset: 261 
+            extent-offset: 280 
+            scroll-percentage: 56.0
+          - name: assets build/shaderfiles
+            base-offset: 413 
+            extent-offset: 447
+            scroll-percentage: 100.0
+          - name: bottom
+            extent-offset: 447
+            scroll-percentage: 100.0
         tree:
           - directory: .vscode
           - directory: android
@@ -18,6 +45,131 @@ sections:
           - directory: shaders
           - file: .gitignore
           - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_01/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_01/pubspec.yaml
+      - name: my_first_triangle.shaderbundle.json
+        display-code: assets/step_01/my_first_triangle.shaderbundle.json
+        file-type: json
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: vertex
+            base-offset: 32 
+            extent-offset: 49 
+            scroll-percentage: 22.0
+          - name: vertex file
+            base-offset: 58 
+            extent-offset: 87 
+            scroll-percentage: 33.0
+          - name: fragment
+            base-offset: 127 
+            extent-offset: 146 
+            scroll-percentage: 67.0
+          - name: fragment file
+            base-offset: 155 
+            extent-offset: 184 
+            scroll-percentage: 78.0
+          - name: bottom
+            extent-offset: 184
+            scroll-percentage: 100.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+          - directory: macos
+          - directory: shaders
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_01/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_01/pubspec.yaml
+      - name: shaders/simple.vert
+        file-type: glsl
+        display-code: assets/step_01/shaders/simple.vert
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: version
+            base-offset: 0 
+            extent-offset: 17 
+            scroll-percentage: 0.0
+          - name: in parameters
+            base-offset: 19 
+            extent-offset: 36 
+            scroll-percentage: 33.0
+          - name: vec2 to vec4
+            base-offset: 68 
+            extent-offset: 92 
+            scroll-percentage: 83.0
+          - name: glPosition assignment
+            base-offset: 54 
+            extent-offset: 93 
+            scroll-percentage: 83.0
+          - name: bottom
+            extent-offset: 93
+            scroll-percentage: 100.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+          - directory: macos
+          - directory: shaders
+            children:
+              - file: simple.frag
+                contents: assets/step_01/shaders/simple.frag
+              - file: simple.vert
+                contents: assets/step_01/shaders/simple.vert
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_01/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_01/pubspec.yaml
+      - name: shaders/simple.frag
+        file-type: glsl
+        display-code: assets/step_01/shaders/simple.frag
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: out parameters
+            base-offset: 19 
+            extent-offset: 39 
+            scroll-percentage: 33.0
+          - name: Raw vec4 color
+            base-offset: 70 
+            extent-offset: 86 
+            scroll-percentage: 83.0
+          - name: frag_color assignment
+            base-offset: 57 
+            extent-offset: 87 
+            scroll-percentage: 83.0
+          - name: bottom
+            extent-offset: 87
+            scroll-percentage: 100.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+          - directory: macos
+          - directory: shaders
+            children:
+              - file: simple.frag
+                contents: assets/step_01/shaders/simple.frag
+              - file: simple.vert
+                contents: assets/step_01/shaders/simple.vert
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_01/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
             contents: assets/step_01/pubspec.yaml
       - name: hook/build.dart
@@ -26,6 +178,13 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
+          - name: manifestFileName
+            base-offset: 290 
+            extent-offset: 345 
+            scroll-percentage: 80.0
+          - name: bottom
+            extent-offset: 345
+            scroll-percentage: 100.0
         tree:
           - directory: .vscode
           - directory: android
@@ -38,6 +197,8 @@ sections:
           - directory: macos
           - file: .gitignore
           - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_01/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
             contents: assets/step_01/pubspec.yaml
       - name: lib/shaders.dart
@@ -46,6 +207,13 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
+          - name: shader bundle file path
+            base-offset: 85 
+            extent-offset: 137 
+            scroll-percentage: 20.0
+          - name: bottom
+            extent-offset: 137
+            scroll-percentage: 100.0
         tree:
           - directory: .vscode
           - directory: android
@@ -63,14 +231,123 @@ sections:
           - directory: windows
           - file: .gitignore
           - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_01/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_02/pubspec.yaml
+            contents: assets/step_01/pubspec.yaml
       - name: lib/main.dart
         display-code: assets/step_01/lib/main.dart
         file-type: dart
         sub-steps:
           - name: top
             extent-offset: 0
+          - name: import typed data
+            base-offset: 0 
+            extent-offset: 25 
+            scroll-percentage: 0.0
+          - name: import flutter_gpu
+            base-offset: 67 
+            extent-offset: 112 
+            scroll-percentage: 0.0
+          - name: import shaders
+            base-offset: 114 
+            extent-offset: 136 
+            scroll-percentage: 0.0
+          - name: SizedBox.expand
+            base-offset: 461 
+            extent-offset: 563 
+            scroll-percentage: 29.0
+          - name: createTexture
+            base-offset: 715 
+            extent-offset: 753 
+            scroll-percentage: 39.0
+          - name: devicePrivate
+            base-offset: 763 
+            extent-offset: 792 
+            scroll-percentage: 40.0
+          - name: size.width and size.height
+            base-offset: 794 
+            extent-offset: 831 
+            scroll-percentage: 40.0
+          - name: texture == null
+            base-offset: 838 
+            extent-offset: 917 
+            scroll-percentage: 44.0
+          - name: renderTarget
+            base-offset: 929 
+            extent-offset: 1019 
+            scroll-percentage: 47.0
+          - name: commandBuffer
+            base-offset: 1032 
+            extent-offset: 1084 
+            scroll-percentage: 49.0
+          - name: renderPass
+            base-offset: 1096 
+            extent-offset: 1153 
+            scroll-percentage: 50.0
+          - name: shaderLibrary SimpleVertex
+            base-offset: 1166 
+            extent-offset: 1202 
+            scroll-percentage: 52.0
+          - name: shaderLibrary SimpleFragment
+            base-offset: 1313 
+            extent-offset: 1351 
+            scroll-percentage: 57.0
+          - name: pipeline linking vertex and fragment
+            base-offset: 1466 
+            extent-offset: 1524 
+            scroll-percentage: 63.0
+          - name: floatsPerIndex
+            base-offset: 1537 
+            extent-offset: 1556 
+            scroll-percentage: 65.0
+          - name: vertex data
+            base-offset: 1608 
+            extent-offset: 1701 
+            scroll-percentage: 69.0
+          - name: Float32List
+            base-offset: 1579 
+            extent-offset: 1599 
+            scroll-percentage: 66.0
+          - name: vertices device buffer
+            base-offset: 1721 
+            extent-offset: 1830 
+            scroll-percentage: 74.0
+          - name: bind pipeline to renderPass
+            base-offset: 1949 
+            extent-offset: 1982 
+            scroll-percentage: 80.0
+          - name: verticesView
+            base-offset: 1995 
+            extent-offset: 2138 
+            scroll-percentage: 86.0
+          - name: bindVertexBuffer
+            base-offset: 2144 
+            extent-offset: 2171 
+            scroll-percentage: 87.0
+          - name: number of vertices
+            base-offset: 2195 
+            extent-offset: 2229 
+            scroll-percentage: 88.0
+          - name: renderPass draw
+            base-offset: 2237 
+            extent-offset: 2254 
+            scroll-percentage: 90.0
+          - name: commandBuffer submit
+            base-offset: 2261 
+            extent-offset: 2283 
+            scroll-percentage: 93.0
+          - name: Paint it on the screen
+            base-offset: 2289 
+            extent-offset: 2372 
+            scroll-percentage: 95.0
+          - name: Always repaint
+            base-offset: 2392 
+            extent-offset: 2455 
+            scroll-percentage: 99.0
+          - name: bottom
+            extent-offset: 2455
+            scroll-percentage: 100.0
         tree:
           - directory: .vscode
           - directory: android
@@ -88,6 +365,8 @@ sections:
           - directory: windows
           - file: .gitignore
           - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_01/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
             contents: assets/step_02/pubspec.yaml
       - name: Show step 1

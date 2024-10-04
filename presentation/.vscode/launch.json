@@ -10,6 +10,12 @@
             "type": "dart"
         },
         {
+            "name": "text_offset_finder",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/text_offset_finder.dart"
+        },
+        {
             "name": "presentation (profile mode)",
             "request": "launch",
             "type": "dart",
