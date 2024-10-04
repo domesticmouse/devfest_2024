@@ -532,3 +532,51 @@ sections:
             contents: assets/step_03/pubspec.yaml
       - name: Show step 3
         show-step: step_03
+
+  - name: Quad with colour issues
+    step-number: 4
+    steps:
+      - name: lib/main.dart
+        display-code: assets/step_04/lib/main.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: colour change
+            base-offset: 1674 
+            extent-offset: 1687 
+            scroll-percentage: 65.0
+          - name: colour change #2
+            base-offset: 1721 
+            extent-offset: 1735 
+            scroll-percentage: 66.0
+          - name: colour change #3
+            base-offset: 1769 
+            extent-offset: 1783 
+            scroll-percentage: 67.0
+          - name: bottom
+            extent-offset: 1783
+            scroll-percentage: 67.0
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+            children:
+              - file: main.dart
+                contents: assets/step_04/lib/main.dart
+              - file: shaders.dart
+                contents: assets/step_04/lib/shaders.dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_04/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_04/pubspec.yaml
+      - name: Show step 4
+        show-step: step_04
