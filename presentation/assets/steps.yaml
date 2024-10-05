@@ -1204,3 +1204,44 @@ sections:
             contents: assets/step_09/pubspec.yaml
       - name: Show step 9
         show-step: step_09
+
+  - name: Cull the back faces
+    step-number: 10
+    steps:
+      - name: lib/main.dart
+        display-code: assets/step_10/lib/main.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: Cull the back faces
+            base-offset: 4749 
+            extent-offset: 4795 
+            scroll-percentage: 86.0
+          - name: bottom
+            extent-offset: 4795
+            scroll-percentage: 86.0
+
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+            children:
+              - file: main.dart
+                contents: assets/step_10/lib/main.dart
+              - file: shaders.dart
+                contents: assets/step_10/lib/shaders.dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_10/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_10/pubspec.yaml
+      - name: Show step 10
+        show-step: step_10
