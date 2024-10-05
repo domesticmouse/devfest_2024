@@ -30,7 +30,7 @@ class DisplayCode extends StatefulWidget {
   final int baseOffset;
   final int extentOffset;
   final double scrollPercentage;
-  final int scrollSeconds;
+  final double scrollSeconds;
 
   @override
   State<DisplayCode> createState() => _DisplayCodeState();
@@ -138,7 +138,7 @@ class DisplayCodeText extends ConsumerStatefulWidget {
   final int baseOffset;
   final int extentOffset;
   final double scrollPercentage;
-  final int scrollSeconds;
+  final double scrollSeconds;
 
   @override
   ConsumerState<DisplayCodeText> createState() => _DisplayCodeTextState();
@@ -214,7 +214,7 @@ class _DisplayCodeTextHelper extends StatefulWidget {
   final int baseOffset;
   final int extentOffset;
   final double scrollPercentage;
-  final int scrollSeconds;
+  final double scrollSeconds;
 
   @override
   State<_DisplayCodeTextHelper> createState() => _DisplayCodeTextHelperState();
@@ -243,7 +243,7 @@ class _DisplayCodeTextHelperState extends State<_DisplayCodeTextHelper> {
         scrollController.position.maxScrollExtent *
             widget.scrollPercentage /
             100,
-        duration: Duration(seconds: widget.scrollSeconds),
+        duration: Duration(milliseconds: (widget.scrollSeconds * 1000).ceil()),
         curve: Curves.easeInOut,
       );
     } else {

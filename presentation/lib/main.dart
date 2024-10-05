@@ -93,7 +93,7 @@ class MainApp extends ConsumerWidget {
                         currentSubStep.extentOffset,
                     extentOffset: currentSubStep.extentOffset,
                     scrollPercentage: currentSubStep.scrollPercentage ?? 0,
-                    scrollSeconds: currentSubStep.scrollSeconds ?? 0,
+                    scrollSeconds: currentSubStep.scrollSeconds,
                   ),
                 (_, String markdown, _) => DisplayMarkdown(assetPath: markdown),
                 (_, _, 'step_01') => ShowStep(child: step_01.MainApp()),

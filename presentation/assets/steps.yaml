@@ -256,15 +256,18 @@ sections:
           - name: SizedBox.expand
             base-offset: 461 
             extent-offset: 563 
-            scroll-percentage: 29.0
+            scroll-percentage: 10.0
+            scroll-seconds: 1.0
           - name: createTexture
             base-offset: 715 
             extent-offset: 753 
             scroll-percentage: 39.0
+            scroll-seconds: 1.0
           - name: devicePrivate
             base-offset: 763 
             extent-offset: 792 
             scroll-percentage: 40.0
+            scroll-seconds: 1.0
           - name: size.width and size.height
             base-offset: 794 
             extent-offset: 831 
@@ -273,10 +276,12 @@ sections:
             base-offset: 838 
             extent-offset: 917 
             scroll-percentage: 44.0
+            scroll-seconds: 1.0
           - name: renderTarget
             base-offset: 929 
             extent-offset: 1019 
             scroll-percentage: 47.0
+            scroll-seconds: 1.0
           - name: commandBuffer
             base-offset: 1032 
             extent-offset: 1084 
@@ -385,6 +390,7 @@ sections:
             base-offset: 1537 
             extent-offset: 1556 
             scroll-percentage: 64.0
+            scroll-seconds: 2.0
           - name: vertex data
             base-offset: 1608 
             extent-offset: 1729 
@@ -506,6 +512,7 @@ sections:
             base-offset: 1641 
             extent-offset: 1953 
             scroll-percentage: 72.0
+            scroll-seconds: 2.0
           - name: bottom
             extent-offset: 1953
             scroll-percentage: 72.0
@@ -546,6 +553,7 @@ sections:
             base-offset: 1674 
             extent-offset: 1687 
             scroll-percentage: 65.0
+            scroll-seconds: 2.0
           - name: colour change #2
             base-offset: 1721 
             extent-offset: 1735 
@@ -594,6 +602,7 @@ sections:
             base-offset: 1537 
             extent-offset: 1556 
             scroll-percentage: 60.0
+            scroll-seconds: 2.0
           - name: vertex data format
             base-offset: 1611 
             extent-offset: 1630 
@@ -741,6 +750,7 @@ sections:
             base-offset: 1671 
             extent-offset: 1681 
             scroll-percentage: 65.0
+            scroll-seconds: 2.0
           - name: bottom
             extent-offset: 1681
             scroll-percentage: 65.0
@@ -883,6 +893,7 @@ sections:
             base-offset: 2945 
             extent-offset: 2980 
             scroll-percentage: 74.0
+            scroll-seconds: 2.0
           - name: Vertex uniforms
             base-offset: 2993 
             extent-offset: 3015 
@@ -977,6 +988,7 @@ sections:
             base-offset: 2992 
             extent-offset: 3049 
             scroll-percentage: 73.0
+            scroll-seconds: 2.0
           - name: perspective matrix
             base-offset: 3061 
             extent-offset: 3106 
@@ -1075,6 +1087,7 @@ sections:
             base-offset: 2302 
             extent-offset: 2321 
             scroll-percentage: 46.0
+            scroll-seconds: 2.0
           - name: Vertex data layout
             base-offset: 2376 
             extent-offset: 2400 
@@ -1218,6 +1231,7 @@ sections:
             base-offset: 4749 
             extent-offset: 4795 
             scroll-percentage: 86.0
+            scroll-seconds: 2.0
           - name: bottom
             extent-offset: 4795
             scroll-percentage: 86.0
@@ -1259,6 +1273,7 @@ sections:
             base-offset: 4145 
             extent-offset: 4206 
             scroll-percentage: 77.0
+            scroll-seconds: 2.0
           - name: Push the model back
             base-offset: 4269 
             extent-offset: 4273 

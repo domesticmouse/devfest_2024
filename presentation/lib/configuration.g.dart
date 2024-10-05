@@ -139,8 +139,8 @@ SubStep _$SubStepFromJson(Map json) => $checkedCreate(
               $checkedConvert('extent-offset', (v) => (v as num).toInt()),
           scrollPercentage: $checkedConvert(
               'scroll-percentage', (v) => (v as num?)?.toDouble()),
-          scrollSeconds:
-              $checkedConvert('scroll-seconds', (v) => (v as num?)?.toInt()),
+          scrollSeconds: $checkedConvert(
+              'scroll-seconds', (v) => (v as num?)?.toDouble() ?? 0.45),
         );
         return val;
       },

@@ -168,14 +168,14 @@ class SubStep {
   final double? scrollPercentage;
 
   @JsonKey(name: 'scroll-seconds')
-  final int? scrollSeconds;
+  final double scrollSeconds;
 
   SubStep({
     required this.name,
     this.baseOffset,
     required this.extentOffset,
     this.scrollPercentage,
-    this.scrollSeconds,
+    this.scrollSeconds = 0.45,
   }) {
     if (extentOffset < 0) {
       throw ArgumentError.value(
