@@ -1061,3 +1061,146 @@ sections:
             contents: assets/step_08/pubspec.yaml
       - name: Show step 8
         show-step: step_08
+
+  - name: Going to a cube
+    step-number: 9
+    steps:
+      - name: lib/main.dart
+        display-code: assets/step_09/lib/main.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: Floats per vertex
+            base-offset: 2302 
+            extent-offset: 2321 
+            scroll-percentage: 46.0
+          - name: Vertex data layout
+            base-offset: 2376 
+            extent-offset: 2400 
+            scroll-percentage: 47.0
+          - name: Back face
+            base-offset: 2408 
+            extent-offset: 2648 
+            scroll-percentage: 52.0
+          - name: Front face
+            base-offset: 2656 
+            extent-offset: 2891 
+            scroll-percentage: 56.0
+          - name: Left face
+            base-offset: 2899 
+            extent-offset: 3139 
+            scroll-percentage: 60.0
+          - name: Right face
+            base-offset: 3147 
+            extent-offset: 3382 
+            scroll-percentage: 64.0
+          - name: Bottom face
+            base-offset: 3390 
+            extent-offset: 3632 
+            scroll-percentage: 68.0
+          - name: Top face
+            base-offset: 3640 
+            extent-offset: 3873 
+            scroll-percentage: 73.0
+          - name: bottom
+            extent-offset: 3873
+            scroll-percentage: 73.0
+
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+            children:
+              - file: main.dart
+                contents: assets/step_09/lib/main.dart
+              - file: shaders.dart
+                contents: assets/step_09/lib/shaders.dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_09/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_09/pubspec.yaml
+      - name: shaders/simple.vert
+        file-type: glsl
+        display-code: assets/step_09/shaders/simple.vert
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: vertex data layout
+            base-offset: 19 
+            extent-offset: 76 
+            scroll-percentage: 38.0
+          - name: vec3 color
+            base-offset: 204 
+            extent-offset: 223 
+            scroll-percentage: 88.0
+          - name: bottom
+            extent-offset: 223
+            scroll-percentage: 88.0
+
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+          - directory: macos
+          - directory: shaders
+            children:
+              - file: simple.frag
+                contents: assets/step_09/shaders/simple.frag
+              - file: simple.vert
+                contents: assets/step_09/shaders/simple.vert
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_09/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_09/pubspec.yaml
+      - name: shaders/simple.frag
+        file-type: glsl
+        display-code: assets/step_09/shaders/simple.frag
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: vec3 color varying
+            base-offset: 19 
+            extent-offset: 39 
+            scroll-percentage: 29.0
+          - name: frag color
+            base-offset: 93 
+            extent-offset: 116 
+            scroll-percentage: 86.0
+          - name: bottom
+            extent-offset: 116
+            scroll-percentage: 86.0
+
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+          - directory: macos
+          - directory: shaders
+            children:
+              - file: simple.frag
+                contents: assets/step_09/shaders/simple.frag
+              - file: simple.vert
+                contents: assets/step_09/shaders/simple.vert
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_09/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_09/pubspec.yaml
+      - name: Show step 9
+        show-step: step_09
