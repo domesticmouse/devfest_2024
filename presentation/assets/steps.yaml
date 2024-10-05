@@ -1245,3 +1245,48 @@ sections:
             contents: assets/step_10/pubspec.yaml
       - name: Show step 10
         show-step: step_10
+
+  - name: Rotate in two axes
+    step-number: 11
+    steps:
+      - name: lib/main.dart
+        display-code: assets/step_11/lib/main.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: Rotate in two axes
+            base-offset: 4145 
+            extent-offset: 4206 
+            scroll-percentage: 77.0
+          - name: Push the model back
+            base-offset: 4269 
+            extent-offset: 4273 
+            scroll-percentage: 78.0
+          - name: bottom
+            extent-offset: 4273
+            scroll-percentage: 78.0
+
+        tree:
+          - directory: .vscode
+          - directory: android
+          - directory: hook
+          - directory: ios
+          - directory: lib
+            children:
+              - file: main.dart
+                contents: assets/step_11/lib/main.dart
+              - file: shaders.dart
+                contents: assets/step_11/lib/shaders.dart
+          - directory: linux
+          - directory: macos
+          - directory: web
+          - directory: windows
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: my_first_triangle.shaderbundle.json
+            contents: assets/step_11/my_first_triangle.shaderbundle.json
+          - file: pubspec.yaml
+            contents: assets/step_11/pubspec.yaml
+      - name: Show step 11
+        show-step: step_11
