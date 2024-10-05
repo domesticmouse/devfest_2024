@@ -34,6 +34,12 @@ class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SizedBox.expand(
