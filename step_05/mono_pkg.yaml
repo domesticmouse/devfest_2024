@@ -21,4 +21,4 @@ stages:
   # See the `mono_repo.yaml` example above for where this stage is specially
   # configured.
   - cron:
-    - test:
+    - test: --enable-impeller
