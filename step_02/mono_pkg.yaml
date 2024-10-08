@@ -14,7 +14,7 @@ stages:
     - analyze
     - format
   - unit_test:
-    - test
+    - test: --enable-impeller
   # Example cron stage which will only run for scheduled jobs (here we run
   # multiple OS configs for extra validation as an example).
   #
