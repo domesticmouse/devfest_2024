@@ -169,7 +169,7 @@ jobs:
         if: "always() && steps.step_11_pub_upgrade.conclusion == 'success'"
         working-directory: step_11
   job_003:
-    name: "analyze; PKGS: presentation, step_01, step_02, step_03, step_04, step_05, step_06, step_07, step_08, step_09, step_10, step_11; `flutter analyze`"
+    name: "analyze; PKGS: presentation, step_01, step_02, step_03, step_04, step_05, step_06, step_07, step_08, step_09, step_10, step_11; `flutter analyze --fatal-infos`"
     runs-on: macos-latest
     steps:
       - name: Cache Pub hosted dependencies
@@ -194,8 +194,8 @@ jobs:
         run: flutter pub upgrade
         if: "always() && steps.checkout.conclusion == 'success'"
         working-directory: presentation
-      - name: presentation; flutter analyze
-        run: flutter analyze
+      - name: "presentation; flutter analyze --fatal-infos"
+        run: flutter analyze --fatal-infos
         if: "always() && steps.presentation_pub_upgrade.conclusion == 'success'"
         working-directory: presentation
       - id: step_01_pub_upgrade
@@ -203,8 +203,8 @@ jobs:
         run: flutter pub upgrade
         if: "always() && steps.checkout.conclusion == 'success'"
         working-directory: step_01
-      - name: step_01; flutter analyze
-        run: flutter analyze
+      - name: "step_01; flutter analyze --fatal-infos"
+        run: flutter analyze --fatal-infos
         if: "always() && steps.step_01_pub_upgrade.conclusion == 'success'"
         working-directory: step_01
       - id: step_02_pub_upgrade
@@ -212,8 +212,8 @@ jobs:
         run: flutter pub upgrade
         if: "always() && steps.checkout.conclusion == 'success'"
         working-directory: step_02
-      - name: step_02; flutter analyze
-        run: flutter analyze
+      - name: "step_02; flutter analyze --fatal-infos"
+        run: flutter analyze --fatal-infos
         if: "always() && steps.step_02_pub_upgrade.conclusion == 'success'"
         working-directory: step_02
       - id: step_03_pub_upgrade
@@ -221,8 +221,8 @@ jobs:
         run: flutter pub upgrade
         if: "always() && steps.checkout.conclusion == 'success'"
         working-directory: step_03
-      - name: step_03; flutter analyze
-        run: flutter analyze
+      - name: "step_03; flutter analyze --fatal-infos"
+        run: flutter analyze --fatal-infos
         if: "always() && steps.step_03_pub_upgrade.conclusion == 'success'"
         working-directory: step_03
       - id: step_04_pub_upgrade
@@ -230,8 +230,8 @@ jobs:
         run: flutter pub upgrade
         if: "always() && steps.checkout.conclusion == 'success'"
         working-directory: step_04
-      - name: step_04; flutter analyze
-        run: flutter analyze
+      - name: "step_04; flutter analyze --fatal-infos"
+        run: flutter analyze --fatal-infos
         if: "always() && steps.step_04_pub_upgrade.conclusion == 'success'"
         working-directory: step_04
       - id: step_05_pub_upgrade
@@ -239,8 +239,8 @@ jobs:
         run: flutter pub upgrade
         if: "always() && steps.checkout.conclusion == 'success'"
         working-directory: step_05
-      - name: step_05; flutter analyze
-        run: flutter analyze
+      - name: "step_05; flutter analyze --fatal-infos"
+        run: flutter analyze --fatal-infos
         if: "always() && steps.step_05_pub_upgrade.conclusion == 'success'"
         working-directory: step_05
       - id: step_06_pub_upgrade
@@ -248,8 +248,8 @@ jobs:
         run: flutter pub upgrade
         if: "always() && steps.checkout.conclusion == 'success'"
         working-directory: step_06
-      - name: step_06; flutter analyze
-        run: flutter analyze
+      - name: "step_06; flutter analyze --fatal-infos"
+        run: flutter analyze --fatal-infos
         if: "always() && steps.step_06_pub_upgrade.conclusion == 'success'"
         working-directory: step_06
       - id: step_07_pub_upgrade
@@ -257,8 +257,8 @@ jobs:
         run: flutter pub upgrade
         if: "always() && steps.checkout.conclusion == 'success'"
         working-directory: step_07
-      - name: step_07; flutter analyze
-        run: flutter analyze
+      - name: "step_07; flutter analyze --fatal-infos"
+        run: flutter analyze --fatal-infos
         if: "always() && steps.step_07_pub_upgrade.conclusion == 'success'"
         working-directory: step_07
       - id: step_08_pub_upgrade
@@ -266,8 +266,8 @@ jobs:
         run: flutter pub upgrade
         if: "always() && steps.checkout.conclusion == 'success'"
         working-directory: step_08
-      - name: step_08; flutter analyze
-        run: flutter analyze
+      - name: "step_08; flutter analyze --fatal-infos"
+        run: flutter analyze --fatal-infos
         if: "always() && steps.step_08_pub_upgrade.conclusion == 'success'"
         working-directory: step_08
       - id: step_09_pub_upgrade
@@ -275,8 +275,8 @@ jobs:
         run: flutter pub upgrade
         if: "always() && steps.checkout.conclusion == 'success'"
         working-directory: step_09
-      - name: step_09; flutter analyze
-        run: flutter analyze
+      - name: "step_09; flutter analyze --fatal-infos"
+        run: flutter analyze --fatal-infos
         if: "always() && steps.step_09_pub_upgrade.conclusion == 'success'"
         working-directory: step_09
       - id: step_10_pub_upgrade
@@ -284,8 +284,8 @@ jobs:
         run: flutter pub upgrade
         if: "always() && steps.checkout.conclusion == 'success'"
         working-directory: step_10
-      - name: step_10; flutter analyze
-        run: flutter analyze
+      - name: "step_10; flutter analyze --fatal-infos"
+        run: flutter analyze --fatal-infos
         if: "always() && steps.step_10_pub_upgrade.conclusion == 'success'"
         working-directory: step_10
       - id: step_11_pub_upgrade
@@ -293,7 +293,7 @@ jobs:
         run: flutter pub upgrade
         if: "always() && steps.checkout.conclusion == 'success'"
         working-directory: step_11
-      - name: step_11; flutter analyze
-        run: flutter analyze
+      - name: "step_11; flutter analyze --fatal-infos"
+        run: flutter analyze --fatal-infos
         if: "always() && steps.step_11_pub_upgrade.conclusion == 'success'"
         working-directory: step_11

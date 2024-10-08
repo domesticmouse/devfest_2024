@@ -11,8 +11,8 @@ os:
 stages:
   # Register two jobs to run under the `analyze` stage.
   - analyze:
-    - analyze
     - format
+    - analyze: --fatal-infos
   - unit_test:
     - test: --enable-impeller
   # Example cron stage which will only run for scheduled jobs (here we run
