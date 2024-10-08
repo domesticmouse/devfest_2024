@@ -34,7 +34,7 @@ jobs:
           sdk: stable
       - id: checkout
         name: Checkout repository
-        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
+        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
       - name: mono_repo self validate
         run: dart pub global activate mono_repo 6.6.2
       - name: mono_repo self validate
@@ -59,7 +59,7 @@ jobs:
           channel: master
       - id: checkout
         name: Checkout repository
-        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
+        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
       - id: presentation_pub_upgrade
         name: presentation; flutter pub upgrade
         run: flutter pub upgrade
@@ -188,7 +188,7 @@ jobs:
           channel: master
       - id: checkout
         name: Checkout repository
-        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
+        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
       - id: presentation_pub_upgrade
         name: presentation; flutter pub upgrade
         run: flutter pub upgrade
