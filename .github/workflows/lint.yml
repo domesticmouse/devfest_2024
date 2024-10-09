@@ -297,33 +297,3 @@ jobs:
         run: flutter analyze --fatal-infos
         if: "always() && steps.step_11_pub_upgrade.conclusion == 'success'"
         working-directory: step_11
-  job_004:
-    name: "analyze; PKG: presentation; `flutter config --enable-native-assets`"
-    runs-on: macos-latest
-    steps:
-      - name: Cache Pub hosted dependencies
-        uses: actions/cache@2cdf405574d6ef1f33a1d12acccd3ae82f47b3f2
-        with:
-          path: "~/.pub-cache/hosted"
-          key: "os:macos-latest;pub-cache-hosted;sdk:master;packages:presentation;commands:command"
-          restore-keys: |
-            os:macos-latest;pub-cache-hosted;sdk:master;packages:presentation
-            os:macos-latest;pub-cache-hosted;sdk:master
-            os:macos-latest;pub-cache-hosted
-            os:macos-latest
-      - name: Setup Flutter SDK
-        uses: subosito/flutter-action@44ac965b96f18d999802d4b807e3256d5a3f9fa1
-        with:
-          channel: master
-      - id: checkout
-        name: Checkout repository
-        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
-      - id: presentation_pub_upgrade
-        name: presentation; flutter pub upgrade
-        run: flutter pub upgrade
-        if: "always() && steps.checkout.conclusion == 'success'"
-        working-directory: presentation
-      - name: "presentation; flutter config --enable-native-assets"
-        run: flutter config --enable-native-assets
-        if: "always() && steps.presentation_pub_upgrade.conclusion == 'success'"
-        working-directory: presentation

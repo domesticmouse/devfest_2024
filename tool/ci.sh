@@ -67,10 +67,6 @@ for PKG in ${PKGS}; do
         echo 'flutter analyze --fatal-infos'
         flutter analyze --fatal-infos || EXIT_CODE=$?
         ;;
-      command)
-        echo 'flutter config --enable-native-assets'
-        flutter config --enable-native-assets || EXIT_CODE=$?
-        ;;
       format)
         echo 'dart format --output=none --set-exit-if-changed .'
         dart format --output=none --set-exit-if-changed . || EXIT_CODE=$?
