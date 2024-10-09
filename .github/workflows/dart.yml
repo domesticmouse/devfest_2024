@@ -17,6 +17,36 @@ permissions: read-all
 
 jobs:
   job_001:
+    name: "unit_test; PKG: presentation; `flutter config --enable-native-assets`"
+    runs-on: macos-latest
+    steps:
+      - name: Cache Pub hosted dependencies
+        uses: actions/cache@2cdf405574d6ef1f33a1d12acccd3ae82f47b3f2
+        with:
+          path: "~/.pub-cache/hosted"
+          key: "os:macos-latest;pub-cache-hosted;sdk:master;packages:presentation;commands:command"
+          restore-keys: |
+            os:macos-latest;pub-cache-hosted;sdk:master;packages:presentation
+            os:macos-latest;pub-cache-hosted;sdk:master
+            os:macos-latest;pub-cache-hosted
+            os:macos-latest
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@44ac965b96f18d999802d4b807e3256d5a3f9fa1
+        with:
+          channel: master
+      - id: checkout
+        name: Checkout repository
+        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
+      - id: presentation_pub_upgrade
+        name: presentation; flutter pub upgrade
+        run: flutter pub upgrade
+        if: "always() && steps.checkout.conclusion == 'success'"
+        working-directory: presentation
+      - name: "presentation; flutter config --enable-native-assets"
+        run: flutter config --enable-native-assets
+        if: "always() && steps.presentation_pub_upgrade.conclusion == 'success'"
+        working-directory: presentation
+  job_002:
     name: "unit_test; PKG: presentation; `flutter test --enable-impeller`"
     runs-on: macos-latest
     steps:
@@ -46,7 +76,7 @@ jobs:
         run: flutter test --enable-impeller
         if: "always() && steps.presentation_pub_upgrade.conclusion == 'success'"
         working-directory: presentation
-  job_002:
+  job_003:
     name: "unit_test; PKG: step_01; `flutter test --enable-impeller`"
     runs-on: macos-latest
     steps:
@@ -76,7 +106,7 @@ jobs:
         run: flutter test --enable-impeller
         if: "always() && steps.step_01_pub_upgrade.conclusion == 'success'"
         working-directory: step_01
-  job_003:
+  job_004:
     name: "unit_test; PKG: step_02; `flutter test --enable-impeller`"
     runs-on: macos-latest
     steps:
@@ -106,7 +136,7 @@ jobs:
         run: flutter test --enable-impeller
         if: "always() && steps.step_02_pub_upgrade.conclusion == 'success'"
         working-directory: step_02
-  job_004:
+  job_005:
     name: "unit_test; PKG: step_03; `flutter test --enable-impeller`"
     runs-on: macos-latest
     steps:
@@ -136,7 +166,7 @@ jobs:
         run: flutter test --enable-impeller
         if: "always() && steps.step_03_pub_upgrade.conclusion == 'success'"
         working-directory: step_03
-  job_005:
+  job_006:
     name: "unit_test; PKG: step_04; `flutter test --enable-impeller`"
     runs-on: macos-latest
     steps:
@@ -166,7 +196,7 @@ jobs:
         run: flutter test --enable-impeller
         if: "always() && steps.step_04_pub_upgrade.conclusion == 'success'"
         working-directory: step_04
-  job_006:
+  job_007:
     name: "unit_test; PKG: step_05; `flutter test --enable-impeller`"
     runs-on: macos-latest
     steps:
@@ -196,7 +226,7 @@ jobs:
         run: flutter test --enable-impeller
         if: "always() && steps.step_05_pub_upgrade.conclusion == 'success'"
         working-directory: step_05
-  job_007:
+  job_008:
     name: "unit_test; PKG: step_06; `flutter test --enable-impeller`"
     runs-on: macos-latest
     steps:
@@ -226,7 +256,7 @@ jobs:
         run: flutter test --enable-impeller
         if: "always() && steps.step_06_pub_upgrade.conclusion == 'success'"
         working-directory: step_06
-  job_008:
+  job_009:
     name: "unit_test; PKG: step_07; `flutter test --enable-impeller`"
     runs-on: macos-latest
     steps:
@@ -256,7 +286,7 @@ jobs:
         run: flutter test --enable-impeller
         if: "always() && steps.step_07_pub_upgrade.conclusion == 'success'"
         working-directory: step_07
-  job_009:
+  job_010:
     name: "unit_test; PKG: step_08; `flutter test --enable-impeller`"
     runs-on: macos-latest
     steps:
@@ -286,7 +316,7 @@ jobs:
         run: flutter test --enable-impeller
         if: "always() && steps.step_08_pub_upgrade.conclusion == 'success'"
         working-directory: step_08
-  job_010:
+  job_011:
     name: "unit_test; PKG: step_09; `flutter test --enable-impeller`"
     runs-on: macos-latest
     steps:
@@ -316,7 +346,7 @@ jobs:
         run: flutter test --enable-impeller
         if: "always() && steps.step_09_pub_upgrade.conclusion == 'success'"
         working-directory: step_09
-  job_011:
+  job_012:
     name: "unit_test; PKG: step_10; `flutter test --enable-impeller`"
     runs-on: macos-latest
     steps:
@@ -346,7 +376,7 @@ jobs:
         run: flutter test --enable-impeller
         if: "always() && steps.step_10_pub_upgrade.conclusion == 'success'"
         working-directory: step_10
-  job_012:
+  job_013:
     name: "unit_test; PKG: step_11; `flutter test --enable-impeller`"
     runs-on: macos-latest
     steps:
@@ -376,7 +406,52 @@ jobs:
         run: flutter test --enable-impeller
         if: "always() && steps.step_11_pub_upgrade.conclusion == 'success'"
         working-directory: step_11
-  job_013:
+  job_014:
+    name: "cron; PKG: presentation; `flutter config --enable-native-assets`"
+    runs-on: macos-latest
+    if: "github.event_name == 'schedule'"
+    steps:
+      - name: Cache Pub hosted dependencies
+        uses: actions/cache@2cdf405574d6ef1f33a1d12acccd3ae82f47b3f2
+        with:
+          path: "~/.pub-cache/hosted"
+          key: "os:macos-latest;pub-cache-hosted;sdk:master;packages:presentation;commands:command"
+          restore-keys: |
+            os:macos-latest;pub-cache-hosted;sdk:master;packages:presentation
+            os:macos-latest;pub-cache-hosted;sdk:master
+            os:macos-latest;pub-cache-hosted
+            os:macos-latest
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@44ac965b96f18d999802d4b807e3256d5a3f9fa1
+        with:
+          channel: master
+      - id: checkout
+        name: Checkout repository
+        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
+      - id: presentation_pub_upgrade
+        name: presentation; flutter pub upgrade
+        run: flutter pub upgrade
+        if: "always() && steps.checkout.conclusion == 'success'"
+        working-directory: presentation
+      - name: "presentation; flutter config --enable-native-assets"
+        run: flutter config --enable-native-assets
+        if: "always() && steps.presentation_pub_upgrade.conclusion == 'success'"
+        working-directory: presentation
+    needs:
+      - job_001
+      - job_002
+      - job_003
+      - job_004
+      - job_005
+      - job_006
+      - job_007
+      - job_008
+      - job_009
+      - job_010
+      - job_011
+      - job_012
+      - job_013
+  job_015:
     name: "cron; PKG: presentation; `flutter test --enable-impeller`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -420,7 +495,8 @@ jobs:
       - job_010
       - job_011
       - job_012
-  job_014:
+      - job_013
+  job_016:
     name: "cron; PKG: step_01; `flutter test --enable-impeller`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -464,7 +540,8 @@ jobs:
       - job_010
       - job_011
       - job_012
-  job_015:
+      - job_013
+  job_017:
     name: "cron; PKG: step_02; `flutter test --enable-impeller`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -508,7 +585,8 @@ jobs:
       - job_010
       - job_011
       - job_012
-  job_016:
+      - job_013
+  job_018:
     name: "cron; PKG: step_03; `flutter test --enable-impeller`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -552,7 +630,8 @@ jobs:
       - job_010
       - job_011
       - job_012
-  job_017:
+      - job_013
+  job_019:
     name: "cron; PKG: step_04; `flutter test --enable-impeller`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -596,7 +675,8 @@ jobs:
       - job_010
       - job_011
       - job_012
-  job_018:
+      - job_013
+  job_020:
     name: "cron; PKG: step_05; `flutter test --enable-impeller`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -640,7 +720,8 @@ jobs:
       - job_010
       - job_011
       - job_012
-  job_019:
+      - job_013
+  job_021:
     name: "cron; PKG: step_06; `flutter test --enable-impeller`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -684,7 +765,8 @@ jobs:
       - job_010
       - job_011
       - job_012
-  job_020:
+      - job_013
+  job_022:
     name: "cron; PKG: step_07; `flutter test --enable-impeller`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -728,7 +810,8 @@ jobs:
       - job_010
       - job_011
       - job_012
-  job_021:
+      - job_013
+  job_023:
     name: "cron; PKG: step_08; `flutter test --enable-impeller`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -772,7 +855,8 @@ jobs:
       - job_010
       - job_011
       - job_012
-  job_022:
+      - job_013
+  job_024:
     name: "cron; PKG: step_09; `flutter test --enable-impeller`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -816,7 +900,8 @@ jobs:
       - job_010
       - job_011
       - job_012
-  job_023:
+      - job_013
+  job_025:
     name: "cron; PKG: step_10; `flutter test --enable-impeller`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -860,7 +945,8 @@ jobs:
       - job_010
       - job_011
       - job_012
-  job_024:
+      - job_013
+  job_026:
     name: "cron; PKG: step_11; `flutter test --enable-impeller`"
     runs-on: macos-latest
     if: "github.event_name == 'schedule'"
@@ -904,3 +990,4 @@ jobs:
       - job_010
       - job_011
       - job_012
+      - job_013
