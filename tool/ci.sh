@@ -29,8 +29,6 @@ function analyze() {
   fi
 }
 
-flutter config --enable-native-assets
-
 if [[ -z ${PKGS} ]]; then
   echo -e '\033[31mPKGS environment variable must be set! - TERMINATING JOB\033[0m'
   exit 64
