@@ -20,8 +20,6 @@ jobs:
         run: melos bootstrap
       - name: Pub get
         run: melos get
-      - name: Enable native assets
-        run: dart  --enable-experiment=native-assets
       - name: Analyze
         run: melos analyze --fatal-infos --fatal-warnings
       - name: Format
