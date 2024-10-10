@@ -26,5 +26,7 @@ jobs:
         run: melos analyze --fatal-infos --fatal-warnings
       - name: Format
         run: melos format --set-exit-if-changed
+      - name: build
+        run: melos run build
       - name: Test
         run: melos test

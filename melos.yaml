@@ -12,6 +12,9 @@ scripts:
   get:
     exec: flutter pub get
     description: Get dependencies
+  build:
+    exec: flutter build macos
+    description: Build macos
   test:
     exec: flutter test --enable-impeller
     description: Run tests
