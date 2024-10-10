@@ -1,0 +1,17 @@
+name: devfest_2024
+repository: https://github.com/domesticmouse/devfest_2024
+
+ide:
+  intellij:
+    enabled: false
+
+packages:
+  - apps/*
+
+scripts:
+  get:
+    exec: flutter pub get
+    description: Get dependencies
+  test:
+    exec: flutter test --enable-impeller
+    description: Run tests
