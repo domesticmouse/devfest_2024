@@ -14,15 +14,17 @@ jobs:
         with:
           channel: main
           cache: true
-      - name: dart pub global activate melos
+      - name: Activate melos
         run: dart pub global activate melos
-      - name: melos bootstrap
+      - name: Bootstrap
         run: melos bootstrap
+      - name: Pub get
+        run: melos get
+      - name: Enable native assets
+        run: dart  --enable-experiment=native-assets
       - name: Analyze
         run: melos analyze --fatal-infos --fatal-warnings
-      - name: Flutter pub get
-        run: melos get
-      - name: Flutter format
+      - name: Format
         run: melos format --set-exit-if-changed
-      - name: Flutter test
+      - name: Test
         run: melos test
