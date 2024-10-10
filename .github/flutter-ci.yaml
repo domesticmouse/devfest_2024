@@ -1,0 +1,29 @@
+name: Flutter CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  analyze:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: main
+          cache: true
+      - name: Install Tools
+        run: ./.github/workflows/scripts/install-tools.sh
+      - name: Analyze
+        uses: invertase/github-action-dart-analyzer@v1
+        with:
+          fatal-infos: true
+          fatal-warnings: true
+      - name: Flutter pub get
+        run: melos get
+      - name: Flutter format
+        run: melos format --set-exit-if-changed
+      - name: Flutter test
+        run: melos test
