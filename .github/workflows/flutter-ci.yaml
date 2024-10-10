@@ -20,6 +20,8 @@ jobs:
         run: melos bootstrap
       - name: Pub get
         run: melos get
+      - name: Enable native assets
+        run: flutter config --enable-native-assets
       - name: Analyze
         run: melos analyze --fatal-infos --fatal-warnings
       - name: Format
