@@ -18,84 +18,84 @@ updates:
       - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
-    directory: "/apps/presentation/"
+    directory: "/presentation/"
     schedule:
       interval: "daily"
     labels:
       - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
-    directory: "/apps/step_01/"
+    directory: "/step_01/"
     schedule:
       interval: "daily"
     labels:
       - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
-    directory: "/apps/step_02/"
+    directory: "/step_02/"
     schedule:
       interval: "daily"
     labels:
       - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
-    directory: "/apps/step_03/"
+    directory: "/step_03/"
     schedule:
       interval: "daily"
     labels:
       - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
-    directory: "/apps/step_04/"
+    directory: "/step_04/"
     schedule:
       interval: "daily"
     labels:
       - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
-    directory: "/apps/step_05/"
+    directory: "/step_05/"
     schedule:
       interval: "daily"
     labels:
       - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
-    directory: "/apps/step_06/"
+    directory: "/step_06/"
     schedule:
       interval: "daily"
     labels:
       - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
-    directory: "/apps/step_07/"
+    directory: "/step_07/"
     schedule:
       interval: "daily"
     labels:
       - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
-    directory: "/apps/step_08/"
+    directory: "/step_08/"
     schedule:
       interval: "daily"
     labels:
       - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
-    directory: "/apps/step_09/"
+    directory: "/step_09/"
     schedule:
       interval: "daily"
     labels:
       - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
-    directory: "/apps/step_10/"
+    directory: "/step_10/"
     schedule:
       interval: "daily"
     labels:
       - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
-    directory: "/apps/step_11/"
+    directory: "/step_11/"
     schedule:
       interval: "daily"
     labels:
