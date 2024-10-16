@@ -12,9 +12,18 @@ scripts:
   get:
     exec: flutter pub get
     description: Get dependencies
+  upgrade:
+    exec: flutter pub upgrade
+    description: Upgrade dependencies
+  upgrade-major-versions:
+    exec: flutter pub upgrade --major-versions
+    description: Upgrade dependencies
   build:
     exec: flutter build macos
     description: Build macos
   test:
     exec: flutter test --enable-impeller
     description: Run tests
+  clean:
+    exec: flutter clean
+    description: Clean projects
