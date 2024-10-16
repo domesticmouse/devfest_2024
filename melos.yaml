@@ -6,7 +6,8 @@ ide:
     enabled: false
 
 packages:
-  - apps/*
+  - step_*
+  - presentation
 
 scripts:
   get:
