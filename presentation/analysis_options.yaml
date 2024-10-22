@@ -2,8 +2,9 @@ include: package:flutter_lints/flutter.yaml
 
 analyzer:
   exclude:
-    - assets/**
-    - build/**
+    - "assets/**"
+    - "build/**"
+    - "lib/*.g.dart"
   plugins:
     - custom_lint
 
