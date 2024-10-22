@@ -32,12 +32,12 @@ void main() {
 class MainApp extends ConsumerWidget {
   const MainApp({super.key});
 
-  ThemeData _buildTheme(brightness) {
+  ThemeData _buildTheme(Brightness brightness) {
     var baseTheme = ThemeData(
-      brightness: systemOverlayStyle,
+      brightness: brightness,
       colorScheme: ColorScheme.fromSeed(
         seedColor: Colors.blue,
-        brightness: systemOverlayStyle,
+        brightness: brightness,
       ),
     );
 
