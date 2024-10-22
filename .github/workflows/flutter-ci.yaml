@@ -22,7 +22,7 @@ jobs:
         run: melos get
       - name: Enable native assets
         run: flutter config --enable-native-assets
-      - name: build_runner
+      - name: dart run build_runner build
         run: |
           cd presentation
           dart --enable-experiment=native-assets run build_runner build --delete-conflicting-outputs
