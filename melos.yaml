@@ -25,6 +25,9 @@ scripts:
   test:
     exec: flutter test --enable-impeller
     description: Run tests
+  fix-apply:
+    exec: dart fix --apply 
+    description: Fix issues
   clean:
     exec: flutter clean
     description: Clean projects

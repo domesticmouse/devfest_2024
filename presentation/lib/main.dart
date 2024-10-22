@@ -34,10 +34,10 @@ class MainApp extends ConsumerWidget {
 
   ThemeData _buildTheme(brightness) {
     var baseTheme = ThemeData(
-      brightness: brightness,
+      brightness: systemOverlayStyle,
       colorScheme: ColorScheme.fromSeed(
         seedColor: Colors.blue,
-        brightness: brightness,
+        brightness: systemOverlayStyle,
       ),
     );
 

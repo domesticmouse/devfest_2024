@@ -7,7 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:step_04/main.dart';
 
 void main() {
-  testWidgets('smoke test', (WidgetTester tester) async {
+  testWidgets('smoke test', (tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MainApp());
   });
