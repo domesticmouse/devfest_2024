@@ -20,6 +20,7 @@ final configurationProvider = AutoDisposeFutureProvider<Configuration>.internal(
   allTransitiveDependencies: null,
 );
 
+// ignore: deprecated_member_use
 typedef ConfigurationRef = AutoDisposeFutureProviderRef<Configuration>;
 String _$highlightersHash() => r'd30c06cf3c26ba914ee3573ff56a790917e2dc94';
 
@@ -34,6 +35,7 @@ final highlightersProvider = AutoDisposeFutureProvider<Highlighters>.internal(
   allTransitiveDependencies: null,
 );
 
+// ignore: deprecated_member_use
 typedef HighlightersRef = AutoDisposeFutureProviderRef<Highlighters>;
 String _$cursorHash() => r'9763a27c8368c949b58f6398bd639c5be4e63884';
 
