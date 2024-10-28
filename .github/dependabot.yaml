@@ -6,97 +6,69 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    labels:
-      - "autosubmit"
   # Pub ecosystem.
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
     directory: "/"
     schedule:
       interval: "daily"
-    labels:
-      - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
     directory: "/presentation/"
     schedule:
       interval: "daily"
-    labels:
-      - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
     directory: "/step_01/"
     schedule:
       interval: "daily"
-    labels:
-      - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
     directory: "/step_02/"
     schedule:
       interval: "daily"
-    labels:
-      - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
     directory: "/step_03/"
     schedule:
       interval: "daily"
-    labels:
-      - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
     directory: "/step_04/"
     schedule:
       interval: "daily"
-    labels:
-      - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
     directory: "/step_05/"
     schedule:
       interval: "daily"
-    labels:
-      - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
     directory: "/step_06/"
     schedule:
       interval: "daily"
-    labels:
-      - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
     directory: "/step_07/"
     schedule:
       interval: "daily"
-    labels:
-      - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
     directory: "/step_08/"
     schedule:
       interval: "daily"
-    labels:
-      - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
     directory: "/step_09/"
     schedule:
       interval: "daily"
-    labels:
-      - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
     directory: "/step_10/"
     schedule:
       interval: "daily"
-    labels:
-      - "autosubmit"
   - package-ecosystem: "pub"
     versioning-strategy: "increase-if-necessary"
     directory: "/step_11/"
     schedule:
       interval: "daily"
-    labels:
-      - "autosubmit"
