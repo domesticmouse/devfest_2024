@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gpu/gpu.dart' as gpu;
 import 'package:vector_math/vector_math.dart' as vm;
 
+import '../config.dart';
 import 'shaders.dart';
 
 class MainApp extends StatefulWidget {
@@ -41,8 +42,9 @@ class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SizedBox.expand(
+    return ColoredBox(
+      color: backgroundColor,
+      child: SizedBox.expand(
         child: AnimatedBuilder(
           builder: (context, child) {
             return CustomPaint(

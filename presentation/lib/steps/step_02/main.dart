@@ -7,6 +7,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter_gpu/gpu.dart' as gpu;
 
+import '../config.dart';
 import 'shaders.dart';
 
 class MainApp extends StatelessWidget {
@@ -14,8 +15,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SizedBox.expand(
+    return ColoredBox(
+      color: backgroundColor,
+      child: SizedBox.expand(
         child: CustomPaint(
           painter: TrianglePainter(),
         ),

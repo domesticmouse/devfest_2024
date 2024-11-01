@@ -5,6 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_scene/scene.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'providers.dart';
@@ -20,17 +21,21 @@ import 'steps/step_08/main.dart' as step_08;
 import 'steps/step_09/main.dart' as step_09;
 import 'steps/step_10/main.dart' as step_10;
 import 'steps/step_11/main.dart' as step_11;
+import 'steps/step_12/main.dart' as step_12;
 
 void main() {
+  final sceneReady = Scene.initializeStaticResources();
   runApp(
-    const ProviderScope(
-      child: MainApp(),
+    ProviderScope(
+      child: MainApp(sceneReady: sceneReady),
     ),
   );
 }
 
 class MainApp extends ConsumerWidget {
-  const MainApp({super.key});
+  const MainApp({super.key, required this.sceneReady});
+
+  final Future<void> sceneReady;
 
   ThemeData _buildTheme(Brightness brightness) {
     var baseTheme = ThemeData(
@@ -107,6 +112,8 @@ class MainApp extends ConsumerWidget {
                 (_, _, 'step_09') => ShowStep(child: step_09.MainApp()),
                 (_, _, 'step_10') => ShowStep(child: step_10.MainApp()),
                 (_, _, 'step_11') => ShowStep(child: step_11.MainApp()),
+                (_, _, 'step_12') =>
+                  ShowStep(child: step_12.MainApp(sceneReady: sceneReady)),
                 _ => DisplayMarkdown(
                     assetPath: 'assets/empty.txt',
                   )

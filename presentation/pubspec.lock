@@ -336,6 +336,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.6.1"
+  flutter_scene:
+    dependency: "direct main"
+    description:
+      name: flutter_scene
+      sha256: "7a3887233b7e735274d832b9b39dce5e486100d163f171320294de2dfcd6e6d2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.5.0-0"
+  flutter_scene_importer:
+    dependency: "direct main"
+    description:
+      name: flutter_scene_importer
+      sha256: e824e58939305cb39be33d0dce5261b1632530be406cddfd326f280e1492bdd1
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.0-0"
   flutter_svg:
     dependency: "direct main"
     description:
