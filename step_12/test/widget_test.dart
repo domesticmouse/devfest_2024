@@ -13,7 +13,7 @@ import 'package:step_12/main.dart';
 void main() {
   testWidgets(
     'Hexagon Explorer smoke test',
-    (WidgetTester tester) async {
+    (tester) async {
       final sceneReady = Scene.initializeStaticResources();
       // Build our app and trigger a frame.
       await tester.pumpWidget(
