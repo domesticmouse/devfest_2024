@@ -253,105 +253,105 @@ sections:
             base-offset: 114 
             extent-offset: 136 
             scroll-percentage: 0.0
-          - name: SizedBox.expand
-            base-offset: 461 
-            extent-offset: 563 
+          - name: SizedBox.expand(CustomPaint(TrianglePainter))
+            base-offset: 447
+            extent-offset: 556
             scroll-percentage: 10.0
             scroll-seconds: 1.0
-          - name: createTexture
-            base-offset: 715 
-            extent-offset: 753 
+          - name: texture = gpu.gpuContext.createTexture
+            base-offset: 718
+            extent-offset: 756
             scroll-percentage: 39.0
             scroll-seconds: 1.0
-          - name: devicePrivate
-            base-offset: 763 
-            extent-offset: 792 
+          - name: gpu.StorageMode.devicePrivate
+            base-offset: 766
+            extent-offset: 795
             scroll-percentage: 40.0
             scroll-seconds: 1.0
-          - name: size.width and size.height
-            base-offset: 794 
-            extent-offset: 831 
+          - name: size.width.ciel(), size.height.ciel()
+            base-offset: 797
+            extent-offset: 834
             scroll-percentage: 40.0
-          - name: texture == null
-            base-offset: 838 
-            extent-offset: 917 
+          - name: if (texture == null) {...}
+            base-offset: 841
+            extent-offset: 920
             scroll-percentage: 44.0
             scroll-seconds: 1.0
-          - name: renderTarget
-            base-offset: 929 
-            extent-offset: 1019 
+          - name: renderTarget = ...
+            base-offset: 932
+            extent-offset: 1022
             scroll-percentage: 47.0
             scroll-seconds: 1.0
-          - name: commandBuffer
-            base-offset: 1032 
-            extent-offset: 1084 
+          - name: commandBuffer = ...
+            base-offset: 1035
+            extent-offset: 1087
             scroll-percentage: 49.0
-          - name: renderPass
-            base-offset: 1096 
-            extent-offset: 1153 
+          - name: renderPass = ...
+            base-offset: 1099
+            extent-offset: 1156
             scroll-percentage: 50.0
-          - name: shaderLibrary SimpleVertex
-            base-offset: 1166 
-            extent-offset: 1202 
+          - name: vert = shaderLibrary['SimpleVertex']
+            base-offset: 1169
+            extent-offset: 1205
             scroll-percentage: 52.0
-          - name: shaderLibrary SimpleFragment
-            base-offset: 1313 
-            extent-offset: 1351 
+          - name: frag = shaderLibrary['SimpleFragment']
+            base-offset: 1316
+            extent-offset: 1354
             scroll-percentage: 57.0
-          - name: pipeline linking vertex and fragment
-            base-offset: 1466 
-            extent-offset: 1524 
+          - name: pipeline = gpu.GpuContext.createRenderPipeline(vert, frag)
+            base-offset: 1469
+            extent-offset: 1527
             scroll-percentage: 63.0
-          - name: floatsPerIndex
-            base-offset: 1537 
-            extent-offset: 1556 
+          - name: floatsPerVertex = 2
+            base-offset: 1540
+            extent-offset: 1559
             scroll-percentage: 65.0
           - name: vertex data
-            base-offset: 1608 
-            extent-offset: 1701 
+            base-offset: 1611
+            extent-offset: 1704
             scroll-percentage: 69.0
-          - name: Float32List
-            base-offset: 1579 
-            extent-offset: 1599 
+          - name: Float32List.fromList
+            base-offset: 1582
+            extent-offset: 1602
             scroll-percentage: 66.0
-          - name: vertices device buffer
-            base-offset: 1721 
-            extent-offset: 1830 
+          - name: verticesDeviceBuffer = ...
+            base-offset: 1724
+            extent-offset: 1833 
             scroll-percentage: 74.0
-          - name: bind pipeline to renderPass
-            base-offset: 1949 
-            extent-offset: 1982 
+          - name: renderPass.bindPipeline(pipeline)
+            base-offset: 1952
+            extent-offset: 1985 
             scroll-percentage: 80.0
-          - name: verticesView
-            base-offset: 1995 
-            extent-offset: 2138 
+          - name: verticesView = gpu.BufferView(...)
+            base-offset: 1998
+            extent-offset: 2141 
             scroll-percentage: 86.0
-          - name: bindVertexBuffer
-            base-offset: 2144 
-            extent-offset: 2171 
+          - name: renderPass.bindVertexBuffer
+            base-offset: 2147
+            extent-offset: 2174
             scroll-percentage: 87.0
-          - name: number of vertices
-            base-offset: 2195 
-            extent-offset: 2229 
+          - name: vertices.length ~/ floatsPerVertex
+            base-offset: 2198
+            extent-offset: 2232 
             scroll-percentage: 88.0
-          - name: renderPass draw
-            base-offset: 2237 
-            extent-offset: 2254 
+          - name: renderPass.draw()
+            base-offset: 2240
+            extent-offset: 2257
             scroll-percentage: 90.0
-          - name: commandBuffer submit
-            base-offset: 2261 
-            extent-offset: 2283 
+          - name: commandBuffer.submit()
+            base-offset: 2264
+            extent-offset: 2286 
             scroll-percentage: 93.0
-          - name: Paint it on the screen
-            base-offset: 2289 
-            extent-offset: 2372 
+          - name: final image = texture.asImage(); canvas.drawImage(image, Offset.zero, Paint());
+            base-offset: 2292
+            extent-offset: 2375
             scroll-percentage: 95.0
-          - name: Always repaint
-            base-offset: 2392 
-            extent-offset: 2455 
+          - name: shouldRepaint(...) => true
+            base-offset: 2400
+            extent-offset: 2458
             scroll-percentage: 99.0
           - name: bottom
-            extent-offset: 2455
+            extent-offset: 2458
             scroll-percentage: 99.0
         tree:
           - directory: .vscode
@@ -386,7 +386,7 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
-          - name: floatsPerVertex
+          - name: floatsPerVertex = 5
             base-offset: 1537 
             extent-offset: 1556 
             scroll-percentage: 64.0
@@ -508,13 +508,13 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
-          - name: vertex data
-            base-offset: 1641 
-            extent-offset: 1953 
+          - name: vertex data, Triangle 1 and Triangle 2
+            base-offset: 1644
+            extent-offset: 1956 
             scroll-percentage: 72.0
             scroll-seconds: 2.0
           - name: bottom
-            extent-offset: 1953
+            extent-offset: 1956
             scroll-percentage: 72.0
         tree:
           - directory: .vscode
@@ -549,21 +549,21 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
-          - name: colour change
-            base-offset: 1674 
-            extent-offset: 1687 
+          - name: Triangle 1 colour change r,g,b line 1
+            base-offset: 1677
+            extent-offset: 1691
             scroll-percentage: 65.0
             scroll-seconds: 2.0
-          - name: colour change #2
-            base-offset: 1721 
-            extent-offset: 1735 
+          - name: Triangle 1 colour change r,g,b line 2
+            base-offset: 1724
+            extent-offset: 1738
             scroll-percentage: 66.0
-          - name: colour change #3
-            base-offset: 1769 
-            extent-offset: 1783 
+          - name: Triangle 1 colour change r,g,b line 3
+            base-offset: 1772
+            extent-offset: 1786
             scroll-percentage: 67.0
           - name: bottom
-            extent-offset: 1783
+            extent-offset: 1786
             scroll-percentage: 67.0
         tree:
           - directory: .vscode
@@ -599,32 +599,32 @@ sections:
           - name: top
             extent-offset: 0
           - name: floats per index
-            base-offset: 1537 
-            extent-offset: 1556 
+            base-offset: 1540
+            extent-offset: 1559
             scroll-percentage: 60.0
             scroll-seconds: 2.0
-          - name: vertex data format
-            base-offset: 1611 
-            extent-offset: 1630 
+          - name: Format x,y,u,v
+            base-offset: 1614
+            extent-offset: 1633
             scroll-percentage: 62.0
-          - name: bottom left UV
-            base-offset: 1671 
-            extent-offset: 1695 
+          - name: Triangle 1 bottom left u,v
+            base-offset: 1674
+            extent-offset: 1698
             scroll-percentage: 65.0
-          - name: bottom right UV
-            base-offset: 1713 
-            extent-offset: 1738 
+          - name: Triangle 1 bottom right UV
+            base-offset: 1716
+            extent-offset: 1741
             scroll-percentage: 66.0
-          - name: top left UV
-            base-offset: 1756 
-            extent-offset: 1777 
+          - name: Triangle 1 top left UV
+            base-offset: 1759
+            extent-offset: 1780
             scroll-percentage: 67.0
-          - name: top right UV
-            base-offset: 1859 
-            extent-offset: 1881 
+          - name: Triangle 2 top right UV
+            base-offset: 1862
+            extent-offset: 1884
             scroll-percentage: 71.0
           - name: bottom
-            extent-offset: 1881
+            extent-offset: 1884
             scroll-percentage: 71.0
 
         tree:
@@ -747,12 +747,12 @@ sections:
           - name: top
             extent-offset: 0
           - name: UV from -1 to 1
-            base-offset: 1671 
-            extent-offset: 1681 
+            base-offset: 1674
+            extent-offset: 1684
             scroll-percentage: 65.0
             scroll-seconds: 2.0
           - name: bottom
-            extent-offset: 1681
+            extent-offset: 1684
             scroll-percentage: 65.0
 
         tree:
@@ -853,66 +853,66 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
-          - name: import math
+          - name: import dart math as math
             base-offset: 26 
             extent-offset: 52 
             scroll-percentage: 0.0
-          - name: import vector math
+          - name: import vector_math.dart as vm
             base-offset: 141 
             extent-offset: 192 
             scroll-percentage: 0.0
-          - name: Stateless to StatefulWidget
-            base-offset: 409 
-            extent-offset: 423 
-            scroll-percentage: 13.0
-          - name: Declare animation and animation controller
-            base-offset: 606 
-            extent-offset: 672 
-            scroll-percentage: 19.0
-          - name: declare animation controller
-            base-offset: 734 
-            extent-offset: 848 
-            scroll-percentage: 24.0
-          - name: Full circle in radians
-            base-offset: 868 
-            extent-offset: 909 
-            scroll-percentage: 26.0
-          - name: AnimatedBuilder
-            base-offset: 1053 
-            extent-offset: 1107 
-            scroll-percentage: 31.0
-          - name: Pass angle into TrianglePainter
-            base-offset: 1163 
-            extent-offset: 1203 
+          - name: StatefulWidget
+            base-offset: 285
+            extent-offset: 299 
+            scroll-percentage: 5.0
+          - name: Declare _controller and _animation
+            base-offset: 482
+            extent-offset: 556
+            scroll-percentage: 10.0
+          - name: Instantiate _controller
+            base-offset: 618
+            extent-offset: 733
+            scroll-percentage: 15.0
+          - name: Declare _animation, full circle in radians
+            base-offset: 752
+            extent-offset: 793
+            scroll-percentage: 18.0
+          - name: AnimatedBuilder widget with _animation
+            base-offset: 1133
+            extent-offset: 1369
+            scroll-percentage: 28.0
+          - name: Pass angle (_animation.value) into TrianglePainter
+            base-offset: 1249
+            extent-offset: 1289
             scroll-percentage: 32.0
           - name: TrianglePainter's angle
-            base-offset: 1348 
-            extent-offset: 1415 
+            base-offset: 1453
+            extent-offset: 1520
             scroll-percentage: 40.0
-          - name: Model matrix
-            base-offset: 2945 
-            extent-offset: 2980 
+          - name: Declare model matrix
+            base-offset: 3050
+            extent-offset: 3085
             scroll-percentage: 74.0
             scroll-seconds: 2.0
-          - name: Vertex uniforms
-            base-offset: 2993 
-            extent-offset: 3015 
+          - name: Declare vertex uniforms
+            base-offset: 3098
+            extent-offset: 3120
             scroll-percentage: 75.0
-          - name: Vertex uniforms buffer
-            base-offset: 3028 
-            extent-offset: 3210 
-            scroll-percentage: 78.0
-          - name: Vertex uniforms buffer view
-            base-offset: 3633 
-            extent-offset: 3788 
-            scroll-percentage: 91.0
+          - name: Declare vertex uniforms buffer
+            base-offset: 3133
+            extent-offset: 3315
+            scroll-percentage: 80.0
+          - name: Declare vertex uniforms buffer view
+            base-offset: 3738
+            extent-offset: 3893
+            scroll-percentage: 95.0
           - name: Bind uniforms buffer
-            base-offset: 3795 
-            extent-offset: 3868 
-            scroll-percentage: 93.0
+            base-offset: 3900
+            extent-offset: 3973
+            scroll-percentage: 100.0
           - name: bottom
-            extent-offset: 3868
-            scroll-percentage: 93.0
+            extent-offset: 3973
+            scroll-percentage: 100.0
 
         tree:
           - directory: .vscode
@@ -984,34 +984,49 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
-          - name: view matrix
-            base-offset: 2992 
-            extent-offset: 3049 
-            scroll-percentage: 73.0
+          - name: scroll to work area
+            extent-offset: 3097
+            scroll-percentage: 75.0
             scroll-seconds: 2.0
-          - name: perspective matrix
-            base-offset: 3061 
-            extent-offset: 3106 
-            scroll-percentage: 74.0
-          - name: Field of view
-            base-offset: 3107 
-            extent-offset: 3121 
-            scroll-percentage: 74.0
-          - name: Correct for aspect ratio
-            base-offset: 3123 
-            extent-offset: 3139 
-            scroll-percentage: 74.0
-          - name: near and far planes
-            base-offset: 3141 
-            extent-offset: 3149 
-            scroll-percentage: 74.0
-          - name: All the matrices
-            base-offset: 3163 
-            extent-offset: 3203 
+          - name: Declare and instantiate view matrix
+            base-offset: 3097
+            extent-offset: 3154
+            scroll-percentage: 75.0
+          - name: View matrix is translation only
+            base-offset: 3115
+            extent-offset: 3126
+            scroll-percentage: 75.0
+          - name: Stepping back 2 units
+            base-offset: 3148
+            extent-offset: 3152
+            scroll-percentage: 75.0
+          - name: Declare and instantiate perspective matrix
+            base-offset: 3166
+            extent-offset: 3255
             scroll-percentage: 76.0
+          - name: Field of view (45deg in radians)
+            base-offset: 3212
+            extent-offset: 3226
+            scroll-percentage: 76.0
+          - name: Correct for aspect ratio - size.aspectRatio
+            base-offset: 3228
+            extent-offset: 3244
+            scroll-percentage: 76.0
+          - name: near (0.1) plane
+            base-offset: 3246
+            extent-offset: 3249
+            scroll-percentage: 76.0
+          - name: far (100) plane
+            base-offset: 3251
+            extent-offset: 3254
+            scroll-percentage: 76.0
+          - name: Declare and instantiate vertUniforms = [model, view, projection]
+            base-offset: 3268
+            extent-offset: 3308
+            scroll-percentage: 78.0
           - name: bottom
-            extent-offset: 3203
-            scroll-percentage: 76.0
+            extent-offset: 3308
+            scroll-percentage: 78.0
 
         tree:
           - directory: .vscode
@@ -1083,41 +1098,44 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
-          - name: Floats per vertex
-            base-offset: 2302 
-            extent-offset: 2321 
+          - name: Scroll to work area
+            extent-offset: 2407
             scroll-percentage: 46.0
             scroll-seconds: 2.0
-          - name: Vertex data layout
-            base-offset: 2376 
-            extent-offset: 2400 
+          - name: floatsPerVertex = 6
+            base-offset: 2407
+            extent-offset: 2426
+            scroll-percentage: 46.0
+          - name: layout x,y,z,r,g,b
+            base-offset: 2481
+            extent-offset: 2505
             scroll-percentage: 47.0
-          - name: Back face
-            base-offset: 2408 
-            extent-offset: 2648 
+          - name: Back face of cube
+            base-offset: 2513
+            extent-offset: 2753
             scroll-percentage: 52.0
-          - name: Front face
-            base-offset: 2656 
-            extent-offset: 2891 
+          - name: Front face of cube
+            base-offset: 2761
+            extent-offset: 2996
             scroll-percentage: 56.0
-          - name: Left face
-            base-offset: 2899 
-            extent-offset: 3139 
+          - name: Left face of cube
+            base-offset: 3004
+            extent-offset: 3244
             scroll-percentage: 60.0
-          - name: Right face
-            base-offset: 3147 
-            extent-offset: 3382 
+          - name: Right face of cube
+            base-offset: 3252
+            extent-offset: 3487
             scroll-percentage: 64.0
-          - name: Bottom face
-            base-offset: 3390 
-            extent-offset: 3632 
+          - name: Bottom face of cube
+            base-offset: 3495
+            extent-offset: 3737
             scroll-percentage: 68.0
-          - name: Top face
-            base-offset: 3640 
-            extent-offset: 3873 
+          - name: Top face of cube
+            base-offset: 3745
+            extent-offset: 3978
             scroll-percentage: 73.0
           - name: bottom
-            extent-offset: 3873
+            extent-offset: 3978
             scroll-percentage: 73.0
 
         tree:
@@ -1227,13 +1245,16 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
-          - name: Cull the back faces
-            base-offset: 4749 
-            extent-offset: 4795 
+          - name: Scroll to work area
+            extent-offset: 4854
             scroll-percentage: 86.0
             scroll-seconds: 2.0
+          - name: renderPass.setCullMode(CullMode.backFace)
+            base-offset: 4854
+            extent-offset: 4899
+            scroll-percentage: 86.0
           - name: bottom
-            extent-offset: 4795
+            extent-offset: 4899
             scroll-percentage: 86.0
 
         tree:
@@ -1269,17 +1290,20 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
-          - name: Rotate in two axes
-            base-offset: 4145 
-            extent-offset: 4206 
+          - name: Scroll to work area
+            extent-offset: 4232
             scroll-percentage: 77.0
             scroll-seconds: 2.0
-          - name: Push the model back
-            base-offset: 4269 
-            extent-offset: 4273 
+          - name: Define model matrix as identity rotated by Y angle and X angle
+            base-offset: 4232
+            extent-offset: 4311
+            scroll-percentage: 77.0
+          - name: Push the model back by translating view matrix by -2.5
+            base-offset: 4374
+            extent-offset: 4378
             scroll-percentage: 78.0
           - name: bottom
-            extent-offset: 4273
+            extent-offset: 4378
             scroll-percentage: 78.0
 
         tree:
@@ -1305,3 +1329,9 @@ sections:
             contents: assets/step_11/pubspec.yaml
       - name: Show step 11
         show-step: step_11
+
+  - name: Flutter Scene
+    step-number: 12
+    steps:
+      - name: Show step 12
+        show-step: step_12

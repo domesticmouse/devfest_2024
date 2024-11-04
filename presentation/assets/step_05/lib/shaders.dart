@@ -11,6 +11,6 @@ gpu.ShaderLibrary get shaderLibrary {
   try {
     return _shaderLibrary!;
   } catch (e) {
-    throw Exception("Failed to load shader bundle! ($_kShaderBundlePath)");
+    throw Exception('Failed to load shader bundle! ($_kShaderBundlePath)');
   }
 }

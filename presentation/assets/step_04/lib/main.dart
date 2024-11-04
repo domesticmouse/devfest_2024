@@ -6,13 +6,7 @@ import 'package:flutter_gpu/gpu.dart' as gpu;
 import 'shaders.dart';
 
 void main() {
-  runApp(
-    const MaterialApp(
-      title: 'Flutter GPU Triangle Demo',
-      debugShowCheckedModeBanner: false,
-      home: MainApp(),
-    ),
-  );
+  runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -20,10 +14,14 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SizedBox.expand(
-        child: CustomPaint(
-          painter: TrianglePainter(),
+    return MaterialApp(
+      title: 'Flutter GPU Triangle Demo',
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: SizedBox.expand(
+          child: CustomPaint(
+            painter: TrianglePainter(),
+          ),
         ),
       ),
     );

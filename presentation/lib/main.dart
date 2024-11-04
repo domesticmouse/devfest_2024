@@ -152,6 +152,11 @@ class NavigationDrawer extends ConsumerWidget {
                               ?.copyWith(fontWeight: FontWeight.w800)
                           : Theme.of(context).textTheme.titleLarge,
                     ),
+                    subtitle: Padding(
+                      padding: EdgeInsets.only(left: 8),
+                      child: Text('Step ${section.displayStepNumber}',
+                          style: Theme.of(context).textTheme.titleMedium),
+                    ),
                     onTap: () {
                       ref.read(cursorProvider.notifier).setCursorPosition(
                           sectionNumber: sectionNumber, stepNumber: 0);

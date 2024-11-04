@@ -1,5 +1,5 @@
-import 'dart:typed_data';
 import 'dart:math' as math;
+import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gpu/gpu.dart' as gpu;
@@ -8,13 +8,7 @@ import 'package:vector_math/vector_math.dart' as vm;
 import 'shaders.dart';
 
 void main() {
-  runApp(
-    const MaterialApp(
-      title: 'Flutter GPU Triangle Demo',
-      debugShowCheckedModeBanner: false,
-      home: MainApp(),
-    ),
-  );
+  runApp(const MainApp());
 }
 
 class MainApp extends StatefulWidget {
@@ -26,7 +20,7 @@ class MainApp extends StatefulWidget {
 
 class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  late Animation _animation;
+  late Animation<double> _animation;
 
   @override
   void initState() {
@@ -40,16 +34,26 @@ class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SizedBox.expand(
-        child: AnimatedBuilder(
-          builder: (context, child) {
-            return CustomPaint(
-              painter: TrianglePainter(angle: _animation.value),
-            );
-          },
-          animation: _animation,
+    return MaterialApp(
+      title: 'Flutter GPU Triangle Demo',
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: SizedBox.expand(
+          child: AnimatedBuilder(
+            builder: (context, child) {
+              return CustomPaint(
+                painter: TrianglePainter(angle: _animation.value),
+              );
+            },
+            animation: _animation,
+          ),
         ),
       ),
     );
