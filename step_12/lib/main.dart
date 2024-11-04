@@ -26,9 +26,9 @@ class MainApp extends StatefulWidget {
 }
 
 class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
-  double elapsedSeconds = 0;
-  Scene scene = Scene();
-  late Ticker _ticker;
+  var elapsedSeconds = 0.0;
+  final Scene scene = Scene();
+  late final Ticker _ticker;
 
   @override
   void initState() {
@@ -72,11 +72,7 @@ class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
               return CustomPaint(
                 painter: ScenePainter(
                   scene: scene,
-                  camera: PerspectiveCamera(
-                    position: Vector3(
-                        sin(elapsedSeconds) * 3, 2, cos(elapsedSeconds) * 3),
-                    target: Vector3(0, 0, 0),
-                  ),
+                  camera: camera,
                 ),
               );
             },
@@ -85,6 +81,15 @@ class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
       ),
     );
   }
+
+  PerspectiveCamera get camera => PerspectiveCamera(
+        position: Vector3(
+          sin(elapsedSeconds) * 3,
+          2,
+          cos(elapsedSeconds) * 3,
+        ),
+        target: Vector3(0, 0, 0),
+      );
 }
 
 class ScenePainter extends CustomPainter {
