@@ -15,20 +15,6 @@
             "request": "launch",
             "type": "dart",
             "program": "lib/text_offset_finder.dart"
-        },
-        {
-            "name": "presentation (profile mode)",
-            "request": "launch",
-            "type": "dart",
-            "program": "lib/main.dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "presentation (release mode)",
-            "request": "launch",
-            "type": "dart",
-            "program": "lib/main.dart",
-            "flutterMode": "release"
         }
     ]
 }

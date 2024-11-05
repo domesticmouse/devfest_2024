@@ -72,3 +72,8 @@ updates:
     directory: "/step_11/"
     schedule:
       interval: "daily"
+  - package-ecosystem: "pub"
+    versioning-strategy: "increase-if-necessary"
+    directory: "/step_12/"
+    schedule:
+      interval: "daily"
