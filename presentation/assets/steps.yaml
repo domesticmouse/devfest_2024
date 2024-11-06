@@ -268,8 +268,12 @@ sections:
             extent-offset: 795
             scroll-percentage: 40.0
             scroll-seconds: 1.0
-          - name: size.width.ciel(), size.height.ciel()
+          - name: size.width.ciel()
             base-offset: 797
+            extent-offset: 814
+            scroll-percentage: 40.0
+          - name: size.height.ciel()
+            base-offset: 816
             extent-offset: 834
             scroll-percentage: 40.0
           - name: if (texture == null) {...}
@@ -386,11 +390,14 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
+          - name: Scroll to work area
+            extent-offset: 1537 
+            scroll-percentage: 64.0
+            scroll-seconds: 2.0
           - name: floatsPerVertex = 5
             base-offset: 1537 
             extent-offset: 1556 
             scroll-percentage: 64.0
-            scroll-seconds: 2.0
           - name: vertex data
             base-offset: 1608 
             extent-offset: 1729 
@@ -508,11 +515,14 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
+          - name: Scroll to work area
+            extent-offset: 1644
+            scroll-percentage: 72.0
+            scroll-seconds: 2.0
           - name: vertex data, Triangle 1 and Triangle 2
             base-offset: 1644
             extent-offset: 1956 
             scroll-percentage: 72.0
-            scroll-seconds: 2.0
           - name: bottom
             extent-offset: 1956
             scroll-percentage: 72.0
@@ -549,11 +559,14 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
+          - name: Scroll to work area
+            extent-offset: 1677
+            scroll-percentage: 65.0
+            scroll-seconds: 2.0
           - name: Triangle 1 colour change r,g,b line 1
             base-offset: 1677
             extent-offset: 1691
             scroll-percentage: 65.0
-            scroll-seconds: 2.0
           - name: Triangle 1 colour change r,g,b line 2
             base-offset: 1724
             extent-offset: 1738
@@ -598,11 +611,14 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
+          - name: Scroll to work area
+            extent-offset: 1540
+            scroll-percentage: 60.0
+            scroll-seconds: 2.0
           - name: floats per index
             base-offset: 1540
             extent-offset: 1559
             scroll-percentage: 60.0
-            scroll-seconds: 2.0
           - name: Format x,y,u,v
             base-offset: 1614
             extent-offset: 1633
@@ -746,11 +762,14 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
+          - name: Scroll to work area
+            extent-offset: 1674
+            scroll-percentage: 65.0
+            scroll-seconds: 2.0
           - name: UV from -1 to 1
             base-offset: 1674
             extent-offset: 1684
             scroll-percentage: 65.0
-            scroll-seconds: 2.0
           - name: bottom
             extent-offset: 1684
             scroll-percentage: 65.0
@@ -863,7 +882,7 @@ sections:
             scroll-percentage: 0.0
           - name: StatefulWidget
             base-offset: 285
-            extent-offset: 299 
+            extent-offset: 299
             scroll-percentage: 5.0
           - name: Declare _controller and _animation
             base-offset: 482
@@ -877,10 +896,14 @@ sections:
             base-offset: 752
             extent-offset: 793
             scroll-percentage: 18.0
+          - name: Scroll to work area
+            extent-offset: 1133
+            scroll-percentage: 32.0
+            scroll-seconds: 1.5
           - name: AnimatedBuilder widget with _animation
             base-offset: 1133
             extent-offset: 1369
-            scroll-percentage: 28.0
+            scroll-percentage: 32.0
           - name: Pass angle (_animation.value) into TrianglePainter
             base-offset: 1249
             extent-offset: 1289
@@ -889,11 +912,14 @@ sections:
             base-offset: 1453
             extent-offset: 1520
             scroll-percentage: 40.0
+          - name: Scroll to work area
+            extent-offset: 3050
+            scroll-percentage: 74.0
+            scroll-seconds: 2.0
           - name: Declare model matrix
             base-offset: 3050
             extent-offset: 3085
             scroll-percentage: 74.0
-            scroll-seconds: 2.0
           - name: Declare vertex uniforms
             base-offset: 3098
             extent-offset: 3120
@@ -1248,7 +1274,7 @@ sections:
           - name: Scroll to work area
             extent-offset: 4854
             scroll-percentage: 86.0
-            scroll-seconds: 2.0
+            scroll-seconds: 2.5
           - name: renderPass.setCullMode(CullMode.backFace)
             base-offset: 4854
             extent-offset: 4899
@@ -1293,7 +1319,7 @@ sections:
           - name: Scroll to work area
             extent-offset: 4232
             scroll-percentage: 77.0
-            scroll-seconds: 2.0
+            scroll-seconds: 2.5
           - name: Define model matrix as identity rotated by Y angle and X angle
             base-offset: 4232
             extent-offset: 4311
