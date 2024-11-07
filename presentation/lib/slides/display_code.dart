@@ -84,7 +84,7 @@ class _DisplayCodeState extends State<DisplayCode> {
                   textStyle: TextStyle(
                     fontSize: 0.01972973 * size.height + 2,
                     color: Colors.white.withAlpha(205),
-                    fontWeight: entry.node.contents == widget.assetPath
+                    fontWeight: entry.node.selected ?? false
                         ? FontWeight.w500
                         : FontWeight.w300,
                     overflow: TextOverflow.ellipsis,

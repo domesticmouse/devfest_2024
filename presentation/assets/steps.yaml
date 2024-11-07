@@ -36,8 +36,8 @@ sections:
             extent-offset: 447
             scroll-percentage: 100.0
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
@@ -46,9 +46,8 @@ sections:
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_01/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_01/pubspec.yaml
+            selected: true
       - name: my_first_triangle.shaderbundle.json
         display-code: assets/step_01/my_first_triangle.shaderbundle.json
         file-type: json
@@ -75,8 +74,8 @@ sections:
             extent-offset: 184
             scroll-percentage: 78.0
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
@@ -85,9 +84,8 @@ sections:
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_01/my_first_triangle.shaderbundle.json
+            selected: true
           - file: pubspec.yaml
-            contents: assets/step_01/pubspec.yaml
       - name: shaders/simple.vert
         file-type: glsl
         display-code: assets/step_01/shaders/simple.vert
@@ -114,8 +112,8 @@ sections:
             extent-offset: 93
             scroll-percentage: 83.0
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
@@ -123,15 +121,12 @@ sections:
           - directory: shaders
             children:
               - file: simple.frag
-                contents: assets/step_01/shaders/simple.frag
               - file: simple.vert
-                contents: assets/step_01/shaders/simple.vert
+                selected: true
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_01/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_01/pubspec.yaml
       - name: shaders/simple.frag
         file-type: glsl
         display-code: assets/step_01/shaders/simple.frag
@@ -154,8 +149,8 @@ sections:
             extent-offset: 87
             scroll-percentage: 83.0
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
@@ -163,15 +158,12 @@ sections:
           - directory: shaders
             children:
               - file: simple.frag
-                contents: assets/step_01/shaders/simple.frag
+                selected: true
               - file: simple.vert
-                contents: assets/step_01/shaders/simple.vert
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_01/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_01/pubspec.yaml
       - name: hook/build.dart
         file-type: dart
         display-code: assets/step_01/hook/build.dart
@@ -186,21 +178,20 @@ sections:
             extent-offset: 345
             scroll-percentage: 80.0
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
             children:
               - file: build.dart
-                contents: assets/step_01/hook/build.dart
+                selected: true
           - directory: ios
           - directory: lib
           - directory: macos
+          - directory: shaders
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_01/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_01/pubspec.yaml
       - name: lib/shaders.dart
         display-code: assets/step_01/lib/shaders.dart
         file-type: dart
@@ -215,26 +206,21 @@ sections:
             extent-offset: 137
             scroll-percentage: 20.0
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
             children:
               - file: main.dart
-                contents: assets/step_01/lib/main.dart
               - file: shaders.dart
-                contents: assets/step_01/lib/shaders.dart
-          - directory: linux
+                selected: true
           - directory: macos
-          - directory: web
-          - directory: windows
+          - directory: shaders
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_01/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_01/pubspec.yaml
       - name: lib/main.dart
         display-code: assets/step_01/lib/main.dart
         file-type: dart
@@ -358,26 +344,21 @@ sections:
             extent-offset: 2458
             scroll-percentage: 99.0
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
             children:
               - file: main.dart
-                contents: assets/step_01/lib/main.dart
+                selected: true
               - file: shaders.dart
-                contents: assets/step_01/lib/shaders.dart
-          - directory: linux
           - directory: macos
-          - directory: web
-          - directory: windows
+          - directory: shaders
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_01/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_01/pubspec.yaml
       - name: Show step 1
         show-step: step_01
 
@@ -393,7 +374,7 @@ sections:
           - name: Scroll to work area
             extent-offset: 1537 
             scroll-percentage: 64.0
-            scroll-seconds: 2.0
+            scroll-seconds: 1.5
           - name: floatsPerVertex = 5
             base-offset: 1537 
             extent-offset: 1556 
@@ -407,26 +388,21 @@ sections:
             scroll-percentage: 69.0
 
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
             children:
               - file: main.dart
-                contents: assets/step_02/lib/main.dart
+                selected: true
               - file: shaders.dart
-                contents: assets/step_02/lib/shaders.dart
-          - directory: linux
           - directory: macos
-          - directory: web
-          - directory: windows
+          - directory: shaders
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_02/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_02/pubspec.yaml
       - name: shaders/simple.vert
         file-type: glsl
         display-code: assets/step_02/shaders/simple.vert
@@ -449,8 +425,8 @@ sections:
             extent-offset: 155
             scroll-percentage: 90.0
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
@@ -458,15 +434,12 @@ sections:
           - directory: shaders
             children:
               - file: simple.frag
-                contents: assets/step_02/shaders/simple.frag
               - file: simple.vert
-                contents: assets/step_02/shaders/simple.vert
+                selected: true
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_02/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_02/pubspec.yaml
       - name: shaders/simple.frag
         file-type: glsl
         display-code: assets/step_02/shaders/simple.frag
@@ -485,8 +458,8 @@ sections:
             extent-offset: 113
             scroll-percentage: 86.0
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
@@ -494,15 +467,12 @@ sections:
           - directory: shaders
             children:
               - file: simple.frag
-                contents: assets/step_02/shaders/simple.frag
+                selected: true
               - file: simple.vert
-                contents: assets/step_02/shaders/simple.vert
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_02/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_02/pubspec.yaml
       - name: Show step 2
         show-step: step_02
 
@@ -518,7 +488,7 @@ sections:
           - name: Scroll to work area
             extent-offset: 1644
             scroll-percentage: 72.0
-            scroll-seconds: 2.0
+            scroll-seconds: 1.5
           - name: vertex data, Triangle 1 and Triangle 2
             base-offset: 1644
             extent-offset: 1956 
@@ -527,26 +497,21 @@ sections:
             extent-offset: 1956
             scroll-percentage: 72.0
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
             children:
               - file: main.dart
-                contents: assets/step_03/lib/main.dart
+                selected: true
               - file: shaders.dart
-                contents: assets/step_03/lib/shaders.dart
-          - directory: linux
           - directory: macos
-          - directory: web
-          - directory: windows
+          - directory: shaders
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_03/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_03/pubspec.yaml
       - name: Show step 3
         show-step: step_03
 
@@ -562,7 +527,7 @@ sections:
           - name: Scroll to work area
             extent-offset: 1677
             scroll-percentage: 65.0
-            scroll-seconds: 2.0
+            scroll-seconds: 1.5
           - name: Triangle 1 colour change r,g,b line 1
             base-offset: 1677
             extent-offset: 1691
@@ -579,26 +544,21 @@ sections:
             extent-offset: 1786
             scroll-percentage: 67.0
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
             children:
               - file: main.dart
-                contents: assets/step_04/lib/main.dart
+                selected: true
               - file: shaders.dart
-                contents: assets/step_04/lib/shaders.dart
-          - directory: linux
           - directory: macos
-          - directory: web
-          - directory: windows
+          - directory: shaders
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_04/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_04/pubspec.yaml
       - name: Show step 4
         show-step: step_04
 
@@ -614,7 +574,7 @@ sections:
           - name: Scroll to work area
             extent-offset: 1540
             scroll-percentage: 60.0
-            scroll-seconds: 2.0
+            scroll-seconds: 1.5
           - name: floats per index
             base-offset: 1540
             extent-offset: 1559
@@ -642,28 +602,22 @@ sections:
           - name: bottom
             extent-offset: 1884
             scroll-percentage: 71.0
-
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
             children:
               - file: main.dart
-                contents: assets/step_05/lib/main.dart
+                selected: true
               - file: shaders.dart
-                contents: assets/step_05/lib/shaders.dart
-          - directory: linux
           - directory: macos
-          - directory: web
-          - directory: windows
+          - directory: shaders
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_05/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_05/pubspec.yaml
       - name: shaders/simple.vert
         file-type: glsl
         display-code: assets/step_05/shaders/simple.vert
@@ -681,10 +635,9 @@ sections:
           - name: bottom
             extent-offset: 144
             scroll-percentage: 90.0
-
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
@@ -692,15 +645,12 @@ sections:
           - directory: shaders
             children:
               - file: simple.frag
-                contents: assets/step_05/shaders/simple.frag
               - file: simple.vert
-                contents: assets/step_05/shaders/simple.vert
+                selected: true
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_05/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_05/pubspec.yaml
       - name: shaders/simple.frag
         file-type: glsl
         display-code: assets/step_05/shaders/simple.frag
@@ -730,10 +680,9 @@ sections:
           - name: bottom
             extent-offset: 422
             scroll-percentage: 93.0
-
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
@@ -741,15 +690,12 @@ sections:
           - directory: shaders
             children:
               - file: simple.frag
-                contents: assets/step_05/shaders/simple.frag
+                selected: true
               - file: simple.vert
-                contents: assets/step_05/shaders/simple.vert
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_05/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_05/pubspec.yaml
       - name: Show step 5
         show-step: step_05
 
@@ -765,7 +711,7 @@ sections:
           - name: Scroll to work area
             extent-offset: 1674
             scroll-percentage: 65.0
-            scroll-seconds: 2.0
+            scroll-seconds: 1.5
           - name: UV from -1 to 1
             base-offset: 1674
             extent-offset: 1684
@@ -773,28 +719,22 @@ sections:
           - name: bottom
             extent-offset: 1684
             scroll-percentage: 65.0
-
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
             children:
               - file: main.dart
-                contents: assets/step_06/lib/main.dart
+                selected: true
               - file: shaders.dart
-                contents: assets/step_06/lib/shaders.dart
-          - directory: linux
           - directory: macos
-          - directory: web
-          - directory: windows
+          - directory: shaders
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_06/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_06/pubspec.yaml
       - name: shaders/simple.frag
         file-type: glsl
         display-code: assets/step_06/shaders/simple.frag
@@ -840,10 +780,9 @@ sections:
           - name: bottom
             extent-offset: 552
             scroll-percentage: 89.0
-
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
@@ -851,15 +790,12 @@ sections:
           - directory: shaders
             children:
               - file: simple.frag
-                contents: assets/step_06/shaders/simple.frag
+                selected: true
               - file: simple.vert
-                contents: assets/step_06/shaders/simple.vert
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_06/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_06/pubspec.yaml
       - name: Show step 6      
         show-step: step_06
 
@@ -915,7 +851,7 @@ sections:
           - name: Scroll to work area
             extent-offset: 3050
             scroll-percentage: 74.0
-            scroll-seconds: 2.0
+            scroll-seconds: 1.5
           - name: Declare model matrix
             base-offset: 3050
             extent-offset: 3085
@@ -939,28 +875,22 @@ sections:
           - name: bottom
             extent-offset: 3973
             scroll-percentage: 100.0
-
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
             children:
               - file: main.dart
-                contents: assets/step_07/lib/main.dart
+                selected: true
               - file: shaders.dart
-                contents: assets/step_07/lib/shaders.dart
-          - directory: linux
           - directory: macos
-          - directory: web
-          - directory: windows
+          - directory: shaders
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_07/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_07/pubspec.yaml
       - name: shaders/simple.vert
         file-type: glsl
         display-code: assets/step_07/shaders/simple.vert
@@ -978,10 +908,9 @@ sections:
           - name: bottom
             extent-offset: 159
             scroll-percentage: 86.0
-
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
@@ -989,15 +918,12 @@ sections:
           - directory: shaders
             children:
               - file: simple.frag
-                contents: assets/step_07/shaders/simple.frag
               - file: simple.vert
-                contents: assets/step_07/shaders/simple.vert
+                selected: true
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_07/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_07/pubspec.yaml
       - name: Show step 7     
         show-step: step_07
 
@@ -1013,7 +939,7 @@ sections:
           - name: scroll to work area
             extent-offset: 3097
             scroll-percentage: 75.0
-            scroll-seconds: 2.0
+            scroll-seconds: 1.5
           - name: Declare and instantiate view matrix
             base-offset: 3097
             extent-offset: 3154
@@ -1053,28 +979,22 @@ sections:
           - name: bottom
             extent-offset: 3308
             scroll-percentage: 78.0
-
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
             children:
               - file: main.dart
-                contents: assets/step_08/lib/main.dart
+                selected: true
               - file: shaders.dart
-                contents: assets/step_08/lib/shaders.dart
-          - directory: linux
           - directory: macos
-          - directory: web
-          - directory: windows
+          - directory: shaders
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_08/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_08/pubspec.yaml
       - name: shaders/simple.vert
         file-type: glsl
         display-code: assets/step_08/shaders/simple.vert
@@ -1092,10 +1012,9 @@ sections:
           - name: bottom
             extent-offset: 211
             scroll-percentage: 88.0
-
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
@@ -1103,15 +1022,12 @@ sections:
           - directory: shaders
             children:
               - file: simple.frag
-                contents: assets/step_08/shaders/simple.frag
               - file: simple.vert
-                contents: assets/step_08/shaders/simple.vert
+                selected: true
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_08/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_08/pubspec.yaml
       - name: Show step 8
         show-step: step_08
 
@@ -1127,7 +1043,7 @@ sections:
           - name: Scroll to work area
             extent-offset: 2407
             scroll-percentage: 46.0
-            scroll-seconds: 2.0
+            scroll-seconds: 1.5
           - name: floatsPerVertex = 6
             base-offset: 2407
             extent-offset: 2426
@@ -1163,28 +1079,22 @@ sections:
           - name: bottom
             extent-offset: 3978
             scroll-percentage: 73.0
-
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
             children:
               - file: main.dart
-                contents: assets/step_09/lib/main.dart
+                selected: true
               - file: shaders.dart
-                contents: assets/step_09/lib/shaders.dart
-          - directory: linux
           - directory: macos
-          - directory: web
-          - directory: windows
+          - directory: shaders
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_09/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_09/pubspec.yaml
       - name: shaders/simple.vert
         file-type: glsl
         display-code: assets/step_09/shaders/simple.vert
@@ -1202,10 +1112,9 @@ sections:
           - name: bottom
             extent-offset: 223
             scroll-percentage: 88.0
-
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
@@ -1213,15 +1122,12 @@ sections:
           - directory: shaders
             children:
               - file: simple.frag
-                contents: assets/step_09/shaders/simple.frag
               - file: simple.vert
-                contents: assets/step_09/shaders/simple.vert
+                selected: true
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_09/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_09/pubspec.yaml
       - name: shaders/simple.frag
         file-type: glsl
         display-code: assets/step_09/shaders/simple.frag
@@ -1239,10 +1145,9 @@ sections:
           - name: bottom
             extent-offset: 116
             scroll-percentage: 86.0
-
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
@@ -1250,15 +1155,12 @@ sections:
           - directory: shaders
             children:
               - file: simple.frag
-                contents: assets/step_09/shaders/simple.frag
+                selected: true
               - file: simple.vert
-                contents: assets/step_09/shaders/simple.vert
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_09/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_09/pubspec.yaml
       - name: Show step 9
         show-step: step_09
 
@@ -1282,28 +1184,22 @@ sections:
           - name: bottom
             extent-offset: 4899
             scroll-percentage: 86.0
-
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
             children:
               - file: main.dart
-                contents: assets/step_10/lib/main.dart
+                selected: true
               - file: shaders.dart
-                contents: assets/step_10/lib/shaders.dart
-          - directory: linux
           - directory: macos
-          - directory: web
-          - directory: windows
+          - directory: shaders
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_10/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_10/pubspec.yaml
       - name: Show step 10
         show-step: step_10
 
@@ -1331,33 +1227,172 @@ sections:
           - name: bottom
             extent-offset: 4378
             scroll-percentage: 78.0
-
         tree:
-          - directory: .vscode
           - directory: android
+          - directory: build
           - directory: hook
           - directory: ios
           - directory: lib
             children:
               - file: main.dart
-                contents: assets/step_11/lib/main.dart
+                selected: true
               - file: shaders.dart
-                contents: assets/step_11/lib/shaders.dart
-          - directory: linux
           - directory: macos
-          - directory: web
-          - directory: windows
+          - directory: shaders
           - file: .gitignore
           - file: analysis_options.yaml
           - file: my_first_triangle.shaderbundle.json
-            contents: assets/step_11/my_first_triangle.shaderbundle.json
           - file: pubspec.yaml
-            contents: assets/step_11/pubspec.yaml
       - name: Show step 11
         show-step: step_11
 
   - name: Flutter Scene
     step-number: 12
     steps:
+      - name: pubspec.yaml
+        display-code: assets/step_12/pubspec.yaml
+        file-type: yaml
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: flutter_scene
+            base-offset: 171
+            extent-offset: 194
+          - name: flutter_scene_importer
+            base-offset: 197
+            extent-offset: 229
+          - name: build models
+            base-offset: 412
+            extent-offset: 439
+          - name: bottom
+            extent-offset: 439
+        tree:
+          - directory: android
+          - directory: assets
+          - directory: build
+          - directory: hook
+          - directory: ios
+          - directory: lib
+          - directory: macos
+          - directory: Textures
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: pubspec.yaml
+            selected: true
+      - name: hook/build.dart
+        display-code: assets/step_12/hook/build.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: flutter_scene_importer
+            base-offset: 0
+            extent-offset: 57
+          - name: buildModels
+            base-offset: 192
+            extent-offset: 289
+          - name: inputFilePaths
+            base-offset: 238
+            extent-offset: 282
+          - name: bottom
+            extent-offset: 282
+        tree:
+          - directory: android
+          - directory: assets
+          - directory: build
+          - directory: hook
+            children:
+              - file: build.dart
+                selected: true
+          - directory: ios
+          - directory: lib
+          - directory: macos
+          - directory: Textures
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: pubspec.yaml
+      - name: lib/main.dart
+        display-code: assets/step_12/lib/main.dart
+        file-type: dart
+        sub-steps:
+          - name: top
+            extent-offset: 0
+          - name: Import flutter_scene
+            base-offset: 69
+            extent-offset: 118
+          - name: Declare a Scene
+            base-offset: 513
+            extent-offset: 539
+            scroll-percentage: 15.0
+          - name: Load port building model
+            base-offset: 804
+            extent-offset: 941
+            scroll-percentage: 35.0
+          - name: port building model asset
+            base-offset: 823
+            extent-offset: 857
+            scroll-percentage: 35.0
+          - name: Add ScenePainter to tree
+            base-offset: 1375
+            extent-offset: 1755
+            scroll-percentage: 70.0
+          - name: scene argument
+            base-offset: 1407
+            extent-offset: 1419
+            scroll-percentage: 70.0
+          - name: PerspectiveCamera
+            base-offset: 1447
+            extent-offset: 1736
+            scroll-percentage: 70.0
+          - name: Position argument
+            base-offset: 1490
+            extent-offset: 1666
+            scroll-percentage: 70.0
+          - name: Position X argument
+            base-offset: 1534
+            extent-offset: 1564
+            scroll-percentage: 70.0
+          - name: Position Y argument
+            base-offset: 1588
+            extent-offset: 1589
+            scroll-percentage: 70.0
+          - name: Position Z argument
+            base-offset: 1613
+            extent-offset: 1643
+            scroll-percentage: 70.0
+          - name: target argument
+            base-offset: 1688
+            extent-offset: 1715
+            scroll-percentage: 70.0
+          - name: Declare ScenePainter
+            base-offset: 1877
+            extent-offset: 1911
+            scroll-percentage: 90.0
+          - name: ScenePainter member variables
+            base-offset: 1977
+            extent-offset: 2026
+            scroll-percentage: 95.0
+          - name: ScenePainter paint method
+            base-offset: 2085
+            extent-offset: 2144
+            scroll-percentage: 100.0
+          - name: bottom
+            extent-offset: 2144
+            scroll-percentage: 100.0
+        tree:
+          - directory: android
+          - directory: assets
+          - directory: build
+          - directory: hook
+          - directory: ios
+          - directory: lib
+            children:
+              - file: main.dart
+                selected: true
+          - directory: macos
+          - directory: Textures
+          - file: .gitignore
+          - file: analysis_options.yaml
+          - file: pubspec.yaml
       - name: Show step 12
         show-step: step_12

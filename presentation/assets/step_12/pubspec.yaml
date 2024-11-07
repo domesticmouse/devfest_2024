@@ -1,4 +1,4 @@
-name: step_01
+name: my_first_triangle
 description: "A new Flutter project."
 publish_to: 'none'
 version: 0.1.0
@@ -9,9 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_gpu:
-    sdk: flutter
-  flutter_gpu_shaders: ^0.2.0
+  flutter_scene: ^0.7.0-0
+  flutter_scene_importer: ^0.7.0-0
   native_assets_cli: ^0.9.0
   vector_math: ^2.1.4
   xml: ^6.5.0
@@ -25,4 +24,4 @@ flutter:
   uses-material-design: true
 
   assets:
-    - build/shaderbundles/
+    - build/models/

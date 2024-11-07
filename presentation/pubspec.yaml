@@ -12,15 +12,15 @@ dependencies:
   flutter_fancy_tree_view: ^1.6.0
   flutter_gpu:
     sdk: flutter
-  flutter_gpu_shaders: ^0.1.2
+  flutter_gpu_shaders: ^0.2.0
   flutter_markdown: ^0.7.1
   flutter_riverpod: ^2.5.1
-  flutter_scene: ^0.5.0-0
-  flutter_scene_importer: ^0.2.0-0
+  flutter_scene: ^0.7.0-0
+  flutter_scene_importer: ^0.7.0-0
   flutter_svg: ^2.0.10+1
   google_fonts: ^6.2.1
   json_annotation: ^4.9.0
-  native_assets_cli: ^0.8.0
+  native_assets_cli: ^0.9.0
   path: ^1.9.0
   riverpod: ^2.5.1
   riverpod_annotation: ^2.3.5
@@ -44,38 +44,41 @@ flutter:
   uses-material-design: true
 
   assets:
-   - assets/
-   - assets/images/
-   - assets/markdown/
-   - assets/step_01/
-   - assets/step_01/hook/
-   - assets/step_01/lib/
-   - assets/step_01/shaders/
-   - assets/step_02/
-   - assets/step_02/lib/
-   - assets/step_02/shaders/
-   - assets/step_03/
-   - assets/step_03/lib/
-   - assets/step_04/
-   - assets/step_04/lib/
-   - assets/step_05/
-   - assets/step_05/lib/
-   - assets/step_05/shaders/
-   - assets/step_06/
-   - assets/step_06/lib/
-   - assets/step_06/shaders/
-   - assets/step_07/
-   - assets/step_07/lib/
-   - assets/step_07/shaders/
-   - assets/step_08/
-   - assets/step_08/lib/
-   - assets/step_08/shaders/
-   - assets/step_09/
-   - assets/step_09/lib/
-   - assets/step_09/shaders/
-   - assets/step_10/
-   - assets/step_10/lib/
-   - assets/step_11/
-   - assets/step_11/lib/
-   - build/models/
-   - build/shaderbundles/
+    - assets/
+    - assets/images/
+    - assets/markdown/
+    - assets/step_01/
+    - assets/step_01/hook/
+    - assets/step_01/lib/
+    - assets/step_01/shaders/
+    - assets/step_02/
+    - assets/step_02/lib/
+    - assets/step_02/shaders/
+    - assets/step_03/
+    - assets/step_03/lib/
+    - assets/step_04/
+    - assets/step_04/lib/
+    - assets/step_05/
+    - assets/step_05/lib/
+    - assets/step_05/shaders/
+    - assets/step_06/
+    - assets/step_06/lib/
+    - assets/step_06/shaders/
+    - assets/step_07/
+    - assets/step_07/lib/
+    - assets/step_07/shaders/
+    - assets/step_08/
+    - assets/step_08/lib/
+    - assets/step_08/shaders/
+    - assets/step_09/
+    - assets/step_09/lib/
+    - assets/step_09/shaders/
+    - assets/step_10/
+    - assets/step_10/lib/
+    - assets/step_11/
+    - assets/step_11/lib/
+    - assets/step_12/
+    - assets/step_12/hook/
+    - assets/step_12/lib/
+    - build/models/
+    - build/shaderbundles/

@@ -209,7 +209,7 @@ class Node {
   final String? directory;
   final String? file;
   final List<Node>? children;
-  final String? contents;
+  final bool? selected;
 
   String get title => directory ?? file ?? '';
 
@@ -217,7 +217,7 @@ class Node {
     this.directory,
     this.file,
     this.children,
-    this.contents,
+    this.selected,
   }) {
     if ((directory == null || directory!.isEmpty) &&
         (file == null || file!.isEmpty)) {
