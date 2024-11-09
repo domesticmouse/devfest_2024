@@ -170,9 +170,17 @@ sections:
         sub-steps:
           - name: top
             extent-offset: 0
+          - name: import flutter_gpu_shaders
+            base-offset: 0
+            extent-offset: 48
+            scroll-percentage: 0.0
+          - name: build shader bundle
+            base-offset: 195
+            extent-offset: 347
+            scroll-percentage: 80.0
           - name: manifestFileName
-            base-offset: 290 
-            extent-offset: 345 
+            base-offset: 290
+            extent-offset: 345
             scroll-percentage: 80.0
           - name: bottom
             extent-offset: 345
@@ -202,9 +210,21 @@ sections:
             base-offset: 85 
             extent-offset: 137 
             scroll-percentage: 20.0
+          - name: _shaderLibrary cache
+            base-offset: 140
+            extent-offset: 174
+            scroll-percentage: 33.0
+          - name: _shaderLibrary getter
+            base-offset: 176
+            extent-offset: 418
+            scroll-percentage: 100.0
+          - name: gpu.ShaderLibrary.fromAssetBundle
+            base-offset: 216
+            extent-offset: 283
+            scroll-percentage: 53.0
           - name: bottom
-            extent-offset: 137
-            scroll-percentage: 20.0
+            extent-offset: 283
+            scroll-percentage: 53.0
         tree:
           - directory: android
           - directory: build
