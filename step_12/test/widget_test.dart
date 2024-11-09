@@ -6,22 +6,14 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_scene/scene.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:step_12/main.dart';
 
 void main() {
-  testWidgets(
-    'Hexagon Explorer smoke test',
-    (tester) async {
-      final sceneReady = Scene.initializeStaticResources();
-      // Build our app and trigger a frame.
-      await tester.pumpWidget(
-        MaterialApp(
-          title: 'Hexagon Explorer test',
-          home: MainApp(sceneReady: sceneReady),
-        ),
-      );
-    },
-  );
+  testWidgets('Hexagon Explorer smoke test', (tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(
+      MaterialApp(title: 'Hexagon Explorer test', home: MainApp()),
+    );
+  });
 }
