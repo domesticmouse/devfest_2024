@@ -17,11 +17,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ColoredBox(
       color: backgroundColor,
-      child: SizedBox.expand(
-        child: CustomPaint(
-          painter: TrianglePainter(),
-        ),
-      ),
+      child: SizedBox.expand(child: CustomPaint(painter: TrianglePainter())),
     );
   }
 }
@@ -32,13 +28,17 @@ class TrianglePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final texture = gpu.gpuContext.createTexture(
-        gpu.StorageMode.devicePrivate, size.width.ceil(), size.height.ceil());
+      gpu.StorageMode.devicePrivate,
+      size.width.ceil(),
+      size.height.ceil(),
+    );
     if (texture == null) {
       throw Exception('Failed to create texture');
     }
 
-    final renderTarget =
-        gpu.RenderTarget.singleColor(gpu.ColorAttachment(texture: texture));
+    final renderTarget = gpu.RenderTarget.singleColor(
+      gpu.ColorAttachment(texture: texture),
+    );
 
     final commandBuffer = gpu.gpuContext.createCommandBuffer();
     final renderPass = commandBuffer.createRenderPass(renderTarget);
@@ -77,7 +77,9 @@ class TrianglePainter extends CustomPainter {
       lengthInBytes: verticesDeviceBuffer.sizeInBytes,
     );
     renderPass.bindVertexBuffer(
-        verticesView, vertices.length ~/ floatsPerVertex);
+      verticesView,
+      vertices.length ~/ floatsPerVertex,
+    );
 
     renderPass.draw();
 

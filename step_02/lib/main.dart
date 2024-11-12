@@ -22,11 +22,7 @@ class MainApp extends StatelessWidget {
       title: 'Flutter GPU Triangle Demo',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: SizedBox.expand(
-          child: CustomPaint(
-            painter: TrianglePainter(),
-          ),
-        ),
+        body: SizedBox.expand(child: CustomPaint(painter: TrianglePainter())),
       ),
     );
   }
@@ -38,13 +34,17 @@ class TrianglePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final texture = gpu.gpuContext.createTexture(
-        gpu.StorageMode.devicePrivate, size.width.ceil(), size.height.ceil());
+      gpu.StorageMode.devicePrivate,
+      size.width.ceil(),
+      size.height.ceil(),
+    );
     if (texture == null) {
       throw Exception('Failed to create texture');
     }
 
-    final renderTarget =
-        gpu.RenderTarget.singleColor(gpu.ColorAttachment(texture: texture));
+    final renderTarget = gpu.RenderTarget.singleColor(
+      gpu.ColorAttachment(texture: texture),
+    );
 
     final commandBuffer = gpu.gpuContext.createCommandBuffer();
     final renderPass = commandBuffer.createRenderPass(renderTarget);
@@ -84,7 +84,9 @@ class TrianglePainter extends CustomPainter {
       lengthInBytes: verticesDeviceBuffer.sizeInBytes,
     );
     renderPass.bindVertexBuffer(
-        verticesView, vertices.length ~/ floatsPerVertex);
+      verticesView,
+      vertices.length ~/ floatsPerVertex,
+    );
 
     renderPass.draw();
 

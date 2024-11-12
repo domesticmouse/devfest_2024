@@ -67,13 +67,17 @@ class TrianglePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final texture = gpu.gpuContext.createTexture(
-        gpu.StorageMode.devicePrivate, size.width.ceil(), size.height.ceil());
+      gpu.StorageMode.devicePrivate,
+      size.width.ceil(),
+      size.height.ceil(),
+    );
     if (texture == null) {
       throw Exception('Failed to create texture');
     }
 
-    final renderTarget =
-        gpu.RenderTarget.singleColor(gpu.ColorAttachment(texture: texture));
+    final renderTarget = gpu.RenderTarget.singleColor(
+      gpu.ColorAttachment(texture: texture),
+    );
 
     final commandBuffer = gpu.gpuContext.createCommandBuffer();
     final renderPass = commandBuffer.createRenderPass(renderTarget);
@@ -152,14 +156,20 @@ class TrianglePainter extends CustomPainter {
 
     final model = vm.Matrix4.rotationY(angle);
     final view = vm.Matrix4.translation(vm.Vector3(0.0, 0.0, -2.0));
-    final projection =
-        vm.makePerspectiveMatrix(vm.radians(45), size.aspectRatio, 0.1, 100);
+    final projection = vm.makePerspectiveMatrix(
+      vm.radians(45),
+      size.aspectRatio,
+      0.1,
+      100,
+    );
 
     final vertUniforms = [model, view, projection];
 
     final vertUniformsDeviceBuffer = gpu.gpuContext.createDeviceBufferWithCopy(
-        ByteData.sublistView(Float32List.fromList(
-            vertUniforms.expand((m) => m.storage).toList())));
+      ByteData.sublistView(
+        Float32List.fromList(vertUniforms.expand((m) => m.storage).toList()),
+      ),
+    );
 
     if (vertUniformsDeviceBuffer == null) {
       throw Exception('Failed to create vert uniforms device buffer');
@@ -173,7 +183,9 @@ class TrianglePainter extends CustomPainter {
       lengthInBytes: verticesDeviceBuffer.sizeInBytes,
     );
     renderPass.bindVertexBuffer(
-        verticesView, vertices.length ~/ floatsPerVertex);
+      verticesView,
+      vertices.length ~/ floatsPerVertex,
+    );
 
     final vertUniformsView = gpu.BufferView(
       vertUniformsDeviceBuffer,

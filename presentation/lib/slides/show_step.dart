@@ -5,10 +5,7 @@
 import 'package:flutter/material.dart';
 
 class ShowStep extends StatelessWidget {
-  const ShowStep({
-    super.key,
-    required this.child,
-  });
+  const ShowStep({super.key, required this.child});
 
   final Widget child;
 
@@ -29,14 +26,15 @@ class ShowStep extends StatelessWidget {
             children: [
               Container(
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withAlpha(77),
-                        blurRadius: 16,
-                        offset: const Offset(4, 8),
-                      ),
-                    ]),
+                  borderRadius: BorderRadius.circular(8),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withAlpha(77),
+                      blurRadius: 16,
+                      offset: const Offset(4, 8),
+                    ),
+                  ],
+                ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8),
                   child: SizedBox(
@@ -44,14 +42,8 @@ class ShowStep extends StatelessWidget {
                     height: gameHeight,
                     child: Stack(
                       children: [
-                        ExcludeFocus(
-                          child: Center(
-                            child: child,
-                          ),
-                        ),
-                        CustomPaint(
-                          painter: _WindowControlsPainer(),
-                        ),
+                        ExcludeFocus(child: Center(child: child)),
+                        CustomPaint(painter: _WindowControlsPainer()),
                       ],
                     ),
                   ),

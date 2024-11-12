@@ -65,13 +65,17 @@ class TrianglePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final texture = gpu.gpuContext.createTexture(
-        gpu.StorageMode.devicePrivate, size.width.ceil(), size.height.ceil());
+      gpu.StorageMode.devicePrivate,
+      size.width.ceil(),
+      size.height.ceil(),
+    );
     if (texture == null) {
       throw Exception('Failed to create texture');
     }
 
-    final renderTarget =
-        gpu.RenderTarget.singleColor(gpu.ColorAttachment(texture: texture));
+    final renderTarget = gpu.RenderTarget.singleColor(
+      gpu.ColorAttachment(texture: texture),
+    );
 
     final commandBuffer = gpu.gpuContext.createCommandBuffer();
     final renderPass = commandBuffer.createRenderPass(renderTarget);
@@ -96,7 +100,6 @@ class TrianglePainter extends CustomPainter {
       -0.8, -0.8, -1.0, -1.0, // bottom left
       0.8, -0.8, 1.0, -1.0, // bottom right
       -0.8, 0.8, -1.0, 1.0, // top left
-
       // Traingle #2
       0.8, -0.8, 1.0, -1.0, // bottom right
       0.8, 0.8, 1.0, 1.0, // top right
@@ -115,8 +118,10 @@ class TrianglePainter extends CustomPainter {
     final vertUniforms = [model];
 
     final vertUniformsDeviceBuffer = gpu.gpuContext.createDeviceBufferWithCopy(
-        ByteData.sublistView(Float32List.fromList(
-            vertUniforms.expand((m) => m.storage).toList())));
+      ByteData.sublistView(
+        Float32List.fromList(vertUniforms.expand((m) => m.storage).toList()),
+      ),
+    );
 
     if (vertUniformsDeviceBuffer == null) {
       throw Exception('Failed to create vert uniforms device buffer');
@@ -130,7 +135,9 @@ class TrianglePainter extends CustomPainter {
       lengthInBytes: verticesDeviceBuffer.sizeInBytes,
     );
     renderPass.bindVertexBuffer(
-        verticesView, vertices.length ~/ floatsPerVertex);
+      verticesView,
+      vertices.length ~/ floatsPerVertex,
+    );
 
     final vertUniformsView = gpu.BufferView(
       vertUniformsDeviceBuffer,

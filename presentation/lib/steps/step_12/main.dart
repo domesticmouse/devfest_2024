@@ -31,8 +31,7 @@ class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
       setState(() {
         elapsedSeconds = elapsed.inMilliseconds.toDouble() / 1000;
       });
-    })
-      ..start();
+    })..start();
 
     Node.fromAsset('build/models/building-port.model').then((model) {
       model.name = 'Port Building';
@@ -67,7 +66,10 @@ class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
                 scene: scene,
                 camera: PerspectiveCamera(
                   position: Vector3(
-                      sin(elapsedSeconds) * 3, 2, cos(elapsedSeconds) * 3),
+                    sin(elapsedSeconds) * 3,
+                    2,
+                    cos(elapsedSeconds) * 3,
+                  ),
                   target: Vector3(0, 0, 0),
                 ),
               ),
