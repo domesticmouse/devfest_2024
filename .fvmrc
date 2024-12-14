@@ -1,0 +1,6 @@
+{
+  "flutter": "master",
+  "runPubGetOnSdkChanges": true,
+  "updateVscodeSettings": true,
+  "updateGitIgnore": true
+}
