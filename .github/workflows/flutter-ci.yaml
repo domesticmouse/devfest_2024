@@ -14,9 +14,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: main
+      - uses: kuhnroyal/flutter-fvm-config-action/setup@v3
       - name: Activate melos
         run: dart pub global activate melos
       - name: Bootstrap
