@@ -5,9 +5,6 @@ ide:
   intellij:
     enabled: false
 
-# Use FVM to manage Flutter SDK
-sdkPath: .fvm/flutter_sdk
-
 packages:
   - step_*
   - presentation
