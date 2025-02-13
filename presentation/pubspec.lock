@@ -332,18 +332,18 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_scene
-      sha256: "24dde4a00f7f356b332d11ee3ca5dd280a6c962c073fb095edd580965ebd216b"
+      sha256: "177bc49bb55bfa0e06aa48bbfa4241b5bc225c3ca434f60692d0fc819fbb49f4"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.0-0"
+    version: "0.8.0-0"
   flutter_scene_importer:
     dependency: "direct main"
     description:
       name: flutter_scene_importer
-      sha256: "4af400adecbf1b2600e07e6a8eab61a3b71c358b1979e791841355184020f3e6"
+      sha256: bb8f0bd908758a606e2e44872ae7c85142f3fbf5532ae9860e62e46b1fabb434
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.0-0"
+    version: "0.8.0-0"
   flutter_svg:
     dependency: "direct main"
     description:
