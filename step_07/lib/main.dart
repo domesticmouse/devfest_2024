@@ -123,7 +123,6 @@ class TrianglePainter extends CustomPainter {
       ),
     );
 
-
     renderPass.bindPipeline(pipeline);
 
     final verticesView = gpu.BufferView(
