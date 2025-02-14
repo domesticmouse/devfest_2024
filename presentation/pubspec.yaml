@@ -15,8 +15,8 @@ dependencies:
   flutter_gpu_shaders: ^0.2.0
   flutter_markdown: ^0.7.1
   flutter_riverpod: ^2.5.1
-  flutter_scene: ^0.7.0-0
-  flutter_scene_importer: ^0.7.0-0
+  flutter_scene: ^0.8.0-0
+  flutter_scene_importer: ^0.8.0-0
   flutter_svg: ^2.0.10+1
   google_fonts: ^6.2.1
   json_annotation: ^4.9.0
