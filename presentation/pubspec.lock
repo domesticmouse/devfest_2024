@@ -295,10 +295,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_gpu_shaders
-      sha256: f8a74a89794c6a4e85dae054043830f62240a2b4ed9773061198aa8c0ad151b1
+      sha256: "98ff2396cd4543883bd4b693a782f9fcbda27e9bf5b3b92475332d36be3bfec6"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.0"
+    version: "0.3.0"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -327,18 +327,18 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_scene
-      sha256: "177bc49bb55bfa0e06aa48bbfa4241b5bc225c3ca434f60692d0fc819fbb49f4"
+      sha256: "9a3a427e902b81c6a901113a7e9428b3b29a2643a52ecbc6592cb051ab37c7e8"
       url: "https://pub.dev"
     source: hosted
-    version: "0.8.0-0"
+    version: "0.9.2-0"
   flutter_scene_importer:
     dependency: "direct main"
     description:
       name: flutter_scene_importer
-      sha256: bb8f0bd908758a606e2e44872ae7c85142f3fbf5532ae9860e62e46b1fabb434
+      sha256: "81c544627dcbfc7227625b41abeaf23054fec5c36c57d2d6cb61518b3bd8a6cd"
       url: "https://pub.dev"
     source: hosted
-    version: "0.8.0-0"
+    version: "0.9.0-0"
   flutter_svg:
     dependency: "direct main"
     description:
@@ -540,10 +540,10 @@ packages:
     dependency: "direct main"
     description:
       name: native_assets_cli
-      sha256: "9573f442a27000af0597639bf8a3db24f23cf6cbab7469ce3b9c80f585075e6b"
+      sha256: "0907c5b85a21ae08dcdd0d2b75061cc614939911c2cab5ac903f35a9fbb2a50b"
       url: "https://pub.dev"
     source: hosted
-    version: "0.9.0"
+    version: "0.13.0"
   node_preamble:
     dependency: transitive
     description:
