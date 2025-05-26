@@ -1,6 +1,8 @@
 name: devfest_2024
 repository: https://github.com/domesticmouse/devfest_2024
 
+sdkPath: .fvm/flutter_sdk
+
 ide:
   intellij:
     enabled: false
@@ -26,8 +28,11 @@ scripts:
     exec: flutter test --enable-impeller
     description: Run tests
   fix-apply:
-    exec: dart fix --apply 
+    exec: dart fix --apply
     description: Fix issues
+  build-macos:
+    exec: flutter build macos
+    description: Build macos
   clean:
     exec: flutter clean
     description: Clean projects

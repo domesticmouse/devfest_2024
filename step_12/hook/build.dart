@@ -6,9 +6,9 @@ import 'package:flutter_scene_importer/build_hooks.dart';
 import 'package:native_assets_cli/native_assets_cli.dart';
 
 void main(List<String> args) {
-  build(args, (config, output) async {
+  build(args, (buildInput, output) async {
     buildModels(
-      buildConfig: config,
+      buildInput: buildInput,
       inputFilePaths: ['assets/building-port.glb'],
     );
   });
