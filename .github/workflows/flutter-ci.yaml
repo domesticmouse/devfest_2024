@@ -15,14 +15,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: kuhnroyal/flutter-fvm-config-action/setup@v3
-      - name: Activate melos
-        run: dart pub global activate melos
-      - name: Bootstrap
-        run: melos bootstrap
       - name: Flutter upgrade
         run: flutter upgrade
       - name: Flutter doctor
         run: flutter doctor -v
+      - name: Activate melos
+        run: dart pub global activate melos
+      - name: Bootstrap
+        run: melos bootstrap
       - name: Pub get
         run: melos get
       - name: Enable native assets
