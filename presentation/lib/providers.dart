@@ -44,27 +44,24 @@ class Cursor extends _$Cursor {
       .watch(configurationProvider)
       .when(
         data: (configuration) {
-          final section =
-              configuration.sections.length > _sectionNumber
-                  ? configuration.sections[_sectionNumber]
-                  : Section(name: 'Empty', steps: [], displayStepNumber: 0);
-          final step =
-              section.steps.length > _stepNumber
-                  ? section.steps[_stepNumber]
-                  : Step(name: 'Empty');
+          final section = configuration.sections.length > _sectionNumber
+              ? configuration.sections[_sectionNumber]
+              : Section(name: 'Empty', steps: [], displayStepNumber: 0);
+          final step = section.steps.length > _stepNumber
+              ? section.steps[_stepNumber]
+              : Step(name: 'Empty');
           var subStep =
               step.subSteps != null && step.subSteps!.length > _subStepNumber
-                  ? step.subSteps![_subStepNumber]
-                  : SubStep(name: 'Empty', extentOffset: 0);
+              ? step.subSteps![_subStepNumber]
+              : SubStep(name: 'Empty', extentOffset: 0);
           return (section, step, subStep);
         },
         error: (error, stackTrace) => throw error,
-        loading:
-            () => (
-              Section(name: 'Empty', steps: [], displayStepNumber: 0),
-              Step(name: 'Empty', displayMarkdown: 'assets/empty.txt'),
-              SubStep(name: 'Empty', extentOffset: 0),
-            ),
+        loading: () => (
+          Section(name: 'Empty', steps: [], displayStepNumber: 0),
+          Step(name: 'Empty', displayMarkdown: 'assets/empty.txt'),
+          SubStep(name: 'Empty', extentOffset: 0),
+        ),
       );
 
   void next() {

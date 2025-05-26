@@ -45,11 +45,10 @@ class TextOffsetFinderAppMenu extends ConsumerWidget {
     if (configuration == null) {
       return MenuAnchor(
         menuChildren: const [],
-        builder:
-            (context, controller, child) => IconButton(
-              onPressed: () => controller.open(),
-              icon: Icon(Icons.file_open),
-            ),
+        builder: (context, controller, child) => IconButton(
+          onPressed: () => controller.open(),
+          icon: Icon(Icons.file_open),
+        ),
       );
     }
 
@@ -62,45 +61,41 @@ class TextOffsetFinderAppMenu extends ConsumerWidget {
               section.name,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style:
-                  section == currentSection
-                      ? Theme.of(context).textTheme.titleLarge?.copyWith(
-                        fontWeight: FontWeight.w800,
-                      )
-                      : Theme.of(context).textTheme.titleLarge,
+              style: section == currentSection
+                  ? Theme.of(context).textTheme.titleLarge?.copyWith(
+                      fontWeight: FontWeight.w800,
+                    )
+                  : Theme.of(context).textTheme.titleLarge,
             ),
           ),
           for (final step in section.steps.where(
             (step) => step.displayCode != null && step.fileType != 'png',
           )) ...[
             MenuItemButton(
-              onPressed:
-                  () => ref
-                      .read(cursorProvider.notifier)
-                      .setCursorPosition(
-                        sectionNumber: configuration.sections.indexOf(section),
-                        stepNumber: section.steps.indexOf(step),
-                      ),
+              onPressed: () => ref
+                  .read(cursorProvider.notifier)
+                  .setCursorPosition(
+                    sectionNumber: configuration.sections.indexOf(section),
+                    stepNumber: section.steps.indexOf(step),
+                  ),
               child: Text(
                 step.name,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style:
-                    step == currentStep
-                        ? Theme.of(context).textTheme.titleMedium?.copyWith(
-                          fontWeight: FontWeight.w800,
-                        )
-                        : Theme.of(context).textTheme.titleMedium,
+                style: step == currentStep
+                    ? Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.w800,
+                      )
+                    : Theme.of(context).textTheme.titleMedium,
               ),
             ),
           ],
         ],
       ],
-      builder:
-          (context, controller, child) => IconButton(
-            onPressed: () => controller.open(),
-            icon: Icon(Icons.file_open),
-          ),
+      builder: (context, controller, child) => IconButton(
+        onPressed: () => controller.open(),
+        icon: Icon(Icons.file_open),
+      ),
     );
   }
 }
@@ -233,64 +228,60 @@ class _OffsetFinderTextViewHelperState
 
     return CallbackShortcuts(
       bindings: {
-        SingleActivator(LogicalKeyboardKey.arrowLeft):
-            () => setState(() {
-              _cursor.left();
-              _scrollController.jumpTo(
-                _scrollController.position.maxScrollExtent *
-                    _cursor.scrollPercentage,
-              );
-            }),
-        SingleActivator(LogicalKeyboardKey.arrowRight):
-            () => setState(() {
-              _cursor.right();
-              _scrollController.jumpTo(
-                _scrollController.position.maxScrollExtent *
-                    _cursor.scrollPercentage,
-              );
-            }),
-        SingleActivator(LogicalKeyboardKey.arrowUp):
-            () => setState(() {
-              _cursor.up();
-              _scrollController.jumpTo(
-                _scrollController.position.maxScrollExtent *
-                    _cursor.scrollPercentage,
-              );
-            }),
-        SingleActivator(LogicalKeyboardKey.arrowDown):
-            () => setState(() {
-              _cursor.down();
-              _scrollController.jumpTo(
-                _scrollController.position.maxScrollExtent *
-                    _cursor.scrollPercentage,
-              );
-            }),
-        SingleActivator(LogicalKeyboardKey.arrowLeft, shift: true):
-            () => setState(() {
+        SingleActivator(LogicalKeyboardKey.arrowLeft): () => setState(() {
+          _cursor.left();
+          _scrollController.jumpTo(
+            _scrollController.position.maxScrollExtent *
+                _cursor.scrollPercentage,
+          );
+        }),
+        SingleActivator(LogicalKeyboardKey.arrowRight): () => setState(() {
+          _cursor.right();
+          _scrollController.jumpTo(
+            _scrollController.position.maxScrollExtent *
+                _cursor.scrollPercentage,
+          );
+        }),
+        SingleActivator(LogicalKeyboardKey.arrowUp): () => setState(() {
+          _cursor.up();
+          _scrollController.jumpTo(
+            _scrollController.position.maxScrollExtent *
+                _cursor.scrollPercentage,
+          );
+        }),
+        SingleActivator(LogicalKeyboardKey.arrowDown): () => setState(() {
+          _cursor.down();
+          _scrollController.jumpTo(
+            _scrollController.position.maxScrollExtent *
+                _cursor.scrollPercentage,
+          );
+        }),
+        SingleActivator(LogicalKeyboardKey.arrowLeft, shift: true): () =>
+            setState(() {
               _cursor.shiftLeft();
               _scrollController.jumpTo(
                 _scrollController.position.maxScrollExtent *
                     _cursor.scrollPercentage,
               );
             }),
-        SingleActivator(LogicalKeyboardKey.arrowRight, shift: true):
-            () => setState(() {
+        SingleActivator(LogicalKeyboardKey.arrowRight, shift: true): () =>
+            setState(() {
               _cursor.shiftRight();
               _scrollController.jumpTo(
                 _scrollController.position.maxScrollExtent *
                     _cursor.scrollPercentage,
               );
             }),
-        SingleActivator(LogicalKeyboardKey.arrowUp, shift: true):
-            () => setState(() {
+        SingleActivator(LogicalKeyboardKey.arrowUp, shift: true): () =>
+            setState(() {
               _cursor.shiftUp();
               _scrollController.jumpTo(
                 _scrollController.position.maxScrollExtent *
                     _cursor.scrollPercentage,
               );
             }),
-        SingleActivator(LogicalKeyboardKey.arrowDown, shift: true):
-            () => setState(() {
+        SingleActivator(LogicalKeyboardKey.arrowDown, shift: true): () =>
+            setState(() {
               _cursor.shiftDown();
               _scrollController.jumpTo(
                 _scrollController.position.maxScrollExtent *

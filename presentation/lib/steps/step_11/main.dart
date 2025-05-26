@@ -146,10 +146,9 @@ class TrianglePainter extends CustomPainter {
       ByteData.sublistView(vertices),
     );
 
-    final model =
-        vm.Matrix4.identity()
-          ..rotateY(angle)
-          ..rotateX(angle / 2);
+    final model = vm.Matrix4.identity()
+      ..rotateY(angle)
+      ..rotateX(angle / 2);
     final view = vm.Matrix4.translation(vm.Vector3(0.0, 0.0, -2.5));
     final projection = vm.makePerspectiveMatrix(
       vm.radians(45),

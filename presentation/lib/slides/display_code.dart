@@ -67,33 +67,31 @@ class _DisplayCodeState extends State<DisplayCode> {
           child: AnimatedTreeView(
             padding: const EdgeInsets.all(12),
             treeController: treeController,
-            nodeBuilder:
-                (context, entry) => TreeIndentation(
-                  guide: IndentGuide.connectingLines(
-                    indent: 0.01052632 * size.width + 5.052632,
-                    color: Colors.grey,
-                    thickness: 2.0,
-                    origin: 0.6,
-                    padding: EdgeInsets.symmetric(horizontal: 8),
-                    // roundCorners: true,
-                  ),
-                  entry: entry,
-                  child: Text(
-                    entry.node.title,
-                    maxLines: 1,
-                    style: GoogleFonts.robotoMono(
-                      textStyle: TextStyle(
-                        fontSize: 0.01972973 * size.height + 2,
-                        color: Colors.white.withAlpha(205),
-                        fontWeight:
-                            entry.node.selected ?? false
-                                ? FontWeight.w500
-                                : FontWeight.w300,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
+            nodeBuilder: (context, entry) => TreeIndentation(
+              guide: IndentGuide.connectingLines(
+                indent: 0.01052632 * size.width + 5.052632,
+                color: Colors.grey,
+                thickness: 2.0,
+                origin: 0.6,
+                padding: EdgeInsets.symmetric(horizontal: 8),
+                // roundCorners: true,
+              ),
+              entry: entry,
+              child: Text(
+                entry.node.title,
+                maxLines: 1,
+                style: GoogleFonts.robotoMono(
+                  textStyle: TextStyle(
+                    fontSize: 0.01972973 * size.height + 2,
+                    color: Colors.white.withAlpha(205),
+                    fontWeight: entry.node.selected ?? false
+                        ? FontWeight.w500
+                        : FontWeight.w300,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
+              ),
+            ),
           ),
         ),
         VerticalDivider(thickness: 1, color: Colors.white.withAlpha(77)),
@@ -158,28 +156,24 @@ class _DisplayCodeTextState extends ConsumerState<DisplayCodeText> {
   Widget build(BuildContext context) {
     final highlightersAsync = ref.watch(highlightersProvider);
     return highlightersAsync.when(
-      data:
-          (highlighters) => FutureBuilder<String>(
-            future: content,
-            builder:
-                (context, snapshot) => switch ((
-                  snapshot.hasData,
-                  snapshot.hasError,
-                )) {
-                  (true, _) => _DisplayCodeTextHelper(
-                    assetPath: widget.assetPath,
-                    content: snapshot.data ?? '',
-                    fileType: widget.fileType,
-                    highlighters: highlighters,
-                    baseOffset: widget.baseOffset,
-                    extentOffset: widget.extentOffset,
-                    scrollPercentage: widget.scrollPercentage,
-                    scrollSeconds: widget.scrollSeconds,
-                  ),
-                  (_, true) => Center(child: Text('Error: ${snapshot.error}')),
-                  _ => Center(child: CircularProgressIndicator()),
-                },
-          ),
+      data: (highlighters) => FutureBuilder<String>(
+        future: content,
+        builder: (context, snapshot) =>
+            switch ((snapshot.hasData, snapshot.hasError)) {
+              (true, _) => _DisplayCodeTextHelper(
+                assetPath: widget.assetPath,
+                content: snapshot.data ?? '',
+                fileType: widget.fileType,
+                highlighters: highlighters,
+                baseOffset: widget.baseOffset,
+                extentOffset: widget.extentOffset,
+                scrollPercentage: widget.scrollPercentage,
+                scrollSeconds: widget.scrollSeconds,
+              ),
+              (_, true) => Center(child: Text('Error: ${snapshot.error}')),
+              _ => Center(child: CircularProgressIndicator()),
+            },
+      ),
       loading: () => Center(child: CircularProgressIndicator()),
       error: (error, stack) => Center(child: Text('Error: $error\n$stack')),
     );

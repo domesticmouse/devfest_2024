@@ -62,10 +62,10 @@ class MainApp extends ConsumerWidget {
         themeMode: ThemeMode.dark,
         home: CallbackShortcuts(
           bindings: <ShortcutActivator, VoidCallback>{
-            SingleActivator(LogicalKeyboardKey.arrowRight):
-                () => ref.read(cursorProvider.notifier).next(),
-            SingleActivator(LogicalKeyboardKey.arrowLeft):
-                () => ref.read(cursorProvider.notifier).previous(),
+            SingleActivator(LogicalKeyboardKey.arrowRight): () =>
+                ref.read(cursorProvider.notifier).next(),
+            SingleActivator(LogicalKeyboardKey.arrowLeft): () =>
+                ref.read(cursorProvider.notifier).previous(),
           },
           child: Focus(
             autofocus: true,
@@ -133,77 +133,73 @@ class NavigationDrawer extends ConsumerWidget {
 
     return Drawer(
       child: ListView(
-        children:
-            configuration != null
-                ? [
-                  for (final (sectionNumber, section)
-                      in configuration.value.sections.indexed) ...[
-                    ListTile(
-                      title: Text(
-                        section.name,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style:
-                            section == currentSection
-                                ? Theme.of(context).textTheme.titleLarge
-                                    ?.copyWith(fontWeight: FontWeight.w800)
-                                : Theme.of(context).textTheme.titleLarge,
-                      ),
-                      subtitle: Padding(
-                        padding: EdgeInsets.only(left: 8),
-                        child: Text(
-                          'Step ${section.displayStepNumber}',
-                          style: Theme.of(context).textTheme.titleMedium,
-                        ),
-                      ),
-                      onTap: () {
-                        ref
-                            .read(cursorProvider.notifier)
-                            .setCursorPosition(
-                              sectionNumber: sectionNumber,
-                              stepNumber: 0,
-                            );
-                      },
+        children: configuration != null
+            ? [
+                for (final (sectionNumber, section)
+                    in configuration.value.sections.indexed) ...[
+                  ListTile(
+                    title: Text(
+                      section.name,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: section == currentSection
+                          ? Theme.of(context).textTheme.titleLarge?.copyWith(
+                              fontWeight: FontWeight.w800,
+                            )
+                          : Theme.of(context).textTheme.titleLarge,
                     ),
-                    if (section == currentSection)
-                      for (var (stepNumber, step) in section.steps.indexed)
-                        ListTile(
-                          title: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              SizedBox(width: 16),
-                              Expanded(
-                                child: Text(
-                                  step.name,
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style:
-                                      step == currentStep
-                                          ? Theme.of(
-                                            context,
-                                          ).textTheme.titleMedium?.copyWith(
-                                            fontWeight: FontWeight.w800,
-                                          )
-                                          : Theme.of(
-                                            context,
-                                          ).textTheme.titleMedium,
-                                ),
+                    subtitle: Padding(
+                      padding: EdgeInsets.only(left: 8),
+                      child: Text(
+                        'Step ${section.displayStepNumber}',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                    ),
+                    onTap: () {
+                      ref
+                          .read(cursorProvider.notifier)
+                          .setCursorPosition(
+                            sectionNumber: sectionNumber,
+                            stepNumber: 0,
+                          );
+                    },
+                  ),
+                  if (section == currentSection)
+                    for (var (stepNumber, step) in section.steps.indexed)
+                      ListTile(
+                        title: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            SizedBox(width: 16),
+                            Expanded(
+                              child: Text(
+                                step.name,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: step == currentStep
+                                    ? Theme.of(
+                                        context,
+                                      ).textTheme.titleMedium?.copyWith(
+                                        fontWeight: FontWeight.w800,
+                                      )
+                                    : Theme.of(context).textTheme.titleMedium,
                               ),
-                            ],
-                          ),
-                          onTap: () {
-                            ref
-                                .read(cursorProvider.notifier)
-                                .setCursorPosition(
-                                  sectionNumber: sectionNumber,
-                                  stepNumber: stepNumber,
-                                );
-                            Scaffold.of(context).openEndDrawer();
-                          },
+                            ),
+                          ],
                         ),
-                  ],
-                ]
-                : [],
+                        onTap: () {
+                          ref
+                              .read(cursorProvider.notifier)
+                              .setCursorPosition(
+                                sectionNumber: sectionNumber,
+                                stepNumber: stepNumber,
+                              );
+                          Scaffold.of(context).openEndDrawer();
+                        },
+                      ),
+                ],
+              ]
+            : [],
       ),
     );
   }

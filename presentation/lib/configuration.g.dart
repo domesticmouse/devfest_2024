@@ -16,10 +16,9 @@ Configuration _$ConfigurationFromJson(Map json) =>
       final val = Configuration(
         sections: $checkedConvert(
           'sections',
-          (v) =>
-              (v as List<dynamic>)
-                  .map((e) => Section.fromJson(e as Map))
-                  .toList(),
+          (v) => (v as List<dynamic>)
+              .map((e) => Section.fromJson(e as Map))
+              .toList(),
         ),
       );
       return val;
@@ -28,27 +27,27 @@ Configuration _$ConfigurationFromJson(Map json) =>
 Map<String, dynamic> _$ConfigurationToJson(Configuration instance) =>
     <String, dynamic>{'sections': instance.sections};
 
-Section _$SectionFromJson(Map json) => $checkedCreate('Section', json, (
-  $checkedConvert,
-) {
-  $checkKeys(
-    json,
-    allowedKeys: const ['name', 'step-number', 'steps'],
-    requiredKeys: const ['name', 'step-number', 'steps'],
-  );
-  final val = Section(
-    name: $checkedConvert('name', (v) => v as String),
-    steps: $checkedConvert(
-      'steps',
-      (v) => (v as List<dynamic>).map((e) => Step.fromJson(e as Map)).toList(),
-    ),
-    displayStepNumber: $checkedConvert(
-      'step-number',
-      (v) => (v as num).toInt(),
-    ),
-  );
-  return val;
-}, fieldKeyMap: const {'displayStepNumber': 'step-number'});
+Section _$SectionFromJson(Map json) =>
+    $checkedCreate('Section', json, ($checkedConvert) {
+      $checkKeys(
+        json,
+        allowedKeys: const ['name', 'step-number', 'steps'],
+        requiredKeys: const ['name', 'step-number', 'steps'],
+      );
+      final val = Section(
+        name: $checkedConvert('name', (v) => v as String),
+        steps: $checkedConvert(
+          'steps',
+          (v) =>
+              (v as List<dynamic>).map((e) => Step.fromJson(e as Map)).toList(),
+        ),
+        displayStepNumber: $checkedConvert(
+          'step-number',
+          (v) => (v as num).toInt(),
+        ),
+      );
+      return val;
+    }, fieldKeyMap: const {'displayStepNumber': 'step-number'});
 
 Map<String, dynamic> _$SectionToJson(Section instance) => <String, dynamic>{
   'name': instance.name,
@@ -81,10 +80,9 @@ Step _$StepFromJson(Map json) => $checkedCreate(
       fileType: $checkedConvert('file-type', (v) => v as String?),
       subSteps: $checkedConvert(
         'sub-steps',
-        (v) =>
-            (v as List<dynamic>?)
-                ?.map((e) => SubStep.fromJson(e as Map))
-                .toList(),
+        (v) => (v as List<dynamic>?)
+            ?.map((e) => SubStep.fromJson(e as Map))
+            .toList(),
       ),
       tree: $checkedConvert(
         'tree',

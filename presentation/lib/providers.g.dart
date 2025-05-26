@@ -13,10 +13,9 @@ String _$configurationHash() => r'b569038866dd3fdeb3d0c6a33b87bd30d832e699';
 final configurationProvider = AutoDisposeFutureProvider<Configuration>.internal(
   configuration,
   name: r'configurationProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$configurationHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$configurationHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
@@ -31,8 +30,9 @@ String _$highlightersHash() => r'88e7745eb013a4c8bfc78deac1df33bc00355a51';
 final highlightersProvider = AutoDisposeFutureProvider<Highlighters>.internal(
   highlighters,
   name: r'highlightersProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$highlightersHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$highlightersHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
@@ -48,8 +48,9 @@ final cursorProvider =
     AutoDisposeNotifierProvider<Cursor, (Section, Step, SubStep)>.internal(
       Cursor.new,
       name: r'cursorProvider',
-      debugGetCreateSourceHash:
-          const bool.fromEnvironment('dart.vm.product') ? null : _$cursorHash,
+      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$cursorHash,
       dependencies: null,
       allTransitiveDependencies: null,
     );
